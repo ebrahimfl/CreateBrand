@@ -1,4 +1,4 @@
-<?php include_once 'header.php' ?>
+<?php require_once "include/header.php"; ?>
 
 <section id="about">
     <h1>About us</h1>
@@ -17,7 +17,7 @@
 
             <a class="button">
                 <div class="icons">
-                    <img src="assets/icons/icon.png" alt="">
+                    <img src="../assets/icons/icon.png" alt="">
                 </div>
                 <button>Start with us!</button>
             </a>
@@ -26,7 +26,7 @@
 
         <!-- right side  -->
         <div class="imgg">
-            <img src="assets/images/services2_bg_3.webp" alt="">
+            <img src="../assets/images/services2_bg_3.webp" alt="">
         </div>
 
     </div>
@@ -34,4 +34,4 @@
 </section>
 
 
-<?php include_once 'footer.php' ?>
+<?php require_once "include/footer.php"; ?>

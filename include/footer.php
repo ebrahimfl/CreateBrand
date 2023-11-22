@@ -37,17 +37,17 @@
             </div>
         </div>
         <div class="icons_section">
-            <a href=""><img src="assets/icons/facebook.svg" alt=""></a>
-            <a href=""><img src="assets/icons/linkdin.svg" alt=""></a>
-            <a href=""><img src="assets/icons/twitter.svg" alt=""></a>
-            <a href=""><img src="assets/icons/instagram.svg" alt=""></a>
+            <a href=""><img src="../assets/icons/facebook.svg" alt=""></a>
+            <a href=""><img src="../assets/icons/linkdin.svg" alt=""></a>
+            <a href=""><img src="../assets/icons/twitter.svg" alt=""></a>
+            <a href=""><img src="../assets/icons/instagram.svg" alt=""></a>
         </div>
         <div class="copyrighting_section">
             <p>Copyrighting&copy; 2023-ALL Rights Reserved | Create Brand</p>
         </div>
     </div>
     </footer>
- <script src="assets/js/main.js"></script>
+ <script src="../assets/js/main.js"></script>
 </body>
 
 </html>
