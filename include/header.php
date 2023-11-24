@@ -1,6 +1,6 @@
 <?php
 include_once("assets/php/connect.php");
-$con = new connect(); 
+
 
 
 ?>

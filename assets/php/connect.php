@@ -1,14 +1,14 @@
 <?php 
- class connect{
-    private $conn;
-    public function __construct()
-    {
+ 
+   
+    
+    
         $db_host = "localhost";
         $db_user = "root";        
         $db_pass = "";
         $db_name = "createbrand";
-        $this->conn = mysqli_connect($db_host,$db_user,$db_pass,$db_name);
-        if (!$this->conn) {
+        $conn = mysqli_connect($db_host,$db_user,$db_pass,$db_name);
+        if (!$conn) {
             die ("<h1>Database do not worked!! Please Database create your server?? Help Ebrahim: 01980533510</h1>");       
         }
 
@@ -24,13 +24,11 @@
         }
         
 
-    }
+    
 
     
        
     
-
- }
 
 
 
