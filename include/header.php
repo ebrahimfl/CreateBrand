@@ -1,3 +1,10 @@
+<?php
+include_once("assets/php/connect.php");
+$con = new connect(); 
+
+
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
