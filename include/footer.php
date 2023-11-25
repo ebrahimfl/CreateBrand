@@ -28,7 +28,7 @@
             </div>
              <div class="footer_col">
                 <ul>
-                    <li><a href="loginSign.php?ouradds" class="footer_h_a">Address</a></li>
+                    <li><a href="loginSign.php?log=ouradds" class="footer_h_a">Address</a></li>
                     <li><a href="index.php">Create Brand</a></li>
                     <li><a href="mailto:createbrand.team@gmail.com" target="_blank">createbrand.team@gmail.com</a></li>
 
