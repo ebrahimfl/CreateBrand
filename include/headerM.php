@@ -1,5 +1,8 @@
 </head>
 
+
+
+
 <body>
     <header>
 
@@ -14,17 +17,21 @@
                     <img src="assets/icons/top-mail.png" alt="Mail">
                     <h3>createbrand.team@gmail.com</h3>
                 </a>
+                
+                    <a href="loginSign.php?log=login" name="login" class="login">Login</a>
+                    <a href="loginSign.php?log=signup" name="signup" class="signup">Create Account</a>
+                
                 </div>
             </section>
         
         <nav>
             <div class="container">
                 <div class="logo">
-                    <h2>Create Brand</h2>
+                    <h2><a href="index.php">Create Brand</a></h2>
                 </div>
                 <ul class="main_menu">
-                    <li><a href="">Home</a></li>
-                    <li><a class="dorp_down_a">Our Services <img src="assets/icons/mingcute_down-line.png"></a>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a class="dorp_down_a"  href="service.php">Our Services <img src="assets/icons/mingcute_down-line.png"></a>
                         <div class="drop_menu">
                             <ul class="drop-down">
                                 <li><a href="">Web Development </a></li>
@@ -59,3 +66,4 @@
         </nav>
     </header>
     <main>
+

@@ -171,62 +171,8 @@
             
         </section>
     </main>
-    <script >
-                    const btn = document.querySelectorAll(".right-img")
-            const titel = document.querySelectorAll(".right-side-titel")
-            const all = document.querySelectorAll('.all')
-            const support = document.querySelector(".support")
-            const testing = document.querySelector(".testing")
-            const launce = document.querySelector(".launce")
-            const design = document.querySelector(".design")
+  
 
-
-                    all.forEach((item) => {
-                        item.style.display = "none"
-                    })
-
-            btn.forEach((btn) => {
-                btn.addEventListener("click",function(){
-                    titel.forEach((item) => {
-                        item.style.display = "none"
-                    })
-                    if(btn.classList.contains("tl")){
-                        support.style.display = "block"
-                    }
-                    else if(btn.classList.contains("tr")){
-                        launce.style.display = "block"
-                    }
-                    else if(btn.classList.contains("bl")){
-                        design.style.display = "block"
-                    }
-                    else{
-                        support.style.display = "block"
-                    }
-                })
-            })
-
-
-            // love effect 
-            const bodyEl = document.getElementById("body")
-
-            bodyEl.addEventListener("mousemove",(event) => {
-                const xPos = event.offsetX;
-                const yPos = event.offsetY;
-                const spanEl = document.createElement("span")
-                spanEl.classList.add("marley")
-                bodyEl.appendChild(spanEl)
-                spanEl.style.left = xPos + "px"
-                spanEl.style.top = yPos + "px"
-                const wh = Math.random() * 50;
-                spanEl.style.width = wh + "px"
-                spanEl.style.height = wh + "px"
-                setTimeout(() => {
-                    spanEl.remove()
-                },4000)
-            })
-
-
-    </script>
 
 
 <?php require_once "include/footer.php"; ?>

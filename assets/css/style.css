@@ -117,7 +117,9 @@
         justify-content: center;
         gap: 5px;
     }
-
+    .logo h2 a {
+        color: #FD3434;
+    }
     .main_menu li {
         padding-bottom: 20px;
     }
