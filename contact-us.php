@@ -1,4 +1,6 @@
-<?php include "header.php"; ?>
+<?php require_once "include/header.php"; ?>
+<link rel="stylesheet" href="assets/css/contact.css">
+<?php require_once "include/headerM.php"; ?>
 
 <!-- ^Contact Section Start-->
 <section id="contact">
@@ -50,4 +52,4 @@
 </section>
 
 <!-- ^Contact Section End-->
-<?php require_once "footer.php"; ?>
+<?php require_once "include/footer.php"; ?>

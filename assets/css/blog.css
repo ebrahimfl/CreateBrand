@@ -1,0 +1,42 @@
+img.blog-img {
+    width: 150px;
+    height: 100px;
+    float: left;
+    overflow: hidden;
+    background-repeat: no-repeat;
+}
+
+h1.title {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    margin-left: 158px;
+    background: none;
+    font-size: 28px;
+}
+
+.sengel-blog {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+    height: 100px;
+    margin-bottom: 8px;
+}
+
+p.meta-d {
+    margin-left: 158px;
+    text-align: justify;
+}
+
+.btn{
+    width: 80px;
+    height: 10px;
+    float: right;
+    margin-right: 3px;    
+}
+
+.btn a {
+    width: 100%;
+    height: 100%;
+}
