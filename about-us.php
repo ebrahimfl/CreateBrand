@@ -1,4 +1,5 @@
-<?php include_once 'header.php' ?>
+<?php require_once "include/header.php"; ?>
+<?php require_once "include/headerM.php"; ?>
 
 <section id="about">
     <h1>About us</h1>
@@ -34,4 +35,4 @@
 </section>
 
 
-<?php include_once 'footer.php' ?>
+<?php require_once "include/footer.php"; ?>

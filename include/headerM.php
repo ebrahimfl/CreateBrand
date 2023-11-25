@@ -1,50 +1,37 @@
-<?php
-include_once 'include/header_include.php';
-?>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/site_responsive.css">
 </head>
+
+
+
 
 <body>
     <header>
 
-        <?php
-        $db = new Database();
-
-        $query = "SELECT gmail,phone from information_create_brand WHERE id ='1'";
-        $result = $db->select($query);
-        if ($result) {
-            $socialLink = $result->fetch_assoc();
-        ?>
+        
             <section class="top-bar">
                 <div class="container">
-                <a href="tel:<?php echo $socialLink['phone'] ?>" style="align-items: center; display:flex">
+                <a href="" style="align-items: center; display:flex">
                     <img src="assets/icons/phone_icons.png" alt="phone">
-                    <h3 class="first-h3"><?php echo $socialLink['phone'] ?></h3>
+                    <h3 class="first-h3">01980533510</h3>
                 </a>
-                <a href="mailto:<?php echo $socialLink['gmail'] ?>" style="align-items: center; display:flex">
+                <a href="" style="align-items: center; display:flex">
                     <img src="assets/icons/top-mail.png" alt="Mail">
-                    <h3><?php echo $socialLink['gmail'] ?></h3>
+                    <h3>createbrand.team@gmail.com</h3>
                 </a>
+                
+                    <a href="loginSign.php?log=login" name="login" class="login">Login</a>
+                    <a href="loginSign.php?log=signup" name="signup" class="signup">Create Account</a>
+                
                 </div>
             </section>
-        <?php } ?>
+        
         <nav>
             <div class="container">
                 <div class="logo">
-                    <h2>Create Brand</h2>
+                    <h2><a href="index.php">Create Brand</a></h2>
                 </div>
                 <ul class="main_menu">
-                    <li><a href="">Home</a></li>
-                    <li><a class="dorp_down_a">Our Services <img src="assets/icons/mingcute_down-line.png"></a>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a class="dorp_down_a"  href="service.php">Our Services <img src="assets/icons/mingcute_down-line.png"></a>
                         <div class="drop_menu">
                             <ul class="drop-down">
                                 <li><a href="">Web Development </a></li>
@@ -66,7 +53,7 @@ include_once 'include/header_include.php';
                             </ul>
                         </div>
                     </li>
-                    <li><a href="faqs.php">FAQ's</a></li>
+                    
                     <li><a href="blog.php">Blog</a></li>
 
                 </ul>
@@ -79,3 +66,4 @@ include_once 'include/header_include.php';
         </nav>
     </header>
     <main>
+
