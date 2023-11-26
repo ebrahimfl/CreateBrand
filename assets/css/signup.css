@@ -8,8 +8,18 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	height: 100vh;
+	
+	
 }
+
+@media screen and (min-height:600px){
+	.sing-up{
+		
+		height: 100vh;
+	}
+
+}
+
 .sing{
 	text-align: center;
 	margin-top:0.5rem;

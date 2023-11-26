@@ -3,6 +3,7 @@
 <main class="container sing-up">
 		<form action="" method="post" class="form-sing-up">
 			<h3 class="sing">Sing Up Here</h3>
+            <p><a href="?log=login"  >Allredy account</a></p>
 			<div>
 				<label for="name">Name</label>
 				<input type="text" id="name" placeholder="Enter Your Name" required>
