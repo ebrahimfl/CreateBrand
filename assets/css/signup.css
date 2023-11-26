@@ -1,0 +1,75 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.sing-up{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+.sing{
+	text-align: center;
+	margin-top:0.5rem;
+	margin-bottom: -10px;
+	background: linear-gradient(95deg,var(--primary),#0099ff);
+	color: transparent;
+	-webkit-background-clip: text;
+	background-clip:text;
+	font-size: 2rem;
+	
+}
+.form-sing-up{
+	min-width: 350px;
+	width: 100%;
+	max-width: 500px;
+	box-shadow: 0 0 10px;
+	border-radius: 1rem;
+	padding: 1rem 0.5rem;
+	transition: all 0.4s ease;
+}
+.form-sing-up:hover{
+	box-shadow:0 0 12px purple;
+}
+.form-sing-up label{
+	font-size: 1.1rem;
+	display: block;
+	margin-top: 0.5rem;
+	color: rgb(81, 77, 77);
+	font-weight: 600;
+}
+.form-sing-up input{
+	width: 100%;
+	padding: 0.6rem;
+	margin-top: 5px;
+	outline:none;
+	border: 1px solid rgb(188, 185, 185);
+	font-size: 20px;
+	border-radius: 0.2rem;
+}
+.form-sing-up input:focus{
+	border: 1px solid var(--primary);
+}
+.form-sing-up input::placeholder{
+	color: lightgrey;
+	font-size: 16px;
+}
+.form-sing-up .sing-up-button{
+	width: 40%;
+	margin: auto;
+}
+.sing-div{
+	display: grid;
+	margin-top: 0.3rem;
+}
+.sing-div input{
+	padding: 0.3rem;
+	background: var(--primary);
+	color: white;
+	cursor: pointer;
+}
+.sing-div input:hover{
+	background: red;
+}
