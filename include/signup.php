@@ -25,7 +25,7 @@
 				<input type="text" id="country" placeholder="Country" name="country" required>
 			</div>
 			<div class="sing-div">
-				<input type="submit" value="Sing Up" name="submite" class="sing-up-button">
+				<input type="submit" value="Sing Up" name="signup" class="sing-up-button">
                 <p><a href="?log=login"  >Allredy account</a></p>
 			</div>
 		</form>
