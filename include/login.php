@@ -1,3 +1,11 @@
+<?php
+if (isset($_COOKIE[md5("name")])) {
+	header("location:user_profile.php");
+}
+
+?>
+
+
 <link rel="stylesheet" href="assets/css/login.css">
 
 <section id="login">

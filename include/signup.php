@@ -1,4 +1,9 @@
+<?php
+if (isset($_COOKIE[md5("name")])) {
+	header("location:user_profile.php");
+}
 
+?>
 <link rel="stylesheet" href="assets/css/signup.css">
 <main class="container sing-up">
 		<form action="assets/php/userCore.php" method="post" class="form-sing-up">

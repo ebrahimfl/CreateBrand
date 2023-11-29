@@ -47,6 +47,7 @@
         color: var(--black) !important;
     }
 
+
     header{
         z-index: 1000;
         position: sticky;
@@ -60,6 +61,7 @@
         top: -41px;
     }
 
+    
     /* === Top Bar Start === */
     .top-bar{
         background-color: var(--primary);

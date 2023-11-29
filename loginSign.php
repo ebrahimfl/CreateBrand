@@ -5,12 +5,16 @@
 
 <?php
 
+
+
 if (isset($_GET['log'])) {
     $log = $_GET['log'];
     if ($log =="login") {
         include_once("include/login.php");
     }elseif ($log=="signup") {
         include_once("include/signup.php");
+    }elseif ($log=="logout") {
+        include_once("include/logout.php");
     }elseif ($log=="ourproject") {
         include_once("include/ourproject.php");
     }elseif ($log=="mostpopularservices") {
@@ -32,6 +36,8 @@ if (isset($_GET['log'])) {
     }
     
     
+}else {
+    header("location:index.php");
 }
 
 ?>

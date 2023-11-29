@@ -9,17 +9,38 @@
         
             <section class="top-bar">
                 <div class="container">
-                <a href="" style="align-items: center; display:flex">
-                    <img src="assets/icons/phone_icons.png" alt="phone">
-                    <h3 class="first-h3">01980533510</h3>
-                </a>
-                <a href="" style="align-items: center; display:flex">
-                    <img src="assets/icons/top-mail.png" alt="Mail">
-                    <h3>createbrand.team@gmail.com</h3>
-                </a>
+                    
+                        <a href="" style="align-items: center; display:flex">
+                        <img src="assets/icons/phone_icons.png" alt="phone">
+                        <h3 class="first-h3">01980533510</h3>
+                        </a>
+                        <a href="" style="align-items: center; display:flex">
+                            <img src="assets/icons/top-mail.png" alt="Mail">
+                            <h3>createbrand.team@gmail.com</h3>
+                        </a>
+
+                    
                 
-                    <a href="loginSign.php?log=login" name="login" class="login">Login</a>
-                    <a href="loginSign.php?log=signup" name="signup" class="signup">Create Account</a>
+
+                <!--login information-->
+                
+                    <?php
+                        if (!isset($_COOKIE[md5('name')])) {
+                    ?>
+                            <a href="loginSign.php?log=login" name="login" class="userInfLog">Login</a>
+                        <a href="loginSign.php?log=signup" name="signup" class="userInfLog">Create Account</a>
+                    <?php
+                        }else{
+                    ?>
+                            <a href="loginSign.php?log=logout" name="logout" class="userInfLog">Logout</a>
+                    <?php
+                        }
+                    
+                    ?>
+                    
+                
+                
+                <!-- End login information-->
                 
                 </div>
             </section>
