@@ -42,7 +42,7 @@
             <a href=""><img src="assets/icons/instagram.svg" alt=""></a>
         </div>
         <div class="copyrighting_section">
-            <p>Copyrighting&copy; 2023-ALL Rights Reserved | Create Brand</p>
+            <p>Copyrighting&copy; 2023-ALL Rights Reserved | <a href="index.php" style="color: white;">Create Brand</a></p>
         </div>
     </div>
     </footer>
