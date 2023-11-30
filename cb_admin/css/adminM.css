@@ -1,12 +1,49 @@
-.dashbrod {
+.top_bar_ad {
     width: 100%;
-    display: flex;
-    padding: 5px;
+    background-color: rgb(16, 15, 15);
+    padding: 6px;
+    font-size: 21px;
+    color: white;
+    box-shadow: 0px 1px 7px 2px #352e2e;
+    display: inline-flex;
+    gap: 33%;
 }
+.top_bar_ad a {
+    
+    color: white;
+}
+
 .das_manu_bar {
     width: 200px;
-    display: grid;
-    gap: 5px;
-    border: 1px solid black;
-    padding: 5px;
+    display: block;
+    background-color: rgb(16, 15, 15);
+    padding: 6px;    
+    box-shadow: 0px 1px 7px 2px #352e2e;
+    min-height: 600px;
+    float: left;
+}
+
+
+.das_main_bar{
+    padding: 8px;
+}
+.das_manu_bar a {
+    color: white;
+    width: 100%;
+    display: block;
+    box-shadow: 0px 2px 4px #322929;
+    padding: 2px 0px;
+    font-size: 20px;
+    font-family: -webkit-body;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.tog {
+    margin-left: 5%;
+}
+
+.t {
+    border: 2px solid white;
+    margin-top: 5px;
+    width: 23px;
 }
