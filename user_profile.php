@@ -6,6 +6,7 @@ if (!isset($_COOKIE[md5("name")])) {
 }
 ?>
    
+   
 
 
 <?php require_once "include/footer.php"; ?>

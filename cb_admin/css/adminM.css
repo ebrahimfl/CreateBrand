@@ -1,0 +1,12 @@
+.dashbrod {
+    width: 100%;
+    display: flex;
+    padding: 5px;
+}
+.das_manu_bar {
+    width: 200px;
+    display: grid;
+    gap: 5px;
+    border: 1px solid black;
+    padding: 5px;
+}
