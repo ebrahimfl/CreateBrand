@@ -1,5 +1,8 @@
 
 <?php
+if (isset($_COOKIE[md5('ad_name')])) {
+    header("location:../admin.php");
+}
 include_once("php/fun/fun.php");
 $conn = new addmin();
 

@@ -7,7 +7,7 @@ if (!isset($_COOKIE[md5("ad_name")])) {
 ?>
 
 
-
+<h1>admin</h1>
 
 
 <?php require_once "include/footer.php"; ?>

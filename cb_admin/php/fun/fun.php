@@ -20,7 +20,7 @@ class addmin{
         $check = mysqli_query($this->conn,$qur);
         if ($check) {
             if (mysqli_num_rows($check)===1) {
-                setcookie(md5("ad_name"),$use_name,time() + (86400 * 1), "/");
+                setcookie(md5("ad_name"),$use_name,time() + (86400/4), "/");
                 header("location:../../admin.php");
             }else {
                 header("location:../../");
