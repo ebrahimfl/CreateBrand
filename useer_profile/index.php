@@ -6,4 +6,7 @@ if (!isset($_COOKIE[md5("name")])) {
     header('location:../user_profile.php?user=profile');
 }
 
+
+
+
 ?>
