@@ -33,6 +33,38 @@ class addmin{
         
     }
 
+    public function show($table_name) {        
+        $sql ="SELECT * FROM $table_name;";
+        $result = $this->conn->query($sql);
+        
+        if ($result->num_rows> 0) {
+            $data = $this->conn->query($sql);
+            return $data;
+
+        }        
+    }
+
+    public function blog_update($id,$data) {
+        if ($data) {
+            $title = $data['title'];
+            $dsc = $data['dsc'];
+            $mata = $data['mata'];
+            $img = $data['img'];
+            $catagory = $data['catagory'];
+
+            $sql = "UPDATE blog SET title='$title',dsc='$dsc',mata='$mata',img='$img',catagory='$catagory' WHERE id=$id";
+            if (mysqli_query($this->conn,$sql)) {
+               echo "ok";
+            }else {
+                echo"sumthing is rong";
+            }
+        }else {
+            "No data";
+        }
+        
+        
+    }
+
 
 }
 
