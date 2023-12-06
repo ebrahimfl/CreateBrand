@@ -61,7 +61,7 @@ class addmin{
         if ($result) {
             echo "succs";
             move_uploaded_file($img_t,"../../assets/images/".$img_name);
-            header("location:../../admin.php?val=AddBlo&&add=ok");
+            header("location:../../admin.php?val=AddBlog&&add=ok");
         }else {
             die("Sumthin problem".$result);
         }
@@ -87,6 +87,16 @@ class addmin{
             "No data";
         }
         
+        
+    }
+    public function delete($table_name,$id) {
+        $sql = "DELETE FROM $table_name WHERE id='$id'";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return "sucssec";
+        }else {
+            die("NO".$result);
+        }
         
     }
 

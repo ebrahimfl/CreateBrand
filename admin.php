@@ -1,3 +1,5 @@
+
+
 <?php require_once "include/header.php"; ?>
 <link rel="stylesheet" href="cb_admin/css/adminM.css">
 <?php require_once "include/headerM.php"; ?>
@@ -6,10 +8,23 @@ if (!isset($_COOKIE[md5("ad_name")])) {
     header("location: index.php");
 }
 ?>
+<!-- blog upload sestem add -->
+
 
 
 <section>
     <div class="container">
+    <?php
+if (isset($_GET["add"])) {
+    $che = $_GET["add"];
+    if ($che=="ok") {
+       echo "Blog Upload Succse";
+       
+    }
+}
+
+?>
+
         <div class="dashbrod">
             <div class="top_bar_ad">
                 <h3><a href="admin.php" >Dashbord</a></h3>
@@ -46,8 +61,8 @@ if (!isset($_COOKIE[md5("ad_name")])) {
                 <a href="?val=Dashbord">Dashbord</a>
                 <a href="javascript:void(0);"  onclick="myFunction('blog_ad')">Blog >>
                     <div id="blog_ad" style="display: none;">
-                        <a href="?val=AllBlog">Blog All</a>
-                        <a href="?val=AddBlog">Add Blog</a>
+                        <a href="?val=AddBlog" style="font-size: 15px;">Add Blog</a>
+                        <a href="?val=AllBlog" style="font-size: 15px;">Blog All</a>                        
                     </div>
                 </a>
                 <a href="?val=">Dashbord</a>
@@ -61,17 +76,23 @@ if (!isset($_COOKIE[md5("ad_name")])) {
             <div class="das_main_bar"  style= "height: 600px; overflow-y: scroll;">
                 <?php
                 
-
-                if (isset($_GET['val'])) {
-                    $val= $_GET['val'];
-                    if ($val=="Dashbord") {
-                        include_once("cb_admin/inc/dasbord.php");
-                    }elseif ($val=="AllBlog") {
-                        include_once("cb_admin/inc/allBlog.php");
-                    }elseif ($val=="AddBlog") {
-                        include_once("cb_admin/inc/AddBlog.php");
+                if (isset($_GET["action"])) {
+                    $action = $_GET['action'];
+                    if ($action=="blogup") {
+                        include_once("cb_admin/inc/blogup.php");
                     }
-                    
+                }else{
+                    if (isset($_GET['val'])) {
+                        $val= $_GET['val'];
+                        if ($val=="Dashbord") {
+                            include_once("cb_admin/inc/dasbord.php");
+                        }elseif ($val=="AllBlog") {
+                            include_once("cb_admin/inc/allBlog.php");
+                        }elseif ($val=="AddBlog") {
+                            include_once("cb_admin/inc/AddBlog.php");
+                        }
+                        
+                    }
                 }
                 
                 

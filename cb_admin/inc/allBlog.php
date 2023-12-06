@@ -2,13 +2,14 @@
 
 if (isset($_GET['action'])) {
     $check = $_GET['action'];
+    $id = $_GET['id'];
     if ($check==="delete") {
-        echo "delete";
+        header("location:../php/core.php?action=delete&&id=$id");
     }elseif ($check==="update") {
-        echo "update";
+        header("location: ../../admin.php?action=blogup&&id=$id");
     }
 }else {
-    include_once("./cb_admin/php/fun/fun.php");
+include_once("./cb_admin/php/fun/fun.php");
 $conn = new addmin;
 ?>
 
