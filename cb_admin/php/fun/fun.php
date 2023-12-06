@@ -44,6 +44,31 @@ class addmin{
         }        
     }
 
+    public function add_blog($data) {
+        $title = $data['title'];
+        $dsc = $data['dsc'];
+        $mata = $data['mata'];
+        $catagory = $data['catagory'];
+        $img_t = $_FILES["img"]['tmp_name'];
+        $img_name = $_FILES["img"]['name'];
+        $type = $_FILES["img"]['type'];
+        $size = $_FILES["img"]['size'];
+       
+        
+
+        $sql = "INSERT INTO blog (title,dsc,mata,img,catagory)VALUES('$title','$dsc','$mata','$img_name','$catagory')";
+        $result = $this->conn->query($sql);
+        if ($result) {
+            echo "succs";
+            move_uploaded_file($img_t,"../../assets/images/".$img_name);
+            header("location:../../admin.php?val=AddBlo&&add=ok");
+        }else {
+            die("Sumthin problem".$result);
+        }
+        
+        
+    }
+
     public function blog_update($id,$data) {
         if ($data) {
             $title = $data['title'];

@@ -47,6 +47,7 @@ if (!isset($_COOKIE[md5("ad_name")])) {
                 <a href="javascript:void(0);"  onclick="myFunction('blog_ad')">Blog >>
                     <div id="blog_ad" style="display: none;">
                         <a href="?val=AllBlog">Blog All</a>
+                        <a href="?val=AddBlog">Add Blog</a>
                     </div>
                 </a>
                 <a href="?val=">Dashbord</a>
@@ -67,6 +68,8 @@ if (!isset($_COOKIE[md5("ad_name")])) {
                         include_once("cb_admin/inc/dasbord.php");
                     }elseif ($val=="AllBlog") {
                         include_once("cb_admin/inc/allBlog.php");
+                    }elseif ($val=="AddBlog") {
+                        include_once("cb_admin/inc/AddBlog.php");
                     }
                     
                 }

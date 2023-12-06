@@ -8,6 +8,13 @@ if (isset($_POST['login'])) {
     
 }
 
+if (isset($_POST['b_sub'])) {
+    $conn->add_blog($_POST);
+    
+    
+    
+}
+
 
 
 ?>
