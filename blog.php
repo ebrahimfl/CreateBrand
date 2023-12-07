@@ -3,13 +3,27 @@
     <link rel="stylesheet" href="assets/css/blog.css">
 <?php require_once "include/headerM.php"; ?>
 
-<?php 
-$idn = isset($_GET['blogid']);
-    if ($idn) {
-        header("location:assets/php/eidt.php");
-    }
 
-?>
+
+    <?php 
+    $idn = isset($_GET['blogid']);
+    if ($idn) {
+        
+     ?>
+     
+     <!-- see detels code -->
+     <div class="container">
+        see details
+     </div>
+        
+        
+    
+    <?php
+     }else {
+    
+    ?>
+
+
 
 
 <section id="blog-m">
@@ -36,7 +50,7 @@ $idn = isset($_GET['blogid']);
                     <img src="?blog-img/<?php echo $img; ?>" alt="" class="blog-img">
                 </a>
                 <a href="?blogid=<?php echo $id; ?>">
-                    <h1 class="title"><?php echo $dsc; ?></h1>
+                    <h1 class="title"><?php echo $title; ?></h1>
                 </a>
                 <a href="?blogid=<?php echo $id; ?>">
                     <p class="meta-d"><?php echo $mata; ?></p>
@@ -55,4 +69,6 @@ $idn = isset($_GET['blogid']);
 
 
 
-<?php require_once "include/footer.php"; ?>
+<?php
+}
+require_once "include/footer.php"; ?>

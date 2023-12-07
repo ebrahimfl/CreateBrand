@@ -1,4 +1,11 @@
+<?php
 
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    header("location:cb_admin/inc/blogup.php?id=$id");
+}
+
+?>
 
 <?php require_once "include/header.php"; ?>
 <link rel="stylesheet" href="cb_admin/css/adminM.css">
@@ -80,6 +87,7 @@ if (isset($_GET["add"])) {
                     $action = $_GET['action'];
                     if ($action=="blogup") {
                         include_once("cb_admin/inc/blogup.php");
+                        
                     }
                 }else{
                     if (isset($_GET['val'])) {

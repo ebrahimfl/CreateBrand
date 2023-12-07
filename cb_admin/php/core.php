@@ -22,7 +22,10 @@ if (isset($_GET["action"])) {
     }
 }
 if (isset($_POST["blogup"])) {
-   
+   if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+        $conn->blog_update($id,$_POST);
+   }
     
 }
 

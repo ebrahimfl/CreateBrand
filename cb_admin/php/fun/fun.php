@@ -40,8 +40,20 @@ class addmin{
         if ($result->num_rows> 0) {
             $data = $this->conn->query($sql);
             return $data;
-
         }        
+    }
+
+    public function show_col($table_name,$id)  {
+        $show = "SELECT * FROM $table_name WHERE id=$id;";
+        $sql_s = mysqli_query($this->conn,$show);
+        if ($sql_s) {
+            $data = mysqli_query($this->conn,$show);
+            return $data;
+        }else {
+            echo "no";
+        }
+        
+        
     }
 
     public function add_blog($data) {
@@ -63,13 +75,13 @@ class addmin{
             move_uploaded_file($img_t,"../../assets/images/".$img_name);
             header("location:../../admin.php?val=AddBlog&&add=ok");
         }else {
-            die("Sumthin problem".$result);
+            dir("Sumthin problem");
         }
         
         
     }
 
-    public function blog_update($id,$data) {
+    public function blog_update($id,$data) {        
         if ($data) {
             $title = $data['title'];
             $dsc = $data['dsc'];
@@ -79,7 +91,7 @@ class addmin{
 
             $sql = "UPDATE blog SET title='$title',dsc='$dsc',mata='$mata',img='$img',catagory='$catagory' WHERE id=$id";
             if (mysqli_query($this->conn,$sql)) {
-               echo "ok";
+               header("location:../?val=AllBlog");
             }else {
                 echo"sumthing is rong";
             }
@@ -95,10 +107,12 @@ class addmin{
         if ($result) {
             return "sucssec";
         }else {
-            die("NO".$result);
+            dir("NO");
         }
         
     }
+
+  
 
 
 }
