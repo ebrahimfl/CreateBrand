@@ -86,11 +86,13 @@ class addmin{
             $title = $data['title'];
             $dsc = $data['dsc'];
             $mata = $data['mata'];
-            $img = $data['img'];
+            $img = $_FILES['img']['name'];
+            $img_t = $_FILES['img']['tmp_name'];            
             $catagory = $data['catagory'];
 
             $sql = "UPDATE blog SET title='$title',dsc='$dsc',mata='$mata',img='$img',catagory='$catagory' WHERE id=$id";
             if (mysqli_query($this->conn,$sql)) {
+                move_uploaded_file($img_t,"../../assets/images/".$img);
                header("location:../?val=AllBlog");
             }else {
                 echo"sumthing is rong";

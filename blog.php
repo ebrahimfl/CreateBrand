@@ -19,7 +19,7 @@
         
     
     <?php
-     }else {
+     }
     
     ?>
 
@@ -47,7 +47,7 @@
         
             <div class="sengel-blog">
                 <a href="?blogid=<?php echo $id; ?>">
-                    <img src="?blog-img/<?php echo $img; ?>" alt="" class="blog-img">
+                    <img src="assets/images/<?php echo $img; ?>" alt="" class="blog-img">
                 </a>
                 <a href="?blogid=<?php echo $id; ?>">
                     <h1 class="title"><?php echo $title; ?></h1>
@@ -58,7 +58,7 @@
                 <div class="btn"><a href="?blogid=<?php echo $id; ?>" >See More</a></div>
             </div>           
                       
-            <?php }  } ?>
+            <?php   } ?>
 
         </div>
     </div>
