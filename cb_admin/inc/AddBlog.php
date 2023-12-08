@@ -7,8 +7,6 @@
     <input type="text" name="catagory" id="catagory" placeholder="Catagory" required>
     <input type="file" name="img" id="img" value="Upload You Thamble">
     <input type="submit" value="Submite" name="b_sub">
-    
-    
 </form>
 
 

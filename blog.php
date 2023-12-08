@@ -4,27 +4,46 @@
 <?php require_once "include/headerM.php"; ?>
 
 
-
+<!-- style add korte hobe singel blog -->
     <?php 
     $idn = isset($_GET['blogid']);
     if ($idn) {
         
+        $id = $_GET['blogid'];
+        
+        $sql= "SELECT * FROM blog WHERE id='$id'";
+            $qurye = mysqli_query($conn,$sql);
+            if ($qurye) {            
+            $data = mysqli_fetch_array($qurye);                                      
+            $title = $data['title'];
+            $dsc = $data['dsc'];
+            $mata = $data['mata'];
+            $img = $data['img'];
+            $catagory = $data['catagory'];
+            $id = $data['id'];  
+                     
+            }
+    
      ?>
+            <!-- see detels code -->
+            <section>
+                <div class="container">
+                    <div class="blog_d">
+                        <h1><?php echo $title; ?></h1>
+                        <img src="assets/images/<?php echo $img;?>" alt="<?php echo $title; ?>">
+                        <p>  <?php echo $dsc; ?> </p>
+                    </div>            
+                </div>
+            </section>
+        <?php
+        }
+        //******* all blog * ******
+        else {
+            
+        
+        ?>
      
-     <!-- see detels code -->
-     <div class="container">
-        see details
-     </div>
-        
-        
-    
-    <?php
-     }
-    
-    ?>
-
-
-
+     
 
 <section id="blog-m">
     <div class="container">
@@ -45,6 +64,7 @@
             
         ?>           
         
+        
             <div class="sengel-blog">
                 <a href="?blogid=<?php echo $id; ?>">
                     <img src="assets/images/<?php echo $img; ?>" alt="" class="blog-img">
@@ -60,6 +80,8 @@
                       
             <?php   } ?>
 
+            
+
         </div>
     </div>
 </section>
@@ -70,5 +92,5 @@
 
 
 <?php
-}
+}}
 require_once "include/footer.php"; ?>

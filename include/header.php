@@ -1,5 +1,7 @@
 <?php
 include_once("assets/php/connect.php");
+include_once("assets/php/function.php");
+
 
 
 
