@@ -76,7 +76,9 @@
                     </li>
                     
                     <li><a href="blog.php">Blog</a></li>
-
+                    <?php if (isset($_COOKIE[md5('name')])) {  ?>
+                    <li><a href="" style="padding: 0;"><img src="assets/images/e.jpg" alt="" srcset="" width="50px" height="50px" style="border-radius: 25px;"></a></li>
+                    <?php } ?>
                 </ul>
                 <div class="menu-icon">
                     <div></div>
