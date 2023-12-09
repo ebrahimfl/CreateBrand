@@ -12,7 +12,7 @@ if (isset($_GET['action'])) {
 include_once("./cb_admin/php/fun/fun.php");
 $conn = new addmin;
 ?>
-
+<link rel="stylesheet" href="cb_admin/css/allblog.css">
 
  <table>
     <tr>
@@ -22,6 +22,7 @@ $conn = new addmin;
         <th>Mata Dsc</th>
         <th>IMG</th>
         <th>Catagory</th>
+        <th>Action</th>
     </tr>
     
     <?php 
@@ -43,7 +44,7 @@ $conn = new addmin;
         <td><?php echo $mata; ?></td>
         <td><?php echo $img; ?></td>
         <td><?php echo $catagory; ?></td>
-        <td><a href="cb_admin/inc/allBlog.php?action=delete&&id=<?php echo $id; ?>">Delete</a> | <a href="cb_admin/inc/allBlog.php?action=update&&id=<?php echo $id; ?>">Update</a></td>
+        <td><a href="cb_admin/inc/allBlog.php?action=delete&&id=<?php echo $id; ?>">Delete</a>  <a href="cb_admin/inc/allBlog.php?action=update&&id=<?php echo $id; ?>">Update</a></td>
     </tr>
 <?php
     
