@@ -7,8 +7,8 @@ class funtion_a{
         $servername = "localhost";
         $username = "root";
         $password = "";
-        $dbName = "$database_name";
-        $this->connect = mysqli_connect($servername,$username,$password,$database_name);
+        $dbName = $database_name;
+        $this->connect = mysqli_connect($servername,$username,$password,$dbName);
 
     }
     public function database($database_name) {
