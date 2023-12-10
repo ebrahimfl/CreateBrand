@@ -1,0 +1,142 @@
+section {
+    padding: 60px 100px;
+}
+
+.main-text {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #000;
+ }
+ 
+ .main-text h3 {
+    font-size: 38px;
+    font-weight: 700;
+ }
+ 
+
+ 
+ 
+ .main-text span {
+    font-weight: 200;
+    color: #000;
+    font-size: .8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+ }
+ .section-pricing {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    grid-gap: 2rem;
+ }
+.pricing-box .box-img img {
+    width: 100px;
+ }
+ .section-pricing .pricing-box {
+    flex: 1 1 18rem;
+    padding: 2rem 1rem 2rem;
+    text-align: center;
+    background: #e5dbdb;
+    transition: transform .4s;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px #d1bdc9;
+}
+ .pricing-btn {
+    width: auto;
+    justify-content: center;
+ }
+ .pricing-box:hover{
+    transform: translateY(-.7rem);
+ }
+
+ .pricing-box h3 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+ }
+ .pricing-box  h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 10px;
+ }
+ .pricing-box h2 span {
+    color: #fd3434;
+    font-size: 1.5rem;
+ }
+ .pricing-box p {
+    margin: .5rem 0 1.5rem 0 ;
+    font-weight: 300;
+    letter-spacing: 1px;
+    color: #000000;
+    line-height: 1.6;
+ }
+ .pricing-box p img {
+    width: 30px;
+ 
+ }
+ 
+
+ 
+.btn-box {
+    display: flex;
+    justify-content: center;
+    height: 45px;
+ }
+ .btn-box a.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 100%;
+    background: #fd3434;
+    color:#000;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    box-shadow: 2px 2px 2px #ddd;
+    transition: .5s ease;
+    font-weight: 600;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    border: 2px solid #ddd;
+ }
+ a.btn:hover{
+    color:#fff;
+ }
+ a.btn::before{
+    content:"" ;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #000;
+    width: 0;
+    height: 100%;
+    z-index: -1;
+    transition: .4s;
+ }
+ a.btn:hover::before {
+    width: 100%;
+ }
+
+ /* support section start from here  */
+#support {
+    padding: 0 100px;
+}
+.section-support .support-boxing{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.section-support .support-box{
+   margin: 50px;
+}
+.section-support .support-box h2{
+    font-size: 1.5rem;
+    padding-bottom: 20px;
+    text-align: left;
+ }
+ .section-support .support-box p{
+    font-size: 1rem;
+ }
