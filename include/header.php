@@ -1,5 +1,9 @@
 <?php
-include_once("assets/php/connect.php");
+include_once("assets/php/function.php");
+$conn_f = new databese();
+$conn_f->connect();
+$conn =
+
 include_once("assets/php/function.php");
 
 

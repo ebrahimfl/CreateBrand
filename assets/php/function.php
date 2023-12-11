@@ -1,50 +1,41 @@
 <?php
 
 
-class funtion_a{
-    private $conn,$connect;
-    function __construct($database_name){
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbName = $database_name;
-        $this->connect = mysqli_connect($servername,$username,$password,$dbName);
-
+class databese{
+    private   $servername = "localhost", $username = "root", $password = "",$database_name="createbrand";
+    private $connect;
+    
+    public function connect(){        
+        $this->connect = mysqli_connect($this->servername,$this->username,$this->password,$this->database_name);  
+             
     }
-    public function database($database_name) {
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
+
+    public function database() {        
         // Create connection
-        $this->conn = mysqli_connect($servername,$username,$password);
+        $conn = mysqli_connect($this->servername,$this->username,$this->password);
         // Check connection
-        if (!$this->conn) {
-            die("Connection failed: " . $this->conn);
+        if (!$conn) {
+            die("Connection failed: " . $conn);
         }
 
         // Create database
-        $dataC = "CREATE DATABASE $database_name";
-        $qure = mysqli_query($this->conn,$dataC);
+        $dataC = "CREATE DATABASE $this->database_name";
+        $qure = mysqli_query($conn,$dataC);
         
         if (!$qure) {
-            die("Somthin rong: ". mysqli_error($this->conn)." fix: database fun header.php theke coment koro" );
+            die("Somthin rong: ". mysqli_error($conn)." fix: database fun header.php theke coment koro" );
             
 
         }else {
-            echo "succs";
+            echo "succs </br>";
 
         }
 
-
-        
-        
-        
-
-        mysqli_close($this->conn);
+        mysqli_close($conn);
     }
 
 
-    public function admin_t(){
+    public function table(){
         // admin table
        $qure = "CREATE TABLE admin ( id int(50) NOT NULL AUTO_INCREMENT PRIMARY KEY,
        ad_name	text,
@@ -90,25 +81,26 @@ class funtion_a{
            die("user table error". $this->connect->error);
        }
 
+       //service tabel
+       $qure = "CREATE TABLE service (
+        id INT(50) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        ser_name TEXT,
+        ser_dec TEXT,
+        ser_img LONGTEXT,
+        date DATETIME DEFAULT CURRENT_TIMESTAMP
+    );";
+        
+       if ($this->connect->query($qure) === TRUE) {
+          echo"user table ok <br>";
+       }else{
+           die("user table error". $this->connect->error);
+       }
+
 
         mysqli_close($this->connect);       
         
     }
     
-
-
-
-
-    
-
-
-
-
-
-  
-    
-
-   
 
 
 
