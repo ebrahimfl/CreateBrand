@@ -87,55 +87,7 @@
 </section>
 
 
-<!-- monuwar blog page start from here  -->
-<section id="blogg" >
-        <div class="blog-box">
-            <div class="blog-img">
-                <img src="assets/images/1.jpg" alt="">
-            </div>
-            <div class="blog-details">
-                <h1>Visiting the solent university</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque corrupti commodi corporis doloribus porro dolore.</p>
-                <a href="#">CONTINUE READING </a>
-            <h2>13/01</h2>
-            </div>
-        </div>
-        <div class="blog-box">
-            <div class="blog-img">
-            <img src="assets/images/1.jpg" alt="">
-            </div>
-            <div class="blog-details">
-                <h1>Visiting the solent university</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque corrupti commodi corporis doloribus porro dolore.</p>
-                <a href="#">CONTINUE READING </a>
-            <h2>13/01</h2>
-            </div>
-        </div>
-        <div class="blog-box">
-            <div class="blog-img">
-            <img src="assets/images/1.jpg" alt="">
-            </div>
-            <div class="blog-details">
-                <h1>Visiting the solent university</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque corrupti commodi corporis doloribus porro dolore.</p>
-                <a href="#">CONTINUE READING </a>
-            <h2>13/01</h2>
-            </div>
-        </div>
-        <div class="blog-box">
-            <div class="blog-img">
-            <img src="assets/images/1.jpg" alt="">
-            </div>
-            <div class="blog-details">
-                <h1>Visiting the solent university</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque corrupti commodi corporis doloribus porro dolore.</p>
-                <a href="#">CONTINUE READING </a>
-            <h2>13/01</h2>
-            </div>
-        </div>
-    </section>
 
-<!-- monuwar blog page end from here  -->
 
 
 <?php
