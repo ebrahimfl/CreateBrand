@@ -3,7 +3,7 @@
 
 class databese{
     private   $servername = "localhost", $username = "root", $password = "",$database_name="createbrand";
-    private $connect;
+    public $connect;
     
     public function connect(){        
         $this->connect = mysqli_connect($this->servername,$this->username,$this->password,$this->database_name);  
@@ -27,7 +27,7 @@ class databese{
             
 
         }else {
-            echo "succs </br>";
+            echo "succs";
 
         }
 
@@ -82,13 +82,11 @@ class databese{
        }
 
        //service tabel
-       $qure = "CREATE TABLE service (
-        id INT(50) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-        ser_name TEXT,
-        ser_dec TEXT,
-        ser_img LONGTEXT,
-        date DATETIME DEFAULT CURRENT_TIMESTAMP
-    );";
+       $qure = "CREATE TABLE service (id int(50) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+            ser_name	text,
+            ser_dec text,
+            ser_img longtext
+        );";
         
        if ($this->connect->query($qure) === TRUE) {
           echo"user table ok <br>";
