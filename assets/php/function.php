@@ -1,5 +1,15 @@
 <?php
 
+class fun{
+    function __construct() {
+        $conne = new databese;
+        $conne->connect();
+        $conn =$conne->connect;
+        
+      }
+
+}
+
 
 class databese{
     private   $servername = "localhost", $username = "root", $password = "",$database_name="createbrand";
