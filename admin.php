@@ -72,7 +72,12 @@ if (isset($_GET["add"])) {
                         <a href="?val=AllBlog" style="font-size: 15px;">Blog All</a>                        
                     </div>
                 </a>
-                <a href="?val=">Dashbord</a>
+                <a href="javascript:void(0);" onclick="myFunction('service')" >Service >>
+                    <div id="service" style="display: none;">
+                        <a href="?val=Service" style="font-size: 15px;">Service</a>
+                                               
+                    </div>
+                </a>
                 <a href="?val=Dashbord">Dashbord</a>
                 <a href="?val=Dashbord">Dashbord</a>
                 <a href="?val=Dashbord">Dashbord</a>
@@ -98,6 +103,8 @@ if (isset($_GET["add"])) {
                             include_once("cb_admin/inc/allBlog.php");
                         }elseif ($val=="AddBlog") {
                             include_once("cb_admin/inc/AddBlog.php");
+                        }elseif ($val=="Service") {
+                            include_once("cb_admin/inc/Service.php");
                         }
                         
                     }

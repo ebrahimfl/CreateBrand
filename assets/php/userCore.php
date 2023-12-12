@@ -1,6 +1,9 @@
 <?php
 
-include_once("connect.php");
+include_once("function.php");
+$conn_f = new databese();
+$conn_f->connect();
+$conn = $conn_f->connect;
 
 if (isset($_POST['signup'])) {
     $name = $_POST['name'];
