@@ -1,10 +1,24 @@
 <?php
 
 class fun{
+    private $conn;
     function __construct() {
         $conne = new databese;
         $conne->connect();
-        $conn =$conne->connect;
+        $this->conn =$conne->connect;
+        
+      }
+    //   show function
+      public function show($table_name,) {
+        $qur = "SELECT * FROM $table_name";
+        $conn_c = mysqli_query($this->conn,$qur);
+        if ($conn_c->num_rows> 0) {
+            $data = $this->conn->query($qur);
+            return $data;
+        }else {
+            return("No Data");
+        }
+
         
       }
 
