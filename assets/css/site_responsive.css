@@ -1,7 +1,5 @@
  /* ^Medium Device Media Query Start */
  @media(max-width:1150px){
-
-
      /* === Nab Bar Responsive Start === */
      .menu-icon {
         display: flex;
@@ -107,11 +105,23 @@
     }
 
 }
+@media(max-width:1170px) {
+    .counter_wrapper{
+        display: grid !important;
+        grid-template-columns: 50% 50% ;
+    }
+}
 
- @media(max-width:850px) {
-
-
-
+ @media(max-width:1090px) {
+    #about .row{
+        margin-top: 10px !important;
+    }
+    .slider{
+        height: 350px !important;
+      }
+      #about .row .text{
+        width: 100% !important;
+      }
      /* === Contact  Section Responsive Start === */
      #contact .row {
          flex-direction: column;
@@ -135,22 +145,49 @@
 
     #about .container .row{
         flex-direction: column;
-        padding: 40px 20px;
     }
     #about .container .row .text{
         width: 100%;
     }
 
  }
+ @media(max-width:750px) {
+    .top-bar #first{
+        display: none !important;
+    }
+    .top-bar .container{
+        justify-content: end !important;
+    }
+    #about .slider .card{
+        width: 280px !important;
+        height: 290px !important;
+        right: 0px !important;
+        border-radius: 0 !important;
+    }
+ }
 
  /* ^Medium Device Media Query End */
 
 
  @media(max-width:588px) {
+    .slider{
+        height: 290px !important;
+      }
+      .services .card{
+        min-width: 280px !important;
+        height: 390px !important;
+    }
+    .counter_wrapper .card{
+        max-width: 240px !important;
+    }
+    .counter_wrapper{
+        grid-template-columns: 100% ;
+        justify-content: center !important;
+    }
 
     h1{
         font-size: 36px !important;
-        margin-bottom: 60px !important;
+        margin-bottom: 50px !important;
     }
 
 
@@ -172,14 +209,15 @@
  /* ^Extra Small Device Media Query Start */
 
  @media(max-width:458px) {
+    .slider{
+        height: 290px !important;
+      }
     h2{
         font-size: 30px !important;
     }
      /* === Top Bar Responsive Start === */
 
-     .top-bar{
-        display:none;
-    }
+   
     header.active_nav {
         position: sticky;
         top: 0px;

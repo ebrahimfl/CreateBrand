@@ -1,13 +1,15 @@
 <?php
-include_once("assets/php/connect.php");
+include_once("assets/php/function.php");
+$conn_f = new databese();
+$conn_f->connect();
+$conn = $conn_f->connect;
+
 include_once("assets/php/function.php");
 
 
 
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 

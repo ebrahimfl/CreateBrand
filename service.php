@@ -3,21 +3,7 @@
 <?php require_once "include/headerM.php"; ?>
 
 <main>
-        <section>
-            <div class="container home">
-                <div class="home-img">
-                    <img src="assets/images/service/Home.webp" alt="">
-                </div>
-                <div class="home-text">
-                    <h1>do you need a world class website</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum repudiandae ex nam, nostrum inventore sunt et eum accusantium! Aliquid perferendis dolorum nam autem aspernatur unde harum doloremque quae quo? Pariatur.</p>
-                    <div class="BTN">
-                        <a href="#" class="btn1">CHEK OUR PROTPOKIO</a>
-                        <a href="#" class="btn2">CHECK OUR PRICING</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
 
         <!-- ============ section 2 start here ========== -->
         <section>
@@ -29,45 +15,32 @@
             <!-- =========== section card ========= -->
             <div class="main-card container">
                 <!-- ========= card 1 ======== -->
+
+                <?php 
+                    include_once("./assets/php/function.php");
+                    $show = new fun();
+                    $ser = $show->show("service");
+                    while ($conn= mysqli_fetch_assoc($ser)) {
+                        $id = $conn['id'];
+                        $ser_name = $conn['ser_name'];
+                        $s_price = $conn['s_price'];
+                        $ser_dec = $conn['ser_dec'];
+                        $ser_img = $conn['ser_img'];
+                        $date = $conn['date'];
+                        
+                                      
+                ?>
                 <article class="main-article">
                     <div class="article-img">
-                        <img src="assets/images/service/website.png" alt="">
+                        <img src="assets/images/service/<?php echo $ser_img?>" alt="<?php echo $ser_name?>">
                     </div>
                     <div class="article-text">
-                        <h4>Websites</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis ut repellat aut asperiores autem deleniti nulla labore est incidunt distinctio, aspernatur dolore repellendus amet quia maxime voluptate adipisci dolor molestias.</p>
+                        <h4><?php echo $ser_name?></h4>
+                        <p class="price"><b>Price: <?php echo $ser_img?></b></p>
+                        <p><?php echo $ser_dec?></p>                        
                     </div>
                 </article>
-                <!-- ============== card 2 =========== -->
-                <article class="main-article">
-                    <div class="article-img">
-                        <img src="assets/images/service/ecomarce-icon.png" alt="">
-                    </div>
-                    <div class="article-text">
-                        <h4>Websites</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis ut repellat aut asperiores autem deleniti nulla labore est incidunt distinctio, aspernatur dolore repellendus amet quia maxime voluptate adipisci dolor molestias.</p>
-                    </div>
-                </article>
-                <!-- =============== card 3 ============== -->
-                 <article class="main-article">
-                    <div class="article-img">
-                        <img src="assets/images/service/web-aplication.png" alt="">
-                    </div>
-                    <div class="article-text">
-                        <h4>Websites</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis ut repellat aut asperiores autem deleniti nulla labore est incidunt distinctio, aspernatur dolore repellendus amet quia maxime voluptate adipisci dolor molestias.</p>
-                    </div>
-                </article>
-                <!-- ============ card 4 ================ -->
-                <article class="main-article">
-                    <div class="article-img">
-                        <img src="assets/images/service/management-icon.png" alt="">
-                    </div>
-                    <div class="article-text">
-                        <h4>Websites</h4>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis ut repellat aut asperiores autem deleniti nulla labore est incidunt distinctio, aspernatur dolore repellendus amet quia maxime voluptate adipisci dolor molestias.</p>
-                    </div>
-                </article>
+               <?php } ?>
             </div>
         </section>
         <!-- ====================== section 3 start here ================= -->
