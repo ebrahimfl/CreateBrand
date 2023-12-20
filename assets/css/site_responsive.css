@@ -158,6 +158,12 @@
     .top-bar .container{
         justify-content: end !important;
     }
+    #about .slider .card{
+        width: 280px !important;
+        height: 290px !important;
+        right: 0px !important;
+        border-radius: 0 !important;
+    }
  }
 
  /* ^Medium Device Media Query End */
@@ -165,7 +171,7 @@
 
  @media(max-width:588px) {
     .slider{
-        height: 250px !important;
+        height: 290px !important;
       }
       .services .card{
         min-width: 280px !important;
@@ -204,7 +210,7 @@
 
  @media(max-width:458px) {
     .slider{
-        height: 230px !important;
+        height: 290px !important;
       }
     h2{
         font-size: 30px !important;

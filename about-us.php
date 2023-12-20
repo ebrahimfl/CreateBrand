@@ -7,29 +7,13 @@
     <div class="container">
         <div class="slider">
             <div class="card">
-                <img src="assets/images/1.jpg" alt="" style='width:60px;height:60px;border-radius: 50%;'>
+                <img src="assets/images/1.jpg" alt="" class="card_img">
                 <h4>Redwan Hussain Shawon</h4>
                 <p>Full-Stack Developer</p>
                 <img src="assets/images/logo.png" alt="" class='logo'>
             </div>
-            <div class="card">
-                <img src="assets/images/1.jpg" alt="" style='width:60px;height:60px;border-radius: 50%;'>
-                <h4>Shawon</h4>
-                <p>Full-Stack Developer</p>
-                <img src="assets/images/logo.png" alt="" class='logo'>
-            </div>
-            <div class="card">
-                <img src="assets/images/1.jpg" alt="" style='width:60px;height:60px;border-radius: 50%;'>
-                <h4>Hussain </h4>
-                <p>Full-Stack Developer</p>
-                <img src="assets/images/logo.png" alt="" class='logo'>
-            </div>
-            <div class="card">
-                <img src="assets/images/1.jpg" alt="" style='width:60px;height:60px;border-radius: 50%;'>
-                <h4>Me </h4>
-                <p>Full-Stack Developer</p>
-                <img src="assets/images/logo.png" alt="" class='logo'>
-            </div>
+            
+        
             <div class="img">
                 <img src="https://media.istockphoto.com/id/914886270/photo/close-up-of-fresh-flame-grilled-burgers-displayed-in-a-row-at-food-market.jpg?s=2048x2048&w=is&k=20&c=zAHiTsjq8ua5TPa3ap01c-WRmiSChSXF_BvvckxGm8s=" alt="">
             </div>
