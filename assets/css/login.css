@@ -48,8 +48,9 @@
     #login .row form input{
         border: none;
         outline: none;
+        outline: none;
         background-color: transparent;
-
+        width: 100%;
     }
     .submit{
         margin-top: 10px;

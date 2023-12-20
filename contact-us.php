@@ -36,7 +36,9 @@
                     <label for="address">Your Message</label>
                     <textarea id="message" placeholder="enter your address" style="height: 140px;"></textarea>
                 </div>
-                <button type='submit' id="contactBtn">Submit</button>
+                <div style='display:inline-block'>
+                    <input type="submit"  id="contactBtn" class='btn_normal' value="Submit">
+                </div>
             </form>
             <div class="contact_details">
                 <h3>Let's Keep in Touch</h3>

@@ -6,45 +6,50 @@
 <body>
     <header>
 
-        
-            <section class="top-bar">
-                <div class="container">
-                    
-                        <a href="" style="align-items: center; display:flex">
+
+        <section class="top-bar">
+            <div class="container" style='display:flex;justify-content: space-between;'>
+
+                <div style='display:flex;gap:30px;align-items:center' id='first'>
+                    <a href="" style="align-items: center; display:flex">
                         <img src="assets/icons/phone_icons.png" alt="phone">
                         <h3 class="first-h3">01980533510</h3>
-                        </a>
-                        <a href="" style="align-items: center; display:flex">
-                            <img src="assets/icons/top-mail.png" alt="Mail">
-                            <h3>createbrand.team@gmail.com</h3>
-                        </a>
+                    </a>
+                    <a href="" style="align-items: center; display:flex">
+                        <img src="assets/icons/top-mail.png" alt="Mail">
+                        <h3>createbrand.team@gmail.com</h3>
+                    </a>
+                </div>
 
-                    
-                
 
                 <!--login information-->
-                
+                <div style='display:flex;gap:30px;align-items:center'>
                     <?php
-                        if (!isset($_COOKIE[md5('name')])) {
+                    if (!isset($_COOKIE[md5('name')])) {
                     ?>
-                            <a href="loginSign.php?log=login" name="login" class="userInfLog">Login</a>
-                        <a href="loginSign.php?log=signup" name="signup" class="userInfLog">Create Account</a>
+                        <a href="loginSign.php?log=login" style="align-items: center; display:flex" name="login" class="userInfLog">
+                            <img src="assets/icons/login.png" alt="phone">
+                            <h3 class="first-h3">Login</h3>
+                        </a>
+                        <a href="loginSign.php?log=signup" name="signup" class="userInfLog" style="align-items: center; display:flex"> <img src="assets/icons/create-account.png" alt="phone">
+                            <h3 class="first-h3">Create Account</h3>
+                        </a>
                     <?php
-                        }else{
+                    } else {
                     ?>
-                            <a href="loginSign.php?log=logout" name="logout" class="userInfLog">Logout</a>
+                        <a href="loginSign.php?log=logout" name="logout" class="userInfLog">Logout</a>
                     <?php
-                        }
-                    
+                    }
+
                     ?>
-                    
-                
-                
-                <!-- End login information-->
-                
+
                 </div>
-            </section>
-        
+
+                <!-- End login information-->
+
+            </div>
+        </section>
+
         <nav>
             <div class="container">
                 <div class="logo">
@@ -52,7 +57,7 @@
                 </div>
                 <ul class="main_menu">
                     <li><a href="index.php">Home</a></li>
-                    <li><a class="dorp_down_a"  href="service.php">Our Services <img src="assets/icons/mingcute_down-line.png"></a>
+                    <li><a class="dorp_down_a" href="service.php">Our Services <img src="assets/icons/mingcute_down-line.png"></a>
                         <div class="drop_menu">
                             <ul class="drop-down">
                                 <li><a href="">Web Development </a></li>
@@ -74,10 +79,10 @@
                             </ul>
                         </div>
                     </li>
-                    
+
                     <li><a href="blog.php">Blog</a></li>
                     <?php if (isset($_COOKIE[md5('name')])) {  ?>
-                    <li><a href="" style="padding: 0;"><img src="assets/images/e.jpg" alt="" srcset="" width="50px" height="50px" style="border-radius: 25px;"></a></li>
+                        <li><a href="" style="padding: 0;"><img src="assets/images/e.jpg" alt="" srcset="" width="50px" height="50px" style="border-radius: 25px;"></a></li>
                     <?php } ?>
                 </ul>
                 <div class="menu-icon">
@@ -89,4 +94,3 @@
         </nav>
     </header>
     <main>
-

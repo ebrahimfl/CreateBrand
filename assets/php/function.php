@@ -9,7 +9,7 @@ class fun{
         
       }
     //   show function
-      public function show($table_name,) {
+      public function show($table_name,){
         $qur = "SELECT * FROM $table_name";
         $conn_c = mysqli_query($this->conn,$qur);
         if ($conn_c->num_rows> 0) {
@@ -18,15 +18,16 @@ class fun{
         }else {
             return("No Data");
         }
-
         
       }
 
 }
 
-
 class databese{
-    private   $servername = "localhost", $username = "root", $password = "",$database_name="createbrand";
+    private   $servername = "localhost",
+	$username = "root",
+	$password = "",
+	$database_name="createbrand";
     public $connect;
     
     public function connect(){        
@@ -34,7 +35,7 @@ class databese{
              
     }
 
-    public function database() {        
+    public function database(){        
         // Create connection
         $conn = mysqli_connect($this->servername,$this->username,$this->password);
         // Check connection
@@ -51,17 +52,16 @@ class databese{
             
 
         }else {
-            echo "succs";
+            echo "success";
 
         }
 
         mysqli_close($conn);
     }
 
-
     public function table(){
         // admin table
-       $qure = "CREATE TABLE admin ( id int(50) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+       $qure = "CREATE TABLE admin (id int(50) NOT NULL AUTO_INCREMENT PRIMARY KEY,
        ad_name	text,
        ad_pass	varchar(50),
        ad_email varchar(30) UNIQUE,
@@ -117,8 +117,6 @@ class databese{
        }else{
            die("user table error". $this->connect->error);
        }
-
-
         mysqli_close($this->connect);       
         
     }
