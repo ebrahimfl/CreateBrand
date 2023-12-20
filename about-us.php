@@ -40,35 +40,30 @@
         </div>
 
         <div class="services">
-            <div class="card">
+        <?php 
+            include_once("assets/php/function.php");
+            $fun = new fun();
+            $datat = $fun->show("service");
+            
+
+            while ($data= $datat->fetch_assoc()) {
+                 $id = $data['id'];
+                 $ser_name = $data['ser_name'];
+                 $s_price = $data['s_price'];
+                 $ser_dec = $data['ser_dec'];
+                 $ser_img = $data['ser_img'];
+                 $date = $data['date'];           
+            
+        ?>
+            <div class="card">                
                 <div class="card_img">
-                    <img src="assets/icons/website.png" alt="">
+                    <img src="assets/icons/<?php echo $ser_img;?>" alt="">
                 </div>
-                <h3>Website Development</h3>
-                <p>Team Web Solutions BD can provide you a complete eCommerce solutions</p>
-            </div>
-         
-            <div class="card">
-                <div class="card_img">
-                    <img src="assets/icons/seo.png" alt="">
-                </div>
-                <h3>Website Development</h3>
-                <p>Team Web Solutions BD can provide you a complete eCommerce solutions</p>
-            </div>
-            <div class="card">
-                <div class="card_img">
-                    <img src="assets/icons/graphics_design.png" alt="">
-                </div>
-                <h3>Website Development</h3>
-                <p>Our highly professional designers offer a creative and best quality graphics design service for your business</p>
-            </div>
-            <div class="card">
-                <div class="card_img">
-                    <img src="assets/icons/website.png" alt="">
-                </div>
-                <h3>Website Development</h3>
-                <p>Team Web Solutions BD can provide you a complete eCommerce solutions</p>
-            </div>
+                <h3><?php echo $ser_name;?></h3>
+                <p>Create of Brand Team</p>
+            </div>         
+            
+            <?php } ?>
      
         </div>
         <div class="counter_wrapper">
