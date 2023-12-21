@@ -26,9 +26,7 @@
                         $s_price = $conn['s_price'];
                         $ser_dec = $conn['ser_dec'];
                         $ser_img = $conn['ser_img'];
-                        $date = $conn['date'];
-                        
-                                      
+                        $date = $conn['date'];                   
                 ?>
                 <article class="main-article">
                     <div class="article-img">

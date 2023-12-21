@@ -54,7 +54,6 @@
 #our-team .row .card{
    border-radius: 10px;
    position: relative;
-   cursor: pointer;
    padding: 34px 30px 30px;
    text-align: center;
    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .13);
@@ -72,6 +71,21 @@
     width:70px;
     height: 70px;
     transition: 0.6s;
+}
+#our-team .row .card::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FD3434;
+    width: 200px;
+    height: 5px;
+    top: -0px;
+    border-radius: 0 0 20px 20px;
+    transition: 0.4s;
+}
+#our-team .row .card:hover::after{
+    top: -20px;
 }
 #our-team .row .card:hover::before{
     left: -29px;
@@ -108,7 +122,7 @@
 #our-team .row .card .text a{
     color: #fff;
     background-color: var(--Secondary);
-    padding: 8px 12px;
+    padding: 9px 12px;
     display: flex;
     align-items: center;
     justify-content: center;

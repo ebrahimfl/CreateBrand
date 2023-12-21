@@ -17,7 +17,6 @@ class addmin{
     public function show($table_name) {        
         $sql ="SELECT * FROM $table_name;";
         $result = $this->conn->query($sql);
-        
         if ($result->num_rows> 0) {
             $data = $this->conn->query($sql);
             return $data;
@@ -92,20 +91,44 @@ class addmin{
         }
         
     }
+
+    public function img_validaction($img_name,$img_tmp_name,$location){
+        if(isset($img_name)&& !empty($img_name)){
+            $ex_validation=['png','PNG','jpeg','jpg','gif'];
+            $img_extanction = pathinfo($img_name, PATHINFO_EXTENSION);
+            if(in_array($img_extanction,$ex_validation)){
+                $new_img_name = rand().'.'.$img_extanction;
+                move_uploaded_file($img_tmp_name,$location.$new_img_name);
+                return $new_img_name;
+            }else{
+                return false;
+            }
+    }else{
+      return false;
+    }
+}
     // *Our Team Add 
     public function team_add(){
-      echo '<pre>';
-      print_r($_POST);
-      echo '</pre>';
-      echo '<pre>';
-      print_r($_FILES);
-      echo '</pre>';
+        $name = $_POST['name'];
+        $team_id = $_POST['team_id'];
+        $category = $_POST['category'];
+        $description = $_POST['description'];
+        $name = $_POST['name'];
+        if($img_name=$this->img_validaction($_FILES['img']['name'],$_FILES['img']['tmp_name'],'../../assets/images/team/')){
+            $sql = "INSERT INTO ourteam(name,team_id,category,image,description,status) VALUES('$name',$team_id,'$category','$img_name','$description',1)";
+            if($this->conn->query($sql)){
+                
+            }
+        }else{
+         header("location:../../admin.php?val=team_add");
+        }
 
     }
 
     // blog fun start
     // blog add
     public function add_blog($data) {
+
         $title = $data['title'];
         $dsc = $data['dsc'];
         $mata = $data['mata'];
@@ -114,8 +137,6 @@ class addmin{
         $img_name = $_FILES["img"]['name'];
         $type = $_FILES["img"]['type'];
         $size = $_FILES["img"]['size'];
-       
-        
 
         $sql = "INSERT INTO blog (title,dsc,mata,img,catagory)VALUES('$title','$dsc','$mata','$img_name','$catagory')";
         $result = $this->conn->query($sql);
