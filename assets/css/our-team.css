@@ -1,0 +1,121 @@
+
+/* Our Team Section Start  */
+#our-team{
+    padding: 0px 0px 100px;
+    background-color: #fff;
+    margin-top: 40px;
+}
+#our-team .container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+#our-team h2{
+    margin-bottom: 30px;
+    font-size: 38px;
+}
+
+#our-team .header-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 50px;
+}
+#our-team .header-menu ul{
+    background:var(--bg2);
+    border-radius: 8px;
+    justify-content: center;
+    display: flex;
+    row-gap: 10px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#our-team .header-menu ul li{
+    display: inline-block;
+    font-size: 17px;
+    color: #000;
+    padding: 10px 40px;
+    font-weight: 500;
+    cursor: pointer;
+}
+#our-team .header-menu ul li.active{
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 8px;
+}
+#our-team .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,320px));
+    gap:40px;
+    row-gap: 40px;
+    justify-content: center;
+}
+#our-team .row .card{
+   border-radius: 10px;
+   position: relative;
+   cursor: pointer;
+   padding: 34px 30px 30px;
+   text-align: center;
+   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .13);
+   position: relative;
+   overflow: hidden;
+}
+#our-team .row .card::before{
+    content: '';
+    position: absolute;
+    left: -129px;
+    top: -128px;
+    border-radius: 2px 0 0 0;
+    background-color: #FD3434;
+    border-radius: 0 50% 50% 50%;
+    width:70px;
+    height: 70px;
+    transition: 0.6s;
+}
+#our-team .row .card:hover::before{
+    left: -29px;
+    top: -28px;
+}
+
+#our-team .row .card.hide{
+    display: none;
+ }
+ #our-team .row .card img.card-img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    transition: 0.4s;
+    transform-origin: left center;
+}
+ 
+
+#our-team .row .card .text h3{
+    font-size: 20px;
+    transition: 0.4s;
+    margin:7px 0;
+    font-weight: 600;
+
+}
+#our-team .row .card:hover h3{
+    color: var(--primary);
+}
+
+#our-team .row .card .text p{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+#our-team .row .card .text a{
+    color: #fff;
+    background-color: var(--Secondary);
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    gap:6px;
+    transition: 0.4s;
+}
+#our-team .row .card:hover a{
+    background-color: var(--primary);
+}

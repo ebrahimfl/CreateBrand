@@ -158,3 +158,114 @@ for (let x = 0; x < acCard.length; x++) {
     acCard[x].querySelector(".paragraph").classList.toggle("active");
   });
 }
+
+
+
+// about page Slider 
+let about_slider_img = document.querySelectorAll('#about .slider .img');
+about_slider_img.forEach((img,index) => {
+  img.style.left=`${index * 100}%`;
+})
+let counter=0;
+const sliderimg = ()=>{
+  if(counter > about_slider_img.length-1){
+    counter=0;
+  }
+
+    about_slider_img.forEach((img,index)=>{
+      img.style.transform=`translateX(-${counter*100}%)`
+    })
+}
+setInterval(()=>{
+  counter++;
+  sliderimg();
+},4000)
+
+
+let about_team_card = document.querySelectorAll('#about .slider .card');
+let count_team_card = 0;
+
+function slider_team_card_about() {
+
+  about_team_card.forEach((value, index) => {
+    value.style.transform = 'scale(0) translateY(-50%)';
+  });
+  setTimeout(function(){
+    about_team_card[count_team_card].style.transform  = 'scale(1) translateY(-50%)';
+    if (count_team_card === about_team_card.length - 1) {
+      count_team_card = 0;
+    } else {
+      count_team_card++;
+    }
+  },600)
+
+}
+ slider_team_card_about();
+setInterval(function() {
+  slider_team_card_about();
+},5000);
+
+
+
+const aboutServicesCard = document.querySelector('#about .services');
+let scrollAmount = 1;
+let scrollDirection = 'right';
+let serviceInterval;
+
+function services_scroll_function() {
+  serviceInterval = setInterval(function() {
+    if (scrollDirection === 'right') {
+      aboutServicesCard.scrollLeft += scrollAmount;
+      if (aboutServicesCard.scrollLeft >= (aboutServicesCard.scrollWidth - aboutServicesCard.clientWidth)) {
+        scrollDirection = 'left';
+      }
+    } else {
+      aboutServicesCard.scrollLeft -= scrollAmount;
+      if (aboutServicesCard.scrollLeft <= 0) {
+        scrollDirection = 'right';
+      }
+    }
+  }, 15);
+}
+
+// Start auto-scroll on page load
+window.addEventListener('load', function() {
+  services_scroll_function();
+});
+
+aboutServicesCard.addEventListener('mouseleave', function() {
+  services_scroll_function();
+});
+
+aboutServicesCard.addEventListener('mouseover', function() {
+  clearInterval(serviceInterval);
+});
+
+
+
+const counter_wrapper_main = document.querySelector('.counter_wrapper');
+let hasCounterFunctionBeenCalled  = true;
+window.addEventListener('scroll',function(){
+  if(window.scrollY+800 > counter_wrapper_main.offsetTop && hasCounterFunctionBeenCalled){
+    conter_function();
+    hasCounterFunctionBeenCalled = false;
+  }
+})
+
+function conter_function(){
+const counter_h4_about = document.querySelectorAll('#about .counter_wrapper .card h4');
+counter_h4_about.forEach((value)=>{
+  let counterValue=0
+  let counter_intervall_fun = setInterval(function(){
+   let counter_arrtibute_value= value.getAttribute('data-counter-value')
+    value.innerHTML=counterValue;
+    value.innerHTML+='<span>+</span>';
+    if(counterValue == counter_arrtibute_value){
+      clearInterval(counter_intervall_fun)
+    }
+    counterValue++;
+  
+  },5)
+  
+})
+}

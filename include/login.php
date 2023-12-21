@@ -20,13 +20,13 @@ if (isset($_COOKIE[md5("name")])) {
                     <h2>User Login</h2>
                     
                         <label for="user-name" class="login-card">
-                            <img src="assets/icons/user-icons.png" alt="">
-                        <input type="text" placeholder="Username" id="user-name" name="userName">
+                            <img src="assets/icons/user-name.png" alt="">
+                        <input type="text" placeholder="Username" id="user-name" name="userName" autocomplete="off">
                         </label>
                     
                         <label for="password" class="login-card">
                             <img src="assets/icons/password-icons.png" alt="">
-                        <input type="text" placeholder="Password" id="password" name="password">
+                        <input type="text" placeholder="Password" id="password" name="password" autocomplete='off'>
                         </label>
                         
                     <input name="login" type="submit" value="Submit" class="submit">

@@ -10,7 +10,6 @@ class addmin{
             if (!$this->conn) {
                 die ("<h1>Database do not worked!! Please Database create your server?? Help Ebrahim: 01980533510</h1>");       
             }
-    
     }
     
    
@@ -59,7 +58,6 @@ class addmin{
         $img_name = $_FILES["img"]['name'];
         $type = $_FILES["img"]['type'];
         $size = $_FILES["img"]['size'];
-       
         
 
         $sql = "INSERT INTO service (ser_name,ser_dec,ser_img)VALUES('$title','$dsc','$img_name')";
@@ -93,7 +91,16 @@ class addmin{
             "No data";
         }
         
-        
+    }
+    // *Our Team Add 
+    public function team_add(){
+      echo '<pre>';
+      print_r($_POST);
+      echo '</pre>';
+      echo '<pre>';
+      print_r($_FILES);
+      echo '</pre>';
+
     }
 
     // blog fun start
@@ -168,10 +175,6 @@ class addmin{
         
         
     }
-    
-
-  
-
 
 }
 

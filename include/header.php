@@ -10,8 +10,6 @@ include_once("assets/php/function.php");
 
 
 ?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 

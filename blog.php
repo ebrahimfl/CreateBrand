@@ -1,95 +1,61 @@
-<?php      
-    require_once "include/header.php"; ?>
-    <link rel="stylesheet" href="assets/css/blog.css">
+<?php require_once "include/header.php"; ?>
+<link rel="stylesheet" href="assets/css/blog.css">
 <?php require_once "include/headerM.php"; ?>
 
-
-<!-- style add korte hobe singel blog -->
-    <?php 
-    $idn = isset($_GET['blogid']);
-    if ($idn) {
-        
-        $id = $_GET['blogid'];
-        
-        $sql= "SELECT * FROM blog WHERE id='$id'";
-            $qurye = mysqli_query($conn,$sql);
-            if ($qurye) {            
-            $data = mysqli_fetch_array($qurye);                                      
-            $title = $data['title'];
-            $dsc = $data['dsc'];
-            $mata = $data['mata'];
-            $img = $data['img'];
-            $catagory = $data['catagory'];
-            $id = $data['id'];  
-                     
-            }
-    
-     ?>
-            <!-- see detels code -->
-            <section>
-                <div class="container">
-                    <div class="blog_d">
-                        <h1><?php echo $title; ?></h1>
-                        <img src="assets/images/<?php echo $img;?>" alt="<?php echo $title; ?>">
-                        <p>  <?php echo $dsc; ?> </p>
-                    </div>            
-                </div>
-            </section>
-        <?php
-        }
-        //******* all blog * ******
-        else {
-            
-        
-        ?>
-     
-     
-
-<section id="blog-m">
+<section id="blog">
     <div class="container">
-        <div class="blog-m">
-
-        <?php 
-            $sql= "SELECT * FROM blog";
-            $qurye = mysqli_query($conn,$sql);
-            $lenth = mysqli_num_rows($qurye);            
-                if ($lenth>0) {
-                    while ($data = mysqli_fetch_array($qurye)){                     
-                        $title = $data['title'];
-                        $dsc = $data['dsc'];
-                        $mata = $data['mata'];
-                        $img = $data['img'];
-                        $catagory = $data['catagory'];
-                        $id = $data['id'];
-            
-        ?>           
-        
-        
-            <div class="sengel-blog">
-                <a href="?blogid=<?php echo $id; ?>">
-                    <img src="assets/images/<?php echo $img; ?>" alt="" class="blog-img">
+        <div class="row">
+            <div class="content">
+                <a href="blog_details.php" class="blog_link">
+                    <div class="card">
+                        <div class="img">
+                            <img src="assets/images/blog/blog-img.png" alt="">
+                        </div>
+                        <div class="blog_text">
+                            <h3>পানিসম্পদ প্রতিমন্ত্রীর স্ত্রী লায়লা শামীমের মৃত্যুতে প্রধানমন্ত্রীর শোক</h3>
+                            <p>পানিসম্পদ প্রতিমন্ত্রী জাহিদ ফারুকের স্ত্রী লায়লা শামীম আরার মৃত্যুতে গভীর শোক ও দুঃখ প্রকাশ করেছেন প্রধানমন্ত্রী শেখ হাসিনা। আজ বৃহস্পতিবার (২১ ডিসেম্বর) </p>
+                        </div>
+                    </div>
                 </a>
-                <a href="?blogid=<?php echo $id; ?>">
-                    <h1 class="title"><?php echo $title; ?></h1>
+                <a href="blog_details.php" class="blog_link">
+                    <div class="card">
+                        <div class="img">
+                            <img src="assets/images/blog/blog-img.png" alt="">
+                        </div>
+                        <div class="blog_text">
+                            <h3>New Blog</h3>
+                            <p>Blog Description</p>
+                        </div>
+                    </div>
                 </a>
-                <a href="?blogid=<?php echo $id; ?>">
-                    <p class="meta-d"><?php echo $mata; ?></p>
+                <a href="blog_details.php" class="blog_link">
+                    <div class="card">
+                        <div class="img">
+                            <img src="assets/images/blog/blog-img.png" alt="">
+                        </div>
+                        <div class="blog_text">
+                            <h3>New Blog</h3>
+                            <p>Blog Description</p>
+                        </div>
+                    </div>
                 </a>
-                <div class="btn"><a href="?blogid=<?php echo $id; ?>" >See More</a></div>
-            </div>           
-                      
-            <?php   } ?>
+                <div class="pagination_buttons">
+                    <a href="blog.php?">
+                        <div class="n_p_btn"><img src="assets/icons/pgRight.png" alt=""></div>
+                    </a>
+                    <a href="blog.php?page=" class=''></a>
+                    <a href="blog.php">
 
-            
+                        <div class='n_p_btn'><img src="assets/icons/pgLeft.png" alt=""></div>
+                    </a>
+                </div>
+            </div>
 
+            <?php include 'include/blog_sidebar.php' ?>
         </div>
+    </div>
+    </div>
     </div>
 </section>
 
-
-
-
-
-<?php
-}}
-require_once "include/footer.php"; ?>
+<?php require_once "include/footer.php"; ?>
