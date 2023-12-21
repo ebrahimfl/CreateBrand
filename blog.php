@@ -1,13 +1,38 @@
 <?php require_once "include/header.php"; ?>
 <link rel="stylesheet" href="assets/css/blog.css">
-<?php require_once "include/headerM.php"; ?>
+<?php require_once "include/headerM.php";
+$fun = new fun(); 
+if (isset($_GET["id"])) {
+    $id =$_GET["id"];
+    $func =$fun->show_col("blog",$id);
+    while ($data =$func->fetch_assoc()) {
+        $title = $data['title'];
+        $dsc = $data['dsc'];
+        $img = $data['img'];
+        $catagory = $data['catagory'];
+        $activ = $data['activ'];
+    ?>
+   <!-- html css code ta add korte hobe -->
+   <?php echo $title; ?>
+   <?php echo $dsc; ?>
+   <?php echo $img; ?>
+   <?php echo $catagory; ?>  
+   <!-- ai pojonto --> 
+
+<?php 
+    }    
+}
+
+
+?>
+
 
 <section id="blog">
     <div class="container">
         <div class="row">
             
             <div class="content">
-            <?php $fun = new fun();
+            <?php 
             $datat = $fun->show("blog");
             while ($data= $datat->fetch_assoc()) {
                 
@@ -16,7 +41,7 @@
             
             ?>
             
-                <a href="blog_details.php" class="blog_link">
+                <a href="?id=<?php echo $data['id']; ?>" class="blog_link">
                     <div class="card">
                         <div class="img">
                             <img src="assets/images/blog/<?php echo $data['img']; ?>" alt="">

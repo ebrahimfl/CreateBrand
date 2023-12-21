@@ -20,6 +20,19 @@ class fun{
         }
         
       }
+      //   show function id 
+      public function show_col($table_name,$id)  {
+        $show = "SELECT * FROM $table_name WHERE id=$id;";
+        $sql_s = mysqli_query($this->conn,$show);
+        if ($sql_s) {
+            $data = mysqli_query($this->conn,$show);            
+            return $data;
+        }else {
+            echo "no";
+        }
+        
+        
+    }
 
 }
 

@@ -74,7 +74,7 @@
                     <div class="row">
                         <h4>Category</h4>
 
-                        <a href="blogs.php?category=">
+                        <a href="?category=">
                             <div class="card">
                             </div>
                         </a>
