@@ -205,24 +205,43 @@ setInterval(function() {
   slider_team_card_about();
 },5000);
 
+
+
 const aboutServicesCard = document.querySelector('#about .services');
-
 let scrollAmount = 1;
-let scrollDirection = 'right'; 
+let scrollDirection = 'right';
+let serviceInterval;
 
-setInterval(function() {
-  if (scrollDirection === 'right') {
-    aboutServicesCard.scrollLeft += scrollAmount;
-    if (aboutServicesCard.scrollLeft >= (aboutServicesCard.scrollWidth - aboutServicesCard.clientWidth)) {
-      scrollDirection = 'left';
+function services_scroll_function() {
+  serviceInterval = setInterval(function() {
+    if (scrollDirection === 'right') {
+      aboutServicesCard.scrollLeft += scrollAmount;
+      if (aboutServicesCard.scrollLeft >= (aboutServicesCard.scrollWidth - aboutServicesCard.clientWidth)) {
+        scrollDirection = 'left';
+      }
+    } else {
+      aboutServicesCard.scrollLeft -= scrollAmount;
+      if (aboutServicesCard.scrollLeft <= 0) {
+        scrollDirection = 'right';
+      }
     }
-  } else {
-    aboutServicesCard.scrollLeft -= scrollAmount;
-    if(aboutServicesCard.scrollLeft <= 0) {
-      scrollDirection = 'right';
-    }
-  }
-},15);
+  }, 15);
+}
+
+// Start auto-scroll on page load
+window.addEventListener('load', function() {
+  services_scroll_function();
+});
+
+aboutServicesCard.addEventListener('mouseleave', function() {
+  services_scroll_function();
+});
+
+aboutServicesCard.addEventListener('mouseover', function() {
+  clearInterval(serviceInterval);
+});
+
+
 
 const counter_wrapper_main = document.querySelector('.counter_wrapper');
 let hasCounterFunctionBeenCalled  = true;

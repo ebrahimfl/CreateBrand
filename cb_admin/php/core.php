@@ -3,7 +3,6 @@ include_once("fun/fun.php");
 $conn = new addmin();
 
 
-
 if (isset($_POST['login'])) {
     $conn->addlog($_POST);    
 }
@@ -13,6 +12,9 @@ if (isset($_POST['b_sub'])) {
 }
 if (isset($_POST['S_sub'])) {
     $conn->serviec_add($_POST);   
+}
+if(isset($_POST['team_add']) && !empty($_POST['team_add'])){
+    $conn->team_add();
 }
 
 if (isset($_GET["action"])) {

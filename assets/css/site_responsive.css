@@ -189,20 +189,28 @@
         font-size: 36px !important;
         margin-bottom: 50px !important;
     }
-
-
+    #blog .row .content .blog_text{
+    padding: 0 10px 10px !important;
+}
+    #blog .row .content a.blog_link{
+        height: auto !important;
+        width: 100%;
+    }
     #blog .row .content{
-        align-items: center;
+        align-items: center !important;
+    }
+    .row .content .blog_text h3{
+        margin: 0 0 6px  !important;
     }
     #blog .row .content img{
-        max-width: 400px;
+        max-width: 400px !important;
     }
     #blog .row .content a.blog_link{
-        max-width: 400px;
+        max-width: 400px !important;
     }
     #blog .row .content .card{
-        display: flex;
-        flex-direction: column;
+        display: flex !important;
+        flex-direction: column !important;
     }
  }
  

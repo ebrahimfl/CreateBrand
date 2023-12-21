@@ -92,6 +92,16 @@ class addmin{
         }
         
     }
+    // *Our Team Add 
+    public function team_add(){
+      echo '<pre>';
+      print_r($_POST);
+      echo '</pre>';
+      echo '<pre>';
+      print_r($_FILES);
+      echo '</pre>';
+
+    }
 
     // blog fun start
     // blog add
