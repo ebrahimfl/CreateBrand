@@ -142,7 +142,7 @@ class addmin{
         $result = $this->conn->query($sql);
         if ($result) {
             echo "succs";
-            move_uploaded_file($img_t,"../../assets/images/".$img_name);
+            move_uploaded_file($img_t,"../../assets/images/blog/".$img_name);
             header("location:../../admin.php?val=AddBlog&&add=ok");
         }else {
             die("Sumthin problem");
