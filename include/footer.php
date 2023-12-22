@@ -11,7 +11,7 @@
             </div>
             <div class="footer_col">
                 <ul>
-                    <li><a href="loginSign.php?log=ourproject" class="footer_h_a">Our Project</a></li>
+                    <li><a href="loginSign.php?log=ourproject" class="footer_h_a">Page</a></li>
                     <li><a href="loginSign.php?log=mostpopularservices">Most Popular Services</a></li>
                     <li><a href="loginSign.php?log=figmaDesign">Figma Design</a></li>
                     <li><a href="loginSign.php?log=htmlTemplate">HTML Template</a></li>
