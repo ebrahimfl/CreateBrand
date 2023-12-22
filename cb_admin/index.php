@@ -19,7 +19,6 @@ $conn = new addmin();
            <div class="form">
             <form action="php/core.php" method="post" >
                     <h2>Admin Login</h2>
-                    
                         <label for="user-name" class="login-card">
                             <img src="assets/icons/user-icons.png" alt="">
                         <input type="text" placeholder="Username" id="user-name" name="userName">

@@ -16,7 +16,6 @@ if (isset($_POST['S_sub'])) {
 if(isset($_POST['team_add']) && !empty($_POST['team_add'])){
     $conn->team_add();
 }
-
 if (isset($_GET["action"])) {
     $check = $_GET['action'];
     $id = $_GET['id'];

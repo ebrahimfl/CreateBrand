@@ -10,7 +10,7 @@ class fun{
       }
     //   show function
       public function show($table_name,){
-        $qur = "SELECT * FROM $table_name";
+        $qur = "SELECT * FROM $table_name  ORDER BY id DESC";
         $conn_c = mysqli_query($this->conn,$qur);
         if ($conn_c->num_rows> 0) {
             $data = $this->conn->query($qur);
@@ -20,6 +20,19 @@ class fun{
         }
         
       }
+      //   show function id 
+      public function show_col($table_name,$id)  {
+        $show = "SELECT * FROM $table_name WHERE id=$id";
+        $sql_s = mysqli_query($this->conn,$show);
+        if ($sql_s) {
+            $data = mysqli_query($this->conn,$show);            
+            return $data;
+        }else {
+            echo "no";
+        }
+        
+        
+    }
 
 }
 

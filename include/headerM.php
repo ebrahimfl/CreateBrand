@@ -70,7 +70,8 @@
                     </li>
                     <li><a href="about-us.php">About</a></li>
                     <li><a href="contact-us.php">Contact</a></li>
-                    <li><a href="our-work.php" class="dorp_down_a">Our Project <img src="assets/icons/mingcute_down-line.png"></a>
+                    <li><a href="our-work.php">Our Project</a></li>
+                    <!-- <li><a href="our-work.php" class="dorp_down_a">Our Project <img src="assets/icons/mingcute_down-line.png"></a>
                         <div class="drop_menu">
                             <ul class="drop-down">
                                 <li><a href="our-work.php">Our Work </a></li>
@@ -78,7 +79,7 @@
                                 <li><a href="">SEO</a></li>
                             </ul>
                         </div>
-                    </li>
+                    </li> -->
 
                     <li><a href="blog.php">Blog</a></li>
                     <?php if (isset($_COOKIE[md5('name')])) {  ?>
