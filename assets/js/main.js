@@ -120,33 +120,59 @@ function setSuccessMsg(input) {
   let form_control = input.parentElement;
   form_control.classList.remove("error-message");
 }
-// Contact us Page Validation End
 
-// Our Team Filterable Image Galler Start
-
-let filterButton = document.querySelectorAll(".header-menu ul li");
+let filterButton = document.querySelectorAll("#our-team .header-menu ul li");
 let filterCard = document.querySelectorAll("#our-team .row .card");
 function filtercardFun(e) {
-  document
-    .querySelector("#our-team .header-menu ul .active")
-    .classList.remove("active");
+  document.querySelector("#our-team .header-menu ul .active").classList.remove("active");
   e.target.classList.add("active");
-  filterCard.forEach((element) => {
-    element.classList.add("hide");
-    if (
-      e.target.dataset.work == "All" ||
-      e.target.dataset.work == element.dataset.work
+
+filterCard.forEach((element) => {
+    if(
+      e.target.dataset.team === "All" ||
+      e.target.dataset.team === element.dataset.team
     ) {
-      element.classList.remove("hide");
+      element.classList.remove("hide"); 
+        element.classList.add("show"); 
+    } else {
+      element.classList.remove("show"); 
+      element.classList.add("hide"); 
     }
   });
 }
 
-filterButton.forEach((button) =>
-  button.addEventListener("click", filtercardFun)
-);
+// Add event listeners to filter buttons
+filterButton.forEach((button) => {
+  button.addEventListener("click", filtercardFun);
+});
 
-// Our Team Filterable Image Galler End
+let filterButton_work = document.querySelectorAll("#our-work .header-menu ul li");
+let filterCard_work = document.querySelectorAll("#our-work .row .card");
+
+function filter_work_fun(e){
+  document.querySelector("#our-work .header-menu ul .active").classList.remove("active");
+  e.target.classList.add('active');
+  filterCard_work.forEach((element)=>{
+    if(e.target.dataset.work === 'All' || e.target.dataset.work === element.dataset.work){
+      element.classList.remove('hide');
+      element.classList.add('show');
+    }else{
+      element.classList.remove('show');
+      element.classList.add('hide');
+    }
+  })
+}
+
+filterButton_work.forEach((button)=>{
+  button.addEventListener('click',filter_work_fun)
+})
+
+
+
+
+
+
+// Our  Filterable Image Galler End
 
 let acCard = document.querySelectorAll("#faqs .row .accordion_card");
 

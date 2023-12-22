@@ -8,21 +8,21 @@ $function = new fun();
    <div class="container">
     <div class="header-menu">
         <ul>
-            <li class='active' data-work="All">All</li>
-            <li data-work="Web Designer">Websaite Design</li>
-            <li data-work="Web Developer">Websaite Development</li>
-            <li data-work="Full Stack Developer">Full Stack Developer</li>
-            <li data-work="SEO">SEO</li>
-            <li data-work="Digital Marketing">Digital Marketing</li>
-            <li data-work="Website any Bug fixing">Website any Bug fixing</li>
-            <li data-work="B2B Lead Colocation">B2B Lead Colocation</li>
-            <li data-work="Wordpress Theme Customization">Wordpress Theme Customization</li>
+            <li class='active' data-team="All">All</li>
+            <li data-team="Web Designer">Websaite Design</li>
+            <li data-team="Web Developer">Websaite Developer</li>
+            <li data-team="Full Stack Developer">Full Stack Developer</li>
+            <li data-team="SEO">SEO</li>
+            <li data-team="Digital Marketing">Digital Marketing</li>
+            <li data-team="Website any Bug fixing">Website any Bug fixing</li>
+            <li data-team="B2B Lead Colocation">B2B Lead Colocation</li>
+            <li data-team="Wordpress Theme Customization">Wordpress Theme Customization</li>
         </ul>
     </div>
     <div class="row">
       <?php $row =  $function->show('ourteam');
         while($data = $row->fetch_assoc()){ ?>
-        <div class="card" data-work="<?php echo $data['category'] ?>">
+        <div class="card" data-team="<?php echo $data['category'] ?>">
          <img src="assets/images/team/<?php echo $data['image'] ?>" alt="" class="card-img">
          <div class="text">
             <h3><?php echo $data['name'] ?></h3>

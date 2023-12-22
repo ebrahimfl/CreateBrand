@@ -1,0 +1,91 @@
+#our-work{
+    padding: 0px 0px 100px;
+    background-color: #fff;
+    margin-top: 40px;
+}
+#our-work .container{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+#our-work h2{
+    margin-bottom: 30px;
+    font-size: 38px;
+}
+
+#our-work .header-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 50px;
+}
+#our-work .header-menu ul{
+    background:var(--bg2);
+    border-radius: 8px;
+    justify-content: center;
+    display: flex;
+    row-gap: 7px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+#our-work .header-menu ul li{
+    display: inline-block;
+    font-size: 16px;
+    color: #000;
+    padding: 12px 25px;
+    font-weight: 500;
+    cursor: pointer;
+}
+#our-work .header-menu ul li.active{
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 8px;
+}
+#our-work .row{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+}
+#our-work .row .card{
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    max-width: 580px;
+    margin:0 auto;
+}
+#our-work .row .card img.card_img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+#our-work .row .card .hover_effect{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 90%;
+    bottom: -110px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px 0 0 3px;
+    padding: 0 0 0 14px;
+    transition: 0.5s;
+}
+#our-work .row .card:hover .hover_effect{
+    bottom: 10px;
+}
+#our-work .row .card .hover_effect h4{
+    font-weight: 600;
+    color: var(--black);
+}
+#our-work .row .card .hover_effect .img{
+    background-color:var(--primary) ;
+    width: 50px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
