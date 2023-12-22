@@ -26,16 +26,16 @@
     border-radius: 8px;
     justify-content: center;
     display: flex;
-    row-gap: 10px;
+    row-gap: 7px;
     flex-wrap: wrap;
     text-align: center;
 }
 
 #our-team .header-menu ul li{
     display: inline-block;
-    font-size: 17px;
+    font-size: 15px;
     color: #000;
-    padding: 10px 40px;
+    padding: 11px 20px;
     font-weight: 500;
     cursor: pointer;
 }

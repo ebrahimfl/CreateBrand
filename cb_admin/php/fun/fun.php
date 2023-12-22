@@ -15,7 +15,7 @@ class addmin{
    
     // show all
     public function show($table_name) {        
-        $sql ="SELECT * FROM $table_name;";
+        $sql ="SELECT * FROM $table_name ORDER BY id DESC";
         $result = $this->conn->query($sql);
         if ($result->num_rows> 0) {
             $data = $this->conn->query($sql);
@@ -25,7 +25,7 @@ class addmin{
 
     // show id
     public function show_col($table_name,$id)  {
-        $show = "SELECT * FROM $table_name WHERE id=$id;";
+        $show = "SELECT * FROM $table_name WHERE id=$id";
         $sql_s = mysqli_query($this->conn,$show);
         if ($sql_s) {
             $data = mysqli_query($this->conn,$show);
