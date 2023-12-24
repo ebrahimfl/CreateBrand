@@ -9,7 +9,7 @@ class fun{
         
       }
     //   show function
-      public function show($table_name,){
+      public function show($table_name){
         $qur = "SELECT * FROM $table_name  ORDER BY id DESC";
         $conn_c = mysqli_query($this->conn,$qur);
         if ($conn_c->num_rows> 0) {
@@ -18,7 +18,16 @@ class fun{
         }else {
             return("No Data");
         }
-        
+      }
+      public function showLimit($table_name,$limit){
+        $qur = "SELECT * FROM $table_name  ORDER BY id DESC LIMIT $limit";
+        $conn_c = mysqli_query($this->conn,$qur);
+        if ($conn_c->num_rows> 0) {
+            $data = $this->conn->query($qur);
+            return $data;
+        }else {
+            return("No Data");
+        }
       }
       //   show function id 
       public function show_col($table_name,$id)  {

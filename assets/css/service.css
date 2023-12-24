@@ -1,37 +1,3 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-:root{
-    --RADIAL-COLOR: orange;
-    --RADIAL-COLOR2: yellow;
-    --RADIAL-COLOR3: skyblue;
-    --WHITE-COLOR: white;
-    --PRIMARY-COLOR: #0099FF;
-    --GREY-COLOR: rgb(150, 141, 141);
-    --TEXT-COLOR: rgb(82, 78, 78);
-    --SECONDARY-COLOR:#FD3434;
-
-    --MT:2rem;
-    --M: 1rem;
-    --MT-SM:0.7rem;
-    --LINE-HIGHT: 1.5rem;
-
-    --BORDER-RADIUS: 15px;
-    --BOX-SHADOW: 0px 5px 20px grey;
-    --SHADOW-purple: 0px 0px 10px purple;
-    --BORDER: 1px solid var(--SECONDARY-COLOR);
-
-    --TRANSITION: all 0.3s ease ;
-
-    /* font size  */
-    --SM-FONT: 13px;
-
-}
-
-
-
 section{
     padding: 1rem 0px;
 }
@@ -102,79 +68,66 @@ section{
     line-height: var(--LINE-HIGHT);
     color: var(--TEXT-COLOR);
 }
-.main-card{
-    margin-top: var(--MT);
-    padding: 1rem 0.5rem;
+#service .service{
     display: grid;
-    grid-template-columns: repeat(4,1fr);
-    /* grid-auto-flow: column nowrap; */
-    gap: 1rem;
+    align-items: center;
+    grid-template-columns: repeat(auto-fit,minmax(300px,1fr));
+    margin-top: 20px;
+    width: 100%;
+    padding: 24px;
+    gap: 30px;
 }
-.main-article{
-    /* min-width: 200px;
-    max-width: 350px; */
-    display: grid;
-    place-items: center;
-    padding: 2rem 2rem;
-    border: var(--BORDER);
-    border-radius: var(--BORDER-RADIUS);
-    box-shadow: var(--BOX-SHADOW);
-    transition: all 0.5s;
+#service .service .card{
+    padding: 35px;
+    background-color: #fff;
+    box-shadow: 7px 5px 30px rgba(72, 73, 121, 0.15);
+    height: 410px;
+    text-align: center;
+    min-width: 350px ;
+    width: 100%;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
 }
-.main-article:hover{
-    box-shadow:var(--SHADOW-purple);
-    transform: scale(0.980);
+#service .service .card::before{
+    content: '';
+    position: absolute;
+    left: -115px;
+    top: -125px;
+    border-radius: 2px 0 0 0;
+    background-color: #FD3434;
+    border-radius: 0 50% 50% 50%;
+    width:70px;
+    height: 70px;
+    transition: 0.6s;
 }
-.article-img{
-    display: grid;
-    width: 150px;
+#service .service .card:hover::before{
+    left: -25px;
+    top: -25px;
 }
-.article-img img{
-    margin: auto;
-    width: 50%;
+#service .service .card .card_img{
+    margin: 0 auto;
+    background-color: #f4f7fd;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
 }
-.article-text h4{
-    text-align: center;
-    font-weight: 800;
-    margin-top: var(--MT-SM);
+#service .service .card h3{
+    font-size: 25px;
+    font-weight: 600;
+    color: #252525;
+    margin-bottom: 20px;
 }
-.article-text p{
-    text-align: center;
-    color: var(--TEXT-COLOR);
-    margin-top: var(--MT-SM);
-    font-size: 13px;
-    line-height: var(--LINE-HIGHT);
-
+#service .service .card p{
+    color: #6e6e6e;
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: 400;
 }
-
-/* ================= section 3 ============== */
-.animate{
-    animation: card 03s linear infinite;
-}
-@keyframes card{
-    50%{transform: translateY(-1rem);}
-}
-.animate2{
-    animation: card1 04s linear infinite;
-}
-@keyframes card1{
-    65%{transform: translateY(1rem);}
-}
-.animate3{
-    animation: card2 06s linear infinite;
-}
-@keyframes card2{
-    60%{transform: translateY(-1rem);}
-}
-.animate4{
-    animation: card3 04s linear infinite;
-}
-@keyframes card3{
-    55%{transform: translateY(1rem);}
-}
-
-/* ================== section 4 ==================== */
 
 .support-section{
     display: flex;

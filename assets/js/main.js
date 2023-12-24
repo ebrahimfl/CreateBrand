@@ -188,7 +188,7 @@ for (let x = 0; x < acCard.length; x++) {
 
 
 // about page Slider 
-let about_slider_img = document.querySelectorAll('#about .slider .img');
+let about_slider_img = document.querySelectorAll('.slider .img');
 about_slider_img.forEach((img,index) => {
   if(img){
     img.style.left=`${index * 100}%`;
@@ -199,7 +199,6 @@ const sliderimg = ()=>{
   if(counter > about_slider_img.length-1){
     counter=0;
   }
-
     about_slider_img.forEach((img,index)=>{
       if(img){
         img.style.transform=`translateX(-${counter*100}%)`
@@ -213,7 +212,7 @@ setInterval(()=>{
 },4000)
 
 
-let about_team_card = document.querySelectorAll('#about .slider .card');
+let about_team_card = document.querySelectorAll('.slider .card');
 let count_team_card = 0;
 
 function slider_team_card_about() {
@@ -242,42 +241,100 @@ setInterval(function() {
 
 
 document.addEventListener('DOMContentLoaded', function() {
-  const aboutServicesCard = document.querySelector('#about .services');
+  const aboutServicesCard = document.querySelector('#scroll.services');
   let scrollAmount = 1;
-  let scrollDirection = 'right';
+  let scrollDirection_service = 'right';
   let serviceInterval;
 
   function services_scroll_function() {
     serviceInterval = setInterval(function() {
     if(aboutServicesCard){
-      if (scrollDirection === 'right') {
+      if (scrollDirection_service === 'right') {
         aboutServicesCard.scrollLeft += scrollAmount;
         if (aboutServicesCard.scrollLeft >= (aboutServicesCard.scrollWidth - aboutServicesCard.clientWidth)) {
-          scrollDirection = 'left';
+          scrollDirection_service = 'left';
         }
       } else {
         aboutServicesCard.scrollLeft -= scrollAmount;
         if (aboutServicesCard.scrollLeft <= 0) {
-          scrollDirection = 'right';
+          scrollDirection_service = 'right';
         }
       }
     }
     }, 15);
     
   }
+  let scrollAmount_team = 1;
+  let scrollDirection_team = 'right';
+  let team_card = document.querySelector('.our-team .rows');
+  let team_Interval
+  function team_scroll_function(){
+    team_Interval = setInterval(function(){
+      if(team_card){
+        if(scrollDirection_team === 'right'){
+          team_card.scrollLeft +=scrollAmount_team;
+          if(team_card.scrollLeft >= (team_card.scrollWidth - team_card.clientWidth)) {
+            scrollDirection_team='left'
+          }
+        }else{
+          team_card.scrollLeft -=scrollAmount_team;
+          if(team_card.scrollLeft <= 0){
+            scrollDirection_team = 'right'
+          }
+        }
+      }
+    },15)
+  }
+  let scrollAmount_project = 1;
+  let scrollDirection_project = 'right';
+  let project_card = document.querySelector('.our-work .work_rows');
+  let project_Interval
 
-  window.addEventListener('load', services_scroll_function);
+  function project_scroll_function(){
+    project_Interval = setInterval(function(){
+      if(project_card){
+        if(scrollDirection_project === 'right'){
+          project_card.scrollLeft +=scrollAmount_project;
+          if(project_card.scrollLeft >= (project_card.scrollWidth - project_card.clientWidth)) {
+            scrollDirection_project='left'
+          }
+        }else{
+          project_card.scrollLeft -=scrollAmount_project;
+          if(project_card.scrollLeft <= 0){
+            scrollDirection_project = 'right'
+          }
+        }
+      }
+    },15)
+  }
+  
 
-  if (aboutServicesCard){
+  window.addEventListener('load', function(){
+    services_scroll_function();
+    team_scroll_function();
+    project_scroll_function();
+
+  });
+  if(project_card){
+    project_card.addEventListener('mouseleave', project_scroll_function);
+    project_card.addEventListener('mouseover', function() {
+      clearInterval(project_Interval);
+    });
+  }
+  if (team_card){
+    team_card.addEventListener('mouseleave', team_scroll_function);
+    team_card.addEventListener('mouseover', function() {
+      clearInterval(team_Interval);
+    });
+  } 
+
+  if(aboutServicesCard){
     aboutServicesCard.addEventListener('mouseleave', services_scroll_function);
-
     aboutServicesCard.addEventListener('mouseover', function() {
       clearInterval(serviceInterval);
     });
   } 
 });
-
-
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -292,7 +349,7 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   function counter_function() {
-    const counter_h4_about = document.querySelectorAll('#about .counter_wrapper .card h4');
+    const counter_h4_about = document.querySelectorAll('.counter_wrapper .card h4');
     counter_h4_about.forEach((value) => {
       let counterValue = 0;
       let counter_interval_fun = setInterval(function() {

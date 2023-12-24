@@ -113,11 +113,10 @@ class addmin{
         $team_id = $_POST['team_id'];
         $category = $_POST['category'];
         $description = $_POST['description'];
-        $name = $_POST['name'];
         if($img_name=$this->img_validaction($_FILES['img']['name'],$_FILES['img']['tmp_name'],'../../assets/images/team/')){
             $sql = "INSERT INTO ourteam(name,team_id,category,image,description,status) VALUES('$name',$team_id,'$category','$img_name','$description',1)";
             if($this->conn->query($sql)){
-                
+                header("location:../../admin.php?val=team_add");
             }
         }else{
          header("location:../../admin.php?val=team_add");
