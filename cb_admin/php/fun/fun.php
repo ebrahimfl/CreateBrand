@@ -133,16 +133,16 @@ class addmin{
         $mata = $data['mata'];
         $catagory = $data['catagory'];
         $img_t = $_FILES["img"]['tmp_name'];
-        $img_name = $_FILES["img"]['name'];
+        $img_namen = $_FILES["img"]['name'];
         $type = $_FILES["img"]['type'];
         $size = $_FILES["img"]['size'];
-        $rand = rand(10,100);
+        $img_name = rand(10,100).$img_namen;
 
         $sql = "INSERT INTO blog (title,dsc,mata,img,catagory)VALUES('$title','$dsc','$mata','$img_name','$catagory')";
         $result = $this->conn->query($sql);
         if ($this->conn->query($sql)) {
             echo "succs";
-            move_uploaded_file($img_t,"../../assets/images/blog/".$rand.$img_name);
+            move_uploaded_file($img_t,"../../assets/images/blog/".$img_name);
             header("location:../../admin.php?val=AddBlog&&add=ok");
         }else {
             die("Sumthin problem");
