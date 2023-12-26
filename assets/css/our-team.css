@@ -91,10 +91,6 @@
     left: -29px;
     top: -28px;
 }
-
-#our-team .row .card.hide{
-    display: none;
- }
  #our-team .row .card img.card-img{
     width: 130px;
     height: 130px;

@@ -8,6 +8,7 @@
     <input type="text" name="team_id" id="t_id" placeholder="enter team id" required>
     <label for="t_img">Member Img <sup style='font-size:14px;color:red;font-weight:400'>* only png PNG jpg jpeg gif<sup></label>
     <input type="file" name="img" id="t_img"  value="upload image" required >
+
     <label for="category">Category</label>
     <select name="category" id="category" style="height:40px;margin:10px;font-size:16px;max-width:700px;outline:none" required> 
         <option value="">Select</option>

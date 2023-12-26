@@ -38,8 +38,8 @@
                 <img src="assets/images/about-img.png" alt="">
             </div>
         </div>
-
-        <div class="services">
+        <div style='margin-top:80px'>
+        <div class="services" id='scroll'>
         <?php 
             include_once("assets/php/function.php");
             $fun = new fun();

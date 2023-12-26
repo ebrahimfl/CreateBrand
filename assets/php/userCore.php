@@ -29,19 +29,22 @@ if (isset($_POST['login'])) {
     $qur = "SELECT email,password,id,name FROM user";
     $sqlconn = mysqli_query($conn,$qur);
     if ($sqlconn) {
-        $dbuser = mysqli_fetch_array($sqlconn);
-        $dbuserU = $dbuser['email'];
-        $dbuserP = $dbuser['password'];
-        $dbuserid = $dbuser['id'];
-        $user_name = $dbuser['name'];
+        while ($dbuser= mysqli_fetch_array($sqlconn) ) {
+            $dbuserU = $dbuser['email'];
+            $dbuserP = $dbuser['password'];
+            $dbuserid = $dbuser['id'];
+            $user_name = $dbuser['name'];
+            if ($uName===$dbuserU && $uPass===$dbuserP) {
+                header("location:../../user_profile.php");
+                setcookie(md5('name'),$dbuserid, time() + (86400 * 100), "/");
+                
+            }else {
+                header("location:../../loginSign.php?log=login&&psssword=dontmass");
+            }
+        } 
+        
 
-        if ($uName===$dbuserU && $uPass===$dbuserP) {
-            header("location:../../user_profile.php");
-            setcookie(md5('name'),$dbuserid, time() + (86400 * 100), "/");
-            
-        }else {
-            header("location:../../loginSign.php?log=login&&psssword=dontmass");
-        }
+        
 
        
     }else {
