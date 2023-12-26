@@ -133,9 +133,10 @@ class addmin{
         $mata = $data['mata'];
         $catagory = $data['catagory'];
         $img_t = $_FILES["img"]['tmp_name'];
-        $img_name = $_FILES["img"]['name'];
+        $img_namen = $_FILES["img"]['name'];
         $type = $_FILES["img"]['type'];
         $size = $_FILES["img"]['size'];
+        $img_name = rand(10,100).$img_namen;
 
         $sql = "INSERT INTO blog (title,dsc,mata,img,catagory)VALUES('$title','$dsc','$mata','$img_name','$catagory')";
         $result = $this->conn->query($sql);
@@ -146,7 +147,6 @@ class addmin{
         }else {
             die("Sumthin problem");
         }
-        
         
     }
 
