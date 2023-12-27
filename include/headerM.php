@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="assets/css/animation.css">
 </head>
 
 
@@ -15,9 +16,9 @@
                         <img src="assets/icons/phone_icons.png" alt="phone">
                         <h3 class="first-h3">01980533510</h3>
                     </a>
-                    <a href="" style="align-items: center; display:flex">
+                    <a href="mailto:createofbrand@gmail.com" style="align-items: center; display:flex">
                         <img src="assets/icons/top-mail.png" alt="Mail">
-                        <h3>createbrand.team@gmail.com</h3>
+                        <h3>createofbrand@gmail.com</h3>
                     </a>
                 </div>
 
@@ -52,8 +53,7 @@
 
         <nav>
             <div class="container">
-                <div class="logo">
-                    <h2><a href="index.php">Create Brand</a></h2>
+                <div class="logo"><a href="index.php"><img style="width:70px;height:70px;padding-bottom:20px" src="assets/images/logo-01.svg" ></a>
                 </div>
                 <ul class="main_menu">
                     <li><a href="index.php">Home</a></li>

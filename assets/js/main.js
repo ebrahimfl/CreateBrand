@@ -342,7 +342,7 @@ document.addEventListener('DOMContentLoaded', function() {
   let hasCounterFunctionBeenCalled = true;
 
   window.addEventListener('scroll', function() {
-    if (counter_wrapper_main && window.scrollY + 800 > counter_wrapper_main.offsetTop && hasCounterFunctionBeenCalled) {
+    if (counter_wrapper_main && window.scrollY + window.innerHeight  > counter_wrapper_main.offsetTop && hasCounterFunctionBeenCalled) {
       counter_function();
       hasCounterFunctionBeenCalled = false;
     }
