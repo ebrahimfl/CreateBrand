@@ -23,6 +23,8 @@ if (isset($_GET["id"])) {
 
             .container .image img {
                 width: 100%;
+                height: 400px;
+                padding-bottom: 20px;
             }
 
             .container .title {
@@ -53,6 +55,7 @@ if (isset($_GET["id"])) {
             @media (max-width:991px) {
                 .container .image img {
                     width: 100%;
+                    height: 300px;
                 }
 
                 .container .title {
@@ -87,6 +90,7 @@ if (isset($_GET["id"])) {
             @media (max-width: 450px) {
                 .container .image img {
                     width: 100%;
+                    height: 250px;
                 }
 
                 .container .title {
@@ -120,16 +124,16 @@ if (isset($_GET["id"])) {
         </style>
         <!-- html css code ta add korte hobe -->
         <div class="container">
-
-            <div class="image">
-                <img src="assets/images/blog/<?php echo $data['img']; ?>" alt="">
-            </div>
             <div class="title">
                 <h1>
                     <?php echo $title; ?>
                 </h1>
 
             </div>
+            <div class="image">
+                <img src="assets/images/blog/<?php echo $data['img']; ?>" alt="">
+            </div>
+
             <div class="desc">
                 <h4><?php echo $dsc; ?></h4>
             </div>
