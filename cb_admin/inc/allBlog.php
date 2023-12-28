@@ -51,10 +51,7 @@ $conn = new addmin;
                let confirmMsg = confirm('Are You Sure');
                if(!confirmMsg){
                 e.preventDefault()
-               }
-               if(confirmMsg){
-                alert('Successfully Delete')
-               }
+               }               
         }
     </script>
 <?php
