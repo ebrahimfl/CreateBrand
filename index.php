@@ -139,7 +139,7 @@ $conn = new fun();
                         <img src="assets/icons/right-arrow.png" alt="">
                     </a>
                 </div>
-            </div>
+         </div>
   </div>
   </div>
   <section id="blog">
@@ -150,14 +150,14 @@ $conn = new fun();
                 $datat = $fun->showLimit("blog",5);
                 while ($data = $datat->fetch_assoc()) {
                 ?>
-                    <a href="?id=<?php echo $data['id']; ?>" class="blog_link an" data-an='fade'>
+                    <a href="blog.php?id=<?php echo $data['id']; ?>" class="blog_link an" data-an='fade'>
                         <div class="card">
                             <div class="img">
                                 <img src="assets/images/blog/<?php echo $data['img']; ?>" alt="">
                             </div>
                             <div class="blog_text">
                                 <h3><?php echo $data['title']; ?></h3>
-                                <p><?php echo $data['dsc']; ?> </p>
+                                <p><?php echo $fun->textShorten($data['dsc'],100) ; ?> </p>
                             </div>
                         </div>
                     </a>
@@ -166,19 +166,19 @@ $conn = new fun();
         </div>
 </section>
 <div class="counter_wrapper">
-            <div class="card">
+            <div class="card an"  data-an='fade-right'>
                 <h4 data-counter-value='2'>0<span>+</span></h4>
                 <h5>YEARS IN BUSINESS</h5>
             </div>
-            <div class="card">
+            <div class="card an" data-an='fade-down'>
                 <h4 data-counter-value='100'>0<span>+</span></h4>
                 <h5>FINISHED PROJECTS</h5>
             </div>
-            <div class="card">
+            <div class="card an" data-an='fade-up'>
                 <h4 data-counter-value='700'>0<span>+</span></h4>
                 <h5>CLIENTS</h5>
             </div>
-            <div class="card">
+            <div class="card an" data-an='fade-left'>
                 <h4 data-counter-value='800'>0<span>+</span></h4>
                 <h5>REVIEWS</h5>
             </div>

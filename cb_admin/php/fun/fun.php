@@ -149,7 +149,6 @@ class addmin{
         }
         
     }
-
     // SHUDHUMATORO BLOG UPDAT
     public function blog_update($id,$data) {        
         if ($data) {
@@ -195,6 +194,7 @@ class addmin{
         
         
     }
+
 
 }
 

@@ -6,7 +6,7 @@ $function = new fun();
 
 <section id="our-team">
    <div class="container">
-    <div class="header-menu">
+    <div class="header-menu an" data-an='fade-right'>
         <ul>
             <li class='active' data-team="All">All</li>
             <li data-team="Web Designer">Websaite Design</li>
@@ -19,10 +19,10 @@ $function = new fun();
             <li data-team="Wordpress Theme Customization">Wordpress Theme Customization</li>
         </ul>
     </div>
-    <div class="row">
+    <div class="row an"  data-an='fade-up'>
       <?php $row =  $function->show('ourteam');
         while($data = $row->fetch_assoc()){ ?>
-        <div class="card" data-team="<?php echo $data['category'] ?>">
+        <div class="card " data-team="<?php echo $data['category'] ?>">
          <img src="assets/images/team/<?php echo $data['image'] ?>" alt="" class="card-img">
          <div class="text">
             <h3><?php echo $data['name'] ?></h3>

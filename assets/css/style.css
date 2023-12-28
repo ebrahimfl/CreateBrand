@@ -51,6 +51,9 @@
         width: 100%;
         padding: 0 20px;
     }
+    .userInfLog{
+        color: #fff;
+    }
     h1{
         font-size: 44px;
         color: var(--black);
@@ -88,8 +91,6 @@
             display: none;
         }
      }
-
-
     header{
         z-index: 1000;
         position: sticky;

@@ -44,10 +44,20 @@ $conn = new addmin;
         <td><?php echo $mata; ?></td>
         <td><?php echo $img; ?></td>
         <td><?php echo $catagory; ?></td>
-        <td><a href="cb_admin/inc/allBlog.php?action=delete&&id=<?php echo $id; ?>">Delete</a>  <a href="cb_admin/inc/allBlog.php?action=update&&id=<?php echo $id; ?>">Update</a></td>
+        <td><a href="cb_admin/inc/allBlog.php?action=delete&&id=<?php echo $id; ?>" onclick="blogDelete(event)">Delete</a>  <a href="cb_admin/inc/allBlog.php?action=update&&id=<?php echo $id;?>">Update</a></td>
     </tr>
+    <script>
+        function blogDelete(e){
+               let confirmMsg = confirm('Are You Sure');
+               if(!confirmMsg){
+                e.preventDefault()
+               }
+               if(confirmMsg){
+                alert('Successfully Delete')
+               }
+        }
+    </script>
 <?php
-    
     }
 ?>
  </table>
