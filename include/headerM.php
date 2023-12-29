@@ -57,15 +57,7 @@
                 </div>
                 <ul class="main_menu">
                     <li><a href="index.php">Home</a></li>
-                    <li><a class="dorp_down_a" href="service.php">Our Services <img src="assets/icons/mingcute_down-line.png"></a>
-                        <div class="drop_menu">
-                            <ul class="drop-down">
-                                <li><a href="">Web Development </a></li>
-                                <li><a href="">Web Design</a></li>
-                                <li><a href="">SEO</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                    <li><a href="service.php">Our Services</a></li>
                     <li><a class="dorp_down_a" href='our-team.php'>Our Team</a>
                     </li>
                     <li><a href="about-us.php">About</a></li>
@@ -80,7 +72,6 @@
                             </ul>
                         </div>
                     </li> -->
-
                     <li><a href="blog.php">Blog</a></li>
                     <?php if (isset($_COOKIE[md5('name')])) {  ?>
                         <li><a href="user_profile.php" style="padding: 0;"><img src="assets/images/e.jpg" alt="" srcset="" width="50px" height="50px" style="border-radius: 25px;"></a></li>

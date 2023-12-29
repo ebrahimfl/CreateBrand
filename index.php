@@ -28,9 +28,6 @@ $conn = new fun();
                 <img src="assets/images/slider/slider-3-01.png" alt="">
             </div>
             <div class="img">
-                <img src="assets/images/slider/slider-3-01.png" alt="">
-            </div>
-            <div class="img">
                 <img src="assets/images/slider/slider-1.png" alt="">
             </div>
             <div class="img">

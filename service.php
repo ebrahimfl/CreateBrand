@@ -18,7 +18,8 @@
                     $ser_img = $conn['ser_img'];
                     $date = $conn['date'];
                 ?>
-                    <div class="card">
+                <div class="card">
+                    <a href="service-details.php">
                         <div class="card_img">
                             <img src="assets/icons/website.png" alt="<?php echo $ser_name ?>">
                         </div>
@@ -27,6 +28,7 @@
                             <p><?php echo $ser_dec ?></p>
                             <p class="price" style='margin-top:5px'><b style='color:#FD3434'>Price: </b> <?php echo $s_price ?></p>
                         </div>
+                        </a>
                 </div>
                 <?php } ?>
             </div>
