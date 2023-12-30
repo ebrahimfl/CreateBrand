@@ -12,7 +12,7 @@ $conn = new fun();
            <div class="text">
            <h1>Hire the Top 3% of Freelance Talent</h1>
            <p>Toptal is an exclusive network of the top freelance software developers, designers, finance experts, product managers, and project managers in the world. Top companies hire Toptal freelancers for their most important projects.</p>
-           <a href="#" class='btn_normal'>Hire Top Talent</a>
+           <a href="Our-Team.php" class='btn_normal'>Hire Top Talent</a>
            </div>
             <?php $row =  $conn->show('ourteam');
                 while($team_data = $row->fetch_assoc()){
@@ -50,6 +50,7 @@ $conn = new fun();
         </div>
         <div>
       <div style='margin-top:80px'>
+
       <h2 class="an" data-an='fade-left'>Our Service</h2>
         <div class="services" id='scroll'>
 
@@ -80,22 +81,12 @@ $conn = new fun();
         </div>
         </div>
     </div>
-  <div class="our-team">
-    <h2 style='margin-top:80px' class="an"  data-an='fade-right'>Our Team</h2>
-  <div class="rows">
-      <?php $row =  $conn->show('ourteam');
-        while($data = $row->fetch_assoc()){ ?>
-        <div class="card an" data-team="<?php echo $data['category'] ?>" data-an='fade-left'>
-         <img src="assets/images/team/<?php echo $data['image'] ?>" alt="" class="card-img">
-         <div class="text">
-            <h3><?php echo $data['name'] ?></h3>
-            <p><?php echo $data['category'] ?></p>
-            <a href="#"><img src='assets/icons/view-icons.png'>View</a>
-         </div>
-        </div>
-        <?php } ?>
+
+    
+    <div class="our-team">
+        <h2 style='margin-top:80px' class="an"  data-an='fade-right'>Our Team</h2>
+        <?php include_once("include/team.php") ?>  
     </div>
-  </div>
 
 
   <div class="our-work">
@@ -136,8 +127,8 @@ $conn = new fun();
                         <img src="assets/icons/right-arrow.png" alt="">
                     </a>
                 </div>
-         </div>
-  </div>
+            </div>
+    </div>
   </div>
   <section id="blog">
   <h2 style='margin-top:80px;margin-bottom:30px' class='an' data-an='fade-down'>Most Popular Blog</h2>
@@ -162,24 +153,7 @@ $conn = new fun();
         </div>
         </div>
 </section>
-<div class="counter_wrapper">
-            <div class="card an"  data-an='fade-right'>
-                <h4 data-counter-value='2'>0<span>+</span></h4>
-                <h5>YEARS IN BUSINESS</h5>
-            </div>
-            <div class="card an" data-an='fade-down'>
-                <h4 data-counter-value='100'>0<span>+</span></h4>
-                <h5>FINISHED PROJECTS</h5>
-            </div>
-            <div class="card an" data-an='fade-up'>
-                <h4 data-counter-value='700'>0<span>+</span></h4>
-                <h5>CLIENTS</h5>
-            </div>
-            <div class="card an" data-an='fade-left'>
-                <h4 data-counter-value='800'>0<span>+</span></h4>
-                <h5>REVIEWS</h5>
-            </div>
-        </div>
+<?php require_once "include/count_w.php"; ?>
 
     </div>
 

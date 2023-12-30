@@ -3,7 +3,7 @@
     
     <section  id="our-team">
     <div class="row an"  data-an='fade-up'>
-      <?php $row =  $function->show('ourteam');
+      <?php $function = new fun(); $row =  $function->show('ourteam');
         while($data = $row->fetch_assoc()){ 
             $id= $data['id'];
             ?>
