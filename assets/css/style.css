@@ -51,6 +51,9 @@
         width: 100%;
         padding: 0 20px;
     }
+    .userInfLog{
+        color: #fff;
+    }
     h1{
         font-size: 44px;
         color: var(--black);
@@ -88,8 +91,6 @@
             display: none;
         }
      }
-
-
     header{
         z-index: 1000;
         position: sticky;
@@ -126,10 +127,6 @@
 
     .top-bar img {
         margin-right: 10px;
-    }
-
-    header .logo {
-        padding-bottom: 20px;
     }
 
     /* === Top Bar End === */
@@ -425,10 +422,10 @@
     line-height: 22px;
     margin-bottom: 30px
 }
-#home .slider{
+ .slider{
     position: relative;
 }
-#home .slider::before{
+ .slider::before{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -436,12 +433,69 @@
     background-color: #00000062;
     z-index: 2;
 }
-#home .slider .btn_normal{
+.slider .btn_normal{
     padding: 13px 36px  !important;
     transition: 0.6s !important;
 }
-#home .slider .btn_normal:hover{
+.slider .btn_normal:hover{
     background-color: var(--Secondary) !important;
+}
+
+.our-work .work_rows{
+    display: flex;
+    gap: 30px;
+    overflow: auto;
+    margin-top: 50px !important;
+    width: 100% !important;
+}
+.our-work .work_rows::-webkit-scrollbar{
+    width: 0;
+}
+.our-work .work_rows .card{
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    min-width: 400px;
+    max-height: 250px;
+}
+.our-work .work_rows .card img.card_img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+.our-work .work_rows .card .hover_effect{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 90%;
+    bottom: -110px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px 0 0 3px;
+    padding: 0 0 0 14px;
+    transition: 0.5s;
+}
+.our-work .work_rows .card:hover .hover_effect{
+    bottom: 10px;
+}
+.our-work .work_rows .card .hover_effect h4{
+    font-weight: 600;
+    color: var(--black);
+}
+.our-work .work_rows .card .hover_effect .img{
+    background-color:var(--primary) ;
+    width: 50px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.our-work .work_rows .card .hover_effect a.img img{
+    width: 14px !important;
+    height: 12px;
 }
     
 #about .row,#home .row{
@@ -549,4 +603,96 @@
 .counter_wrapper h5{
     font-size: 16px;
     font-weight: 600;
+}
+.our-team .rows {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    overflow-x: auto; 
+    padding: 30px;
+    margin-top: 20px;
+    width: 100%;
+}
+.our-team .rows::-webkit-scrollbar{
+    width: 0;
+}
+
+.our-team .rows .card {
+    min-width: 320px;
+    border-radius: 10px;
+    padding: 34px 30px 30px;
+    text-align: center;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, .13);
+    overflow: hidden;
+}
+
+
+.our-team .rows  .card::before{
+    content: '';
+    position: absolute;
+    left: -129px;
+    top: -128px;
+    border-radius: 2px 0 0 0;
+    background-color: #FD3434;
+    border-radius: 0 50% 50% 50%;
+    width:70px;
+    height: 70px;
+    transition: 0.6s;
+}
+.our-team .rows .card::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FD3434;
+    width: 200px;
+    height: 5px;
+    top: -0px;
+    border-radius: 0 0 20px 20px;
+    transition: 0.4s;
+}
+.our-team .rows .card:hover::after{
+    top: -20px;
+}
+.our-team .rows .card:hover::before{
+    left: -29px;
+    top: -28px;
+}
+ .our-team .rows .card img.card-img{
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    transition: 0.4s;
+    transform-origin: left center;
+}
+ 
+
+.our-team .rows .card .text h3{
+    font-size: 20px;
+    transition: 0.4s;
+    margin:7px 0;
+    font-weight: 600;
+
+}
+.our-team .rows .card:hover h3{
+    color: var(--primary);
+}
+
+.our-team .rows .card .text p{
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.our-team .rows .card .text a{
+    color: #fff;
+    background-color: var(--Secondary);
+    padding: 9px 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    gap:6px;
+    transition: 0.4s;
+}
+.our-team .rows .card:hover a{
+    background-color: var(--primary);
 }

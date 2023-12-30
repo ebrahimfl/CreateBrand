@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="assets/css/animation.css">
 </head>
 
 
@@ -15,9 +16,9 @@
                         <img src="assets/icons/phone_icons.png" alt="phone">
                         <h3 class="first-h3">01980533510</h3>
                     </a>
-                    <a href="" style="align-items: center; display:flex">
+                    <a href="mailto:createofbrand@gmail.com" style="align-items: center; display:flex">
                         <img src="assets/icons/top-mail.png" alt="Mail">
-                        <h3>createbrand.team@gmail.com</h3>
+                        <h3>createofbrand@gmail.com</h3>
                     </a>
                 </div>
 
@@ -52,20 +53,11 @@
 
         <nav>
             <div class="container">
-                <div class="logo">
-                    <h2><a href="index.php">Create Brand</a></h2>
+                <div class="logo"><a href="index.php"><img style="width:70px;height:70px;padding-bottom:20px" src="assets/images/logo-01.svg" ></a>
                 </div>
                 <ul class="main_menu">
                     <li><a href="index.php">Home</a></li>
-                    <li><a class="dorp_down_a" href="service.php">Our Services <img src="assets/icons/mingcute_down-line.png"></a>
-                        <div class="drop_menu">
-                            <ul class="drop-down">
-                                <li><a href="">Web Development </a></li>
-                                <li><a href="">Web Design</a></li>
-                                <li><a href="">SEO</a></li>
-                            </ul>
-                        </div>
-                    </li>
+                    <li><a href="service.php">Our Services</a></li>
                     <li><a class="dorp_down_a" href='our-team.php'>Our Team</a>
                     </li>
                     <li><a href="about-us.php">About</a></li>
@@ -80,10 +72,9 @@
                             </ul>
                         </div>
                     </li> -->
-
                     <li><a href="blog.php">Blog</a></li>
                     <?php if (isset($_COOKIE[md5('name')])) {  ?>
-                        <li><a href="" style="padding: 0;"><img src="assets/images/e.jpg" alt="" srcset="" width="50px" height="50px" style="border-radius: 25px;"></a></li>
+                        <li><a href="user_profile.php" style="padding: 0;"><img src="assets/images/e.jpg" alt="" srcset="" width="50px" height="50px" style="border-radius: 25px;"></a></li>
                     <?php } ?>
                 </ul>
                 <div class="menu-icon">

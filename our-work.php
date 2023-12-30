@@ -4,7 +4,7 @@
 
 <section id="our-work">
     <div class="container">
-        <div class="header-menu">
+        <div class="header-menu an" data-an='fade-left'>
             <ul>
                 <li class='active' data-work="All">All</li>
                 <li data-work="Websaite Design">Websaite Design</li>
@@ -13,8 +13,8 @@
                 <li data-work="SEO">SEO</li>
             </ul>
         </div>
-        <div class="row">
-            <div class="card" data-work="Websaite Design">
+        <div class="row an" data-an='fade'>
+            <div class="card" data-work="Websaite Design" >
                 <img src="assets/images/1-1.png" alt="" class="card_img">
                 <div class="hover_effect">
                     <h4>Website Design</h4>

@@ -113,6 +113,14 @@
 }
 
  @media(max-width:1090px) {
+
+    #service-details .review .row{
+        grid-template-columns: 100%;
+        justify-content: center;
+    }
+    #service-details .review .row .card{
+        margin: 20px auto;
+    }
     #blog .rows .content{
         grid-template-columns: 100% !important;
     }

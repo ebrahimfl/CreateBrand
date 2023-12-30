@@ -68,8 +68,8 @@ if (isset($_GET["add"])) {
                 <a href="?val=Dashbord">Dashbord</a>
                 <a href="javascript:void(0);"  onclick="myFunction('blog_ad')">Blog >>
                     <div id="blog_ad" style="display: none;">
-                        <a href="?val=AddBlog" style="font-size: 15px;">Add Blog</a>
-                        <a href="?val=AllBlog" style="font-size: 15px;">Blog All</a>                        
+                        <a href="?val=AllBlog" style="font-size: 15px;">Blog All</a>
+                        <a href="?val=AddBlog" style="font-size: 15px;">Add Blog</a>                                                
                     </div>
                 </a>
                 <a href="javascript:void(0);" onclick="myFunction('service')" >Service >>

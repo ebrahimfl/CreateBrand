@@ -170,24 +170,12 @@ if (isset($_GET["id"])) {
                             </div>
                             <div class="blog_text">
                                 <h3><?php echo $data['title']; ?></h3>
-                                <p><?php echo $data['dsc']; ?> </p>
+                                <p><?php echo $fun->textShorten($data['dsc'],200) ?> </p>
                             </div>
                         </div>
                     </a>
                 <?php } ?>
-
-                <!-- <div class="pagination_buttons">
-                    <a href="blog.php?">
-                        <div class="n_p_btn"><img src="assets/icons/pgRight.png" alt=""></div>
-                    </a>
-                    <a href="blog.php?page=" class=''></a>
-                    <a href="blog.php">
-
-                        <div class='n_p_btn'><img src="assets/icons/pgLeft.png" alt=""></div>
-                    </a>
-                </div> -->
             </div>
-
             <?php include 'include/blog_sidebar.php' ?>
         </div>
     </div>
