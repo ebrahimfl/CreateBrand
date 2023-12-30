@@ -26,7 +26,7 @@ if($service_data = $service_row->fetch_assoc()){
         </div>
         <div class="content">
             <div class="heading">
-                <h2 style='text-align: left;'><?php echo $service_data['ser_name'] ?></h2>
+                <h2 style=''><?php echo $service_data['ser_name'] ?></h2>
             </div>
             <div class="description">
                 <p>

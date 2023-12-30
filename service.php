@@ -24,8 +24,8 @@
                             <img src="assets/icons/website.png" alt="<?php echo $ser_name ?>">
                         </div>
                         <div class="card-text">
-                            <h3><?php echo $ser_name ?></h4>
-                            <p><?php echo $ser_dec ?></p>
+                            <h3> <?php echo $ser_name ?></h4>
+                            <p><?php echo $show->textShorten($ser_dec,90)  ?></p>
                             <p class="price" style='margin-top:5px'><b style='color:#FD3434'>Price: </b> <?php echo $s_price ?></p>
                         </div>
                         </a>
