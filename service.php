@@ -19,7 +19,7 @@
                     $date = $conn['date'];
                 ?>
                 <div class="card">
-                    <a href="service-details.php">
+                    <a href="service-details.php?id=<?php echo $id ?>">
                         <div class="card_img">
                             <img src="assets/icons/website.png" alt="<?php echo $ser_name ?>">
                         </div>

@@ -82,3 +82,32 @@
     line-height: 26px;
     margin: 10px 0;
 }
+.contact{
+    background-color: var(--Secondary);
+    width: 100%;
+    margin: 80px 0;
+    min-height: 250px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.contact h2{
+    color: #fff !important;
+}
+.contact button{
+   display: flex;
+   margin: 30px auto 0;
+   background-color: var(--primary);
+   font-size: 20px !important;
+   font-weight: 600;
+   border: 2px solid transparent !important;
+}
+.contact button:hover{
+    border: 2px solid #fff !important;
+}
+
+.slider::before{
+    background-color: transparent !important;
+}

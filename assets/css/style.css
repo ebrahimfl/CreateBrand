@@ -422,10 +422,10 @@
     line-height: 22px;
     margin-bottom: 30px
 }
-#home .slider{
+ .slider{
     position: relative;
 }
-#home .slider::before{
+ .slider::before{
     width: 100%;
     height: 100%;
     position: absolute;
@@ -433,12 +433,69 @@
     background-color: #00000062;
     z-index: 2;
 }
-#home .slider .btn_normal{
+.slider .btn_normal{
     padding: 13px 36px  !important;
     transition: 0.6s !important;
 }
-#home .slider .btn_normal:hover{
+.slider .btn_normal:hover{
     background-color: var(--Secondary) !important;
+}
+
+.our-work .work_rows{
+    display: flex;
+    gap: 30px;
+    overflow: auto;
+    margin-top: 50px !important;
+    width: 100% !important;
+}
+.our-work .work_rows::-webkit-scrollbar{
+    width: 0;
+}
+.our-work .work_rows .card{
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    min-width: 400px;
+    max-height: 250px;
+}
+.our-work .work_rows .card img.card_img{
+    width: 100%;
+    height: 100%;
+    border-radius: 4px;
+}
+.our-work .work_rows .card .hover_effect{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    width: 90%;
+    bottom: -110px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 3px 0 0 3px;
+    padding: 0 0 0 14px;
+    transition: 0.5s;
+}
+.our-work .work_rows .card:hover .hover_effect{
+    bottom: 10px;
+}
+.our-work .work_rows .card .hover_effect h4{
+    font-weight: 600;
+    color: var(--black);
+}
+.our-work .work_rows .card .hover_effect .img{
+    background-color:var(--primary) ;
+    width: 50px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.our-work .work_rows .card .hover_effect a.img img{
+    width: 14px !important;
+    height: 12px;
 }
     
 #about .row,#home .row{
