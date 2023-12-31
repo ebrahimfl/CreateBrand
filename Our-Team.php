@@ -9,9 +9,7 @@ $function = new fun();
     <div class="header-menu an" data-an='fade-right'>
         <ul>
             <li class='active' data-team="All">All</li>
-            <li data-team="Web Designer">Websaite Design</li>
-            <li data-team="Web Developer">Websaite Developer</li>
-            <li data-team="Full Stack Developer">Full Stack Developer</li>
+            <li data-team="Web Designer">Websaite Design & Developer</li>           
             <li data-team="SEO">SEO</li>
             <li data-team="Digital Marketing">Digital Marketing</li>
             <li data-team="Website any Bug fixing">Website any Bug fixing</li>
