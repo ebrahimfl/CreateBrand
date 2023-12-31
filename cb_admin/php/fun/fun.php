@@ -200,6 +200,13 @@ class addmin{
         $data =$result->fetch_assoc();
         return $data['count'];
     }
+    public function visitior_total(){
+        global $connection;
+        $sql = "SELECT COUNT(id) AS count FROM visitor";
+        $result = $connection->query($sql);
+        $data =$result->fetch_assoc();
+        return $data['count'];
+    }
 
 
 }
