@@ -4,9 +4,10 @@
         <div class="row">
             <div class="footer_col">
                 <div class="logo">
-                    <h2><a href="index.php" style="color:white">Create Brand</a></h2>
+                    <h2><a href="index.php" style="color:white;font-size:28px;text-align:left;">Create of Brand</a></h2>
                     </div>
-                    <p>বর্তমান তথ্য ও যোগাযোগ প্রযুক্তির যুগ। ভার্চুয়াল জগতের আমাদের কাজগুলোকে আরো সহজ করে তুলতে আমরা নিয়ে এসেছি এক বিশস্থ প্রতিষ্ঠান <a href="index.php" style="color:blue; text-decoration: underline">ক্রিয়েট ব্র্যান্ড ।</a> 
+                    <p>বর্তমান তথ্য ও যোগাযোগ প্রযুক্তির যুগ। ভার্চুয়াল জগতের আমাদের কাজগুলোকে আরো সহজ করে তুলতে আমরা নিয়ে এসেছি এক বিশস্থ প্রতিষ্ঠান <a href="index.php" style="color:blue; text-decoration: underline">ক্রিয়েট অফ ব্রান্ড
+</a> 
                    </p>
             </div>
             <div class="footer_col">
@@ -42,7 +43,7 @@
             <a href=""><img src="assets/icons/instagram.svg" alt=""></a>
         </div>
         <div class="copyrighting_section">
-            <p>Copyrighting&copy; 2023-ALL Rights Reserved | <a href="index.php" style="color: white;">Create Brand</a></p>
+            <p>Copyrighting&copy; 2023-ALL Rights Reserved | <a href="index.php" style="color: white;">Create of Brand</a></p>
         </div>
     </div>
     </footer>

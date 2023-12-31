@@ -4,12 +4,7 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
     include_once("../php/fun/fun.php");
     $conn = new addmin;
-
 ?>
-
-
-
-
     <?php
     $blog_show = $conn->show_col("blog", $id);
     while ($data = mysqli_fetch_assoc($blog_show)) {
@@ -18,9 +13,6 @@ if (isset($_GET['id'])) {
         $mata = $data['mata'];
         $img = $data['img'];
         $catagory = $data['catagory'];
-
-
-
     ?>
         <link rel="stylesheet" href="../css/update_blog.css">
         <div class="update-blog-conatiner">

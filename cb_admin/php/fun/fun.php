@@ -190,9 +190,15 @@ class addmin{
         }else {
            dir("Database not connected");
         }
+        
+    }
 
-        
-        
+   public function visitior($time){
+        global $connection;
+        $sql = "SELECT COUNT(id) AS count FROM visitor WHERE time >='$time'";
+        $result = $connection->query($sql);
+        $data =$result->fetch_assoc();
+        return $data['count'];
     }
 
 

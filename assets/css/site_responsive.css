@@ -175,6 +175,26 @@
         transform: translate(-50%,-50%);
         padding: 0 10px;
     }
+
+    #team_details .row{
+        grid-template-columns: 100% !important;
+        gap: 0 !important;
+    }
+    #team_details .row .image{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 40px;
+    }
+
+    #team_details .row .image  img{
+        position: static !important;
+        max-width: 500px;
+    }
+    #team_details  .warrper{
+        flex-direction: column !important;
+        align-items: start !important;
+    } 
 }
 
  @media(max-width:750px) {
