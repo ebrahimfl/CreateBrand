@@ -21,7 +21,7 @@ $conn = new fun();
                     <img src="assets/images/team/<?php echo $team_data['image'] ?>" alt="" class="card_img">
                     <h4><?php echo $team_data['name'] ?></h4>
                     <p><?php echo $team_data['category'] ?></p>
-                    <img src="assets/images/logo.png" alt="" class='logo'>
+                    <img src="assets/images/logo-01.svg" style="width: 70px;height:80px;margin-top:10px" alt="" class='logo'>
                 </div>
             <?php } ?>
             <div class="img">

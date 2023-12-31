@@ -3,13 +3,19 @@
     <div class="container">
         <div class="slider an" style="margin-bottom: 40px;" data-an='fade'>
             <div class="img">
-                <img src="assets/images/slider/slider-3-01.png" alt="">
+                <img src="assets/images/slider/web-design-01.svg" alt="">
             </div>
             <div class="img">
-                <img src="assets/images/slider/slider-1.png" alt="">
+                <img src="assets/images/slider/web-design-02.svg" alt="">
             </div>
             <div class="img">
-                <img src="assets/images/slider/slider-2.png" alt="">
+                <img src="assets/images/slider/bug-fix.svg" alt="">
+            </div>
+            <div class="img">
+                <img src="assets/images/slider/dashboard-1.svg" alt="">
+            </div>
+            <div class="img">
+                <img src="assets/images/slider/dashboard-2.svg" alt="">
             </div>
         </div>
         <div class="content">

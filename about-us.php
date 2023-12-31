@@ -10,7 +10,7 @@
                 <img src="assets/images/1.jpg" alt="" class="card_img">
                 <h4>Redwan Hussain Shawon</h4>
                 <p>Full-Stack Developer</p>
-                <img src="assets/images/logo.png" alt="" class='logo'>
+                <img src="assets/images/logo-01.svg" style="width: 70px;height:80px;margin-top:10px" alt="" class='logo'>
             </div>
             
         

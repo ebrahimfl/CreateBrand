@@ -6,7 +6,14 @@ $conn = $conn_f->connect;
 
 include_once("assets/php/function.php");
 
-
+$ip =$_SERVER['REMOTE_ADDR'];
+$query = "SELECT * FROM visitor WHERE ip='$ip'";
+$result=$conn->query($query);
+if($result->num_rows == 0){
+$query = "INSERT INTO visitor(ip)VALUES('$ip')";
+$conn->query($query);
+echo $ip;
+}
 
 
 ?>

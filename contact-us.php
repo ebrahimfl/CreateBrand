@@ -43,7 +43,7 @@
             <div class="contact_details">
                 <h3>Let's Keep in Touch</h3>
                 <p>Have and Question in your Mind, don't Hesitate to Ask.</p>
-                <h2>Create Brand</h2>
+                <h2>Create of Brand</h2>
                 <div class="contact_social">
                     <a href="mailto:createbrand.team@gmail.com"><span><img src="assets/icons/top-mail.png" alt=""></span>createbrand.team@gmail.com</a>
                     <a href="tel:0132322232"><span><img src="assets/icons/phone_icons.png" alt=""></span>01322322323</a>

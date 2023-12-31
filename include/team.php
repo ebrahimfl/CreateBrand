@@ -5,8 +5,7 @@
     <div class="row an"  data-an='fade-up'>
       <?php $function = new fun(); $row =  $function->show('ourteam');
         while($data = $row->fetch_assoc()){ 
-            $id= $data['id'];
-            ?>
+            $id= $data['id'];     ?>
         <div class="card " data-team="<?php echo $data['category'] ?>">
          <img src="assets/images/team/<?php echo $data['image'] ?>" alt="" class="card-img">
          <div class="text">
