@@ -70,11 +70,13 @@ $conn = new fun();
 
                     ?>
                         <div class="card an" data-an='zoom-in'>
+                            <a href="service-details.php?id=<?php echo $id ?>">
                             <div class="card_img">
                                 <img src="assets/icons/<?php echo $ser_img; ?>" alt="">
                             </div>
                             <h3><?php echo $ser_name; ?></h3>
-                            <p>Create of Brand Team</p>
+                            <p><?php echo $fun->textShorten($ser_dec,90); ?></p>
+                            </a>
                         </div>
                     <?php } ?>
 
