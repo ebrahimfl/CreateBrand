@@ -113,8 +113,23 @@ class addmin{
         $team_id = $_POST['team_id'];
         $category = $_POST['category'];
         $description = $_POST['description'];
+        $location = $_POST['location'];
+       $join_date = date('Y-m-d',strtotime($_POST['join_date']));
+        $best_skills = $_POST['best_skills'];
+        $project_1 = $_POST['project_1'];
+        $project_1_desc = $_POST['project_1_desc'];
+        $project_1_desc = $_POST['project_1_desc'];
+        $project_2 = $_POST['project_2'];
+        $project_2_desc = $_POST['project_2_desc'];
+        $project_3 = $_POST['project_3'];
+        $project_3_desc = $_POST['project_3_desc'];
+        $project_3_desc = $_POST['project_3_desc'];
+        $work_ex_name = $_POST['work_ex_name'];
+        $work_ex_desc = $_POST['work_ex_desc'];
+        
+
         if($img_name=$this->img_validaction($_FILES['img']['name'],$_FILES['img']['tmp_name'],'../../assets/images/team/')){
-            $sql = "INSERT INTO ourteam(name,team_id,category,image,description,status) VALUES('$name',$team_id,'$category','$img_name','$description',1)";
+            $sql = "INSERT INTO ourteam(name,team_id,category,image,description,status,location,join_date,best_skills,project_1,project_1_desc,project_2,project_2_desc,project_3,project_3_desc,work_ex_name,work_ex_desc) VALUES('$name',$team_id,'$category','$img_name','$description',1,'$location','$join_date','$best_skills','$project_1','$project_1_desc','$project_2','$project_2_desc','$project_3','$project_3_desc','$work_ex_name','$work_ex_desc')";
             if($this->conn->query($sql)){
                 header("location:../../admin.php?val=team_add");
             }
@@ -196,6 +211,13 @@ class addmin{
    public function visitior($time){
         global $connection;
         $sql = "SELECT COUNT(id) AS count FROM visitor WHERE time >='$time'";
+        $result = $connection->query($sql);
+        $data =$result->fetch_assoc();
+        return $data['count'];
+    }
+    public function visitior_total(){
+        global $connection;
+        $sql = "SELECT COUNT(id) AS count FROM visitor";
         $result = $connection->query($sql);
         $data =$result->fetch_assoc();
         return $data['count'];
