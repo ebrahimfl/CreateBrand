@@ -1,7 +1,7 @@
 
 
 <link rel="stylesheet" href="assets/css/about.css">
-<section id="about">
+<section id="about" class="container">
     <div class="counter_wrapper">
         <div class="card an" data-an='fade-right'>
             <h4 data-counter-value='2'>0<span>+</span></h4>
