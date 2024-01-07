@@ -12,7 +12,6 @@ $result=$conn->query($query);
 if($result->num_rows == 0){
 $query = "INSERT INTO visitor(ip)VALUES('$ip')";
 $conn->query($query);
-echo $ip;
 }
 
 
