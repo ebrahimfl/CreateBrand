@@ -3,6 +3,7 @@
 
 
 <?php require_once "include/service.php"; ?>
+<?php require_once "include/all_pricing.php"; ?>
 
 
 

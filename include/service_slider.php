@@ -2,8 +2,10 @@
 <section id="about">
 
     <div class="container">
+    <!-- <h2 style="margin-top: 30px;" class="sec-titel">Our Services</h2> -->
 
         <div class="services" id='scroll'>
+        
             <?php 
                 include_once("assets/php/function.php");
                 $fun = new fun();

@@ -65,3 +65,5 @@
         </div>
     </div>
 </div>
+
+<?php include_once("include/team_slider.php"); ?>

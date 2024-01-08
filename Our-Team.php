@@ -17,8 +17,13 @@ $function = new fun();
             <li data-team="Wordpress Theme Customization">Wordpress Theme Customization</li>
         </ul>
     </div>
-    <?php include_once("include/team.php") ?>
+    <?php include_once("include/team.php");?>    
    </div>
     </section>
+    <style>#our-team {
+    padding: 0px 0px 9px;
+    }</style>
+    <?php include_once("include/service_slider.php"); ?>
+
 
 <?php require_once "include/footer.php"; ?>
