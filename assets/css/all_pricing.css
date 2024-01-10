@@ -1,0 +1,80 @@
+/* #dddd ol {
+    max-width: 100%;
+    position: relative;
+    margin: 0 50px ;
+}
+
+#dddd ol li::before {
+    content: '';
+    width: 0.5rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 15%;
+    background: rgb(12, 12, 11);
+    z-index: -1;
+}
+
+#dddd li {
+    padding: 0.5rem 1.5rem 1rem;
+    border-radius: 1.5rem;
+    background: peachpuff;
+   margin-left: 50px;
+}
+
+#dddd li+li {
+    margin-top: 1rem;
+}
+
+#dddd ::marker {
+    font-weight: 600;
+    color: rgb(26, 24, 24);
+    font-size: 1.8rem;
+    margin-left: 200px;
+}
+
+ */
+.header-text-pricing {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-text-pricing h1,
+h3,
+p {
+    margin: 5px 0;
+}
+
+.header-text-pricing hr {
+    width: 90%;
+}
+
+#package {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 50px;
+}
+.package-left h4{
+    font-size: 25px;
+}
+.package-left ol li {
+    font-size: 20px;
+}
+
+.package-left ol li {
+    list-style: decimal;
+    margin: 20px 50px;
+}
+.package-left ol li ul li {
+    list-style: outside;
+    margin: 20px;
+}
+
+
+.package-right table tr th, td  {
+    border: 2px solid #ddd;
+    padding: 3px 8px;
+}

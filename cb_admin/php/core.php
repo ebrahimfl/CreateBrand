@@ -34,7 +34,57 @@ if (isset($_POST["blogup"])) {
    }
     
 }
+// monuwar write 
+if (isset($_POST["save_change_email_input"])) {
+    if (isset($_GET['id'])) {
+         $id = $_GET['id'];
+         $conn->update_user_data($id,$_POST);
+    }
+     
+ }
+ if (isset($_POST["save_add_eamil_get"])) {
+    if (isset($_GET['id'])) {
+         $id = $_GET['id'];
+         $conn->save_add_eamil_ge($id,$_POST);
+    }
+     
+ }
+ if (isset($_POST["save_change_number_get"])) {
+    if (isset($_GET['id'])) {
+         $id = $_GET['id'];
+         $conn->save_change_number_get($id,$_POST);
+    }
+     
+ }
+ if (isset($_POST["add_number_get_save"])) {
+    if (isset($_GET['id'])) {
+         $id = $_GET['id'];
+         $conn->add_number_ge($id,$_POST);
+    }
+     
+ }
+ if (isset($_POST["change_country_get"])) {
+    if (isset($_GET['id'])) {
+         $id = $_GET['id'];
+         $conn->change_country_get($id,$_POST);
+    }
+     
+ }
 
+ if (isset($_POST["save_add_country_get"])) {
+    if (isset($_GET['id'])) {
+         $id = $_GET['id'];
+         $conn->save_add_country_get($id,$_POST);
+    }
+     
+ }
 
+ if (isset($_POST["save_add_country_get"])) {
+   if (isset($_GET['id'])) {
+        $id = $_GET['id'];
+        $conn->save_add_country_get($id,$_POST);
+   }
+    
+}
 
 ?>
