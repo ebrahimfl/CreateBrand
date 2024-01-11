@@ -113,33 +113,21 @@ class addmin
     // *Our Team Add 
     public function team_add()
     {
+        $acces = $_POST['acces'];
         $name = $_POST['name'];
+        $Nid = $_POST['Nid'];
         $team_id = $_POST['team_id'];
         $category = $_POST['category'];
-        $description = $_POST['description'];
         $location = $_POST['location'];
-        $join_date = date('Y-m-d', strtotime($_POST['join_date']));
-        $best_skills = $_POST['best_skills'];
-        $project_1 = $_POST['project_1'];
-        $project_1_desc = $_POST['project_1_desc'];
-        $project_1_desc = $_POST['project_1_desc'];
-        $project_2 = $_POST['project_2'];
-        $project_2_desc = $_POST['project_2_desc'];
-        $project_3 = $_POST['project_3'];
-        $project_3_desc = $_POST['project_3_desc'];
-        $project_3_desc = $_POST['project_3_desc'];
-        $work_ex_name = $_POST['work_ex_name'];
-        $work_ex_desc = $_POST['work_ex_desc'];
-
-
-        if ($img_name = $this->img_validaction($_FILES['img']['name'], $_FILES['img']['tmp_name'], '../../assets/images/team/')) {
-            $sql = "INSERT INTO ourteam(name,team_id,category,image,description,status,location,join_date,best_skills,project_1,project_1_desc,project_2,project_2_desc,project_3,project_3_desc,work_ex_name,work_ex_desc) VALUES('$name',$team_id,'$category','$img_name','$description',1,'$location','$join_date','$best_skills','$project_1','$project_1_desc','$project_2','$project_2_desc','$project_3','$project_3_desc','$work_ex_name','$work_ex_desc')";
+        $password = $_POST['password'];
+       
+            $sql = "INSERT INTO admin (	acces, ad_id, ad_name, ad_pass, ad_parmison, ad_nid, ad_catagory, location) VALUES('$acces', '$team_id', '$name', '$password', '1', '$Nid', '$category', '$location')";
             if ($this->conn->query($sql)) {
-                header("location:../../admin.php?val=team_add");
+                header("location:../../admin.php?val=team_add&&ok");
+            }else {                
+                header("location:../../admin.php?val=team_add&&no");
             }
-        } else {
-            header("location:../../admin.php?val=team_add");
-        }
+        
     }
 
     // blog fun start
