@@ -6,7 +6,7 @@
     <input type="text" name="title" id="title" placeholder="Title" required>
 
     <label for="id">Content Here </label>
-    <textarea name="dsc" id="id" cols="20" rows="5" placeholder="Your Content" required></textarea>
+    <textarea name="dsc" id="id" cols="20" rows="5" class="check" placeholder="Your Content" required></textarea>
 
     <label for="mata">Meta Description Here </label>
     <input type="text" name="mata" id="mata" placeholder="Mata Dsciption" required>
@@ -20,6 +20,16 @@
     
     <input type="submit" class="btnn" value="Submite" name="b_sub">
 </form>
+
+<script src="cb_admin/textarea/ckeditor.js"></script>
+<style> p.ck-placeholder {   min-height: 319px; } </style>
+<script>
+	 ClassicEditor
+		.create( document.querySelector( '.check' ), {
+			// toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
+		} )
+		
+</script>
 
 
 
