@@ -38,10 +38,21 @@ class fun{
             return $data;
         }else {
             echo "no";
+        }       
+        
         }
+      //   show function skill tabal
+      public function skill($table_name,$id)  {
+        $show = "SELECT * FROM $table_name WHERE ad_id=$id";
+        $sql_s = mysqli_query($this->conn,$show);
+        if ($sql_s) {
+            $data = mysqli_query($this->conn,$show);            
+            return $data;
+        }else {
+            echo "no";
+        }       
         
-        
-    }
+        }
 
     public function textShorten($text, $limit = 400){
         $text = substr($text, 0, $limit);
