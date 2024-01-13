@@ -19,8 +19,11 @@ if (!$id) {
             $ad_catagory = $data['ad_catagory'];
             $location = $data['location'];            
             $dsc = $data['dsc'];            
+            $verifiy = $data['verifiy'];            
+            $exp_about = $data['exp_about'];            
             $datea=date_create($data['data']);
             $join_date = date_format($datea,"d M Y");
+            
         }    
     }  
     
@@ -110,6 +113,18 @@ if (!$id) {
       
             <div class="work_experience">
                 <h3>Work Experience</h3>
+                <div class="veryfy">
+                    <p class="name_company">Creat of Brand</p>
+                    <?php
+                        if ($verifiy == 1) {
+                            $v_img ="verifiy.png";
+                        }else {
+                            $v_img ="verifiy_not.png";
+                        }
+                    ?>
+                    <img src="assets/icons/<?php echo $v_img ?>" class="verigiy" alt="" srcset="">
+                </div>
+
             </div>
 
             <div class="work_experience">
@@ -117,7 +132,7 @@ if (!$id) {
                     <div>
                         <h3>About</h3>
                     </div>
-                    <p class='description'><?php echo $dsc  ?></p>
+                    <p class='description'><?php echo $exp_about  ?></p>
                 </div>
             </div>
 
