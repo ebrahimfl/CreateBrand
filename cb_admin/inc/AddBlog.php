@@ -1,6 +1,9 @@
 
 <link rel="stylesheet" href="cb_admin/css/add_blog.css">
 
+
+
+
 <form action="cb_admin/php/core.php" method="post" enctype= "multipart/form-data" >
     <label for="title">Title Here </label>
     <input type="text" name="title" id="title" placeholder="Title" required>
@@ -21,15 +24,8 @@
     <input type="submit" class="btnn" value="Submite" name="b_sub">
 </form>
 
-<script src="cb_admin/textarea/ckeditor.js"></script>
-<style> p.ck-placeholder {   min-height: 319px; } </style>
-<script>
-	 ClassicEditor
-		.create( document.querySelector( '.check' ), {
-			// toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
-		} )
-		
-</script>
+
+
 
 
 

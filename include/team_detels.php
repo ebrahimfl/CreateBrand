@@ -1,24 +1,51 @@
 <link rel="stylesheet" href="assets/css/team_details.css">
+
+
+<?php
+$id = $_GET["id"];
+if (!$id) {
+    header("location: ../our-team.php");   
+}
+ $function = new fun(); 
+ $row =  $function->show_col("admin",$id);
+ $check = mysqli_num_rows($row);
+
+ if ($check === 1) {
+        while ($data = $row->fetch_assoc()) {
+            $ad_id = $data['ad_id'];
+            $img = $data['img'];
+            $ad_name = $data['ad_name'];
+            $ad_catagory = $data['ad_catagory'];
+            $location = $data['location'];            
+            $dsc = $data['dsc'];
+            $ad_catagory = $data['ad_catagory'];
+            $ad_catagory = $data['ad_catagory'];
+            $datea=date_create($data['data']);
+            $join_date = date_format($datea,"d M Y");
+        }    
+    }  
+
+?>
 <div id="team_details">
     <div class="container">
         <div class="row">
             <div class="image">
-                <img src="https://assets.toptal.io/images?url=https%3A%2F%2Fbs-uploads.toptal.io%2Fblackfish-uploads%2Ftalent%2Fprofile%2Fpicture_file%2Fpicture%2F1065667%2Fhuge_90fb7631e5d3f62d179fe9ca40317478-46da0068435556b45ed22930150aaf95.jpg&width=524" alt="">
+                <img src="assets/images/team/<?php echo $img ?>" alt="">
             </div>
             <div class="text">
-                <h2>Anuar Heberlein</h2>
-                <h4 class='expert'>Web Designer And Developer</h4>
+                <h2><?php echo $ad_name ?></h2>
+                <h4 class='expert'><?php echo $ad_catagory ?></h4>
                 <div class="warrper warrper_1">
                     <div>
                         <h5>Location</h5>
-                        <h4>San Diego, CA, United States</h4>
+                        <h4><?php echo $location ?></h4>
                     </div>
                     <div>
                         <h5>Create of Brand Join Date</h5>
-                        <h4>20 jan 2022</h4>
+                        <h4><?php echo $join_date ?></h4>
                     </div>
                 </div>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos excepturi cum, tempora debitis magnam beatae doloribus fugiat praesentium eaque quidem labore. Mollitia minima consectetur inventore consequuntur! Similique consequatur provident magnam omnis quo labore iste porro, odit impedit doloremque blanditiis et recusandae accusantium ab at nam in esse quae non perferendis? Veritatis cum neque, maxime sit odio, quaerat ut sunt quam rerum eum reprehenderit? Laudantium quaerat fuga accusantium deserunt, vitae nihil hic quis! Tenetur aspernatur nostrum odio perferendis cum aliquid animi blanditiis maiores explicabo, praesentium </p>
+                <p><?php echo $dsc ?> </p>
                 <div class="skill_keywords">
                     <button>Real Estate Venture Capital</button>
                     <button>Market Segmentaion </button>

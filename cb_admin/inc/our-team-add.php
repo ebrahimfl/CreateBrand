@@ -43,12 +43,3 @@
 
 
 
-<script src="cb_admin/textarea/ckeditor.js"></script>
-<style> p.ck-placeholder {   min-height: 319px; } </style>
-<script>
-	 ClassicEditor
-		.create( document.querySelector( '#id' ), {
-			// toolbar: [ 'heading', '|', 'bold', 'italic', 'link' ]
-		} )
-		
-</script>
