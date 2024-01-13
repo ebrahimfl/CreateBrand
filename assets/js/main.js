@@ -68,10 +68,10 @@ function validate() {
   let subjectVal = subject.value.trim();
   let messageVal = message.value.trim();
   let error = true;
-  if (nameVal == "") {
+  if(nameVal == "") {
     setErrorMsg(name, "Name Can not be blank");
     error = false;
-  } else {
+  }else {
     setSuccessMsg(name);
   }
   if (emailVal == "") {
@@ -94,7 +94,7 @@ function validate() {
     setSuccessMsg(phone);
   }
   if (subjectVal == "") {
-    setErrorMsg(subject, "subject not be blank");
+    setErrorMsg(subject, "select a subject");
     error = false;
   } else if (subjectVal.length < 3) {
     setErrorMsg(subject, "min 3 character input");
@@ -119,6 +119,7 @@ function setErrorMsg(input, errorVal) {
 function setSuccessMsg(input) {
   let form_control = input.parentElement;
   form_control.classList.remove("error-message");
+  form_control.querySelector("small").innerHTML='';
 }
 
 let filterButton = document.querySelectorAll("#our-team .header-menu ul li");
@@ -369,4 +370,19 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   
 });
+
+
+// Modal 
+function openModal(modalId,overlayId) {
+  document.getElementById(modalId).style.display = 'block';
+  document.getElementById(overlayId).style.display = 'block';
+}
+
+function closeModal(modalId,overlayId) {
+  document.getElementById(modalId).style.display = 'none';
+  document.getElementById(overlayId).style.display = 'none';
+}
+
+
+
 

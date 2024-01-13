@@ -32,7 +32,6 @@
                     <li><a href="loginSign.php?log=ouradds" class="footer_h_a">Address</a></li>
                     <li><a href="index.php">Create Brand</a></li>
                     <li><a href="mailto:createbrand.team@gmail.com" target="_blank">createbrand.team@gmail.com</a></li>
-
                 </ul>
             </div>
         </div>
@@ -49,6 +48,21 @@
     </footer>
  <script src="assets/js/animation.js"></script>
  <script src="assets/js/main.js"></script>
+ <script>
+    <?php if(isset($_SESSION['alert']) && !empty($_SESSION['alert'])){
+        if(isset($_SESSION['alert']['danger'])){
+         echo 'openModal("dangerModal", "overlay")';
+         unset($_SESSION['alert']);
+        }
+        if(isset($_SESSION['alert']['type'])){
+            if($_SESSION['alert']['type']=='success'){
+            echo 'openModal("successModal", "overlay")';
+            unset($_SESSION['alert']);
+           }
+        }
+    } ?>
+
+ </script>
 </body>
 
 </html>
