@@ -3,12 +3,18 @@
 </head>
 <body>
 
+<?php if (isset($_SESSION['alert'])) { ?>
+
 
     <div class="overlay" id="overlay"></div>
+
+    
     <div class="modal" id="dangerModal">
         <div class="modal-content">
             <h4>Danger Alert</h4>
-            <p><?php if($_SESSION['alert']['type'] == 'danger' ) echo $_SESSION['alert']['message'] ?></p>
+            <p><?php            
+            if($_SESSION['alert']['type'] == 'danger' ) 
+            echo $_SESSION['alert']['message']; ?></p>
            
             <button class="btn btn-danger" onclick="closeModal('dangerModal', 'overlay')">Close</button>
         </div>
@@ -17,10 +23,22 @@
     <div class="modal" id="successModal">
         <div class="modal-content">
             <h4>Success Alert</h4>
-            <p><?php if($_SESSION['alert']['type'] == 'success') echo $_SESSION['alert']['message'] ?></p>
+            <p><?php  
+                if($_SESSION['alert']['type'] == 'success') echo $_SESSION['alert']['message'] ;
+                ?></p>
             <button class="btn btn-success" onclick="closeModal('successModal', 'overlay')">Close</button>
         </div>
     </div>
+
+
+<?php
+            }
+
+?>
+
+
+
+
     
     <header>
         <section class="top-bar">

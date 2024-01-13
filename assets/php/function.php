@@ -66,8 +66,6 @@ class fun
         }       
         
         }
-    }
-
       //   show function skill tabal
       public function skill($table_name,$id)  {
         $show = "SELECT * FROM $table_name WHERE ad_id=$id";
@@ -80,7 +78,6 @@ class fun
         }       
         
         }
-
 
     public function textShorten($text, $limit = 400)
     {
