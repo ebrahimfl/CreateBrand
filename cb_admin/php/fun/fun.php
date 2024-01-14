@@ -188,7 +188,12 @@ class addmin
         $check = mysqli_query($this->conn, $qur);
         if ($check) {
             if (mysqli_num_rows($check) === 1) {
+                $id_c = mysqli_fetch_assoc($check);
+                $id = $id_c['id'];
                 setcookie(md5("ad_name"), $use_name, time() + (86400 / 4), "/");
+                session_start();
+                $_SESSION[md5("admin_brandOfcreate_id")]=$id;
+                $_SESSION[md5("admin_brandOfcreate_ad_id")]= $id_c['ad_id'];
                 header("location:../../admin.php");
             } else {
                 header("location:../../");
