@@ -301,6 +301,12 @@
  /* ^Extra Small Device Media Query Start */
 
  @media(max-width:458px) {
+    #service .container{
+        padding: 0 !important;
+    }
+    #service .service{
+        padding: 12px !important;
+    }
     .slider{
         height: 290px !important;
       }
