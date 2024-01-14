@@ -1,6 +1,7 @@
 <link rel="stylesheet" href="assets/css/service.css">
-<div class="container">
+
     <section id='service'>
+     <div class="container">
         <h2 class="sec-titel">Our Services</h2>
             <div class="service">
                 <?php
@@ -28,5 +29,5 @@
                 </div>
                 <?php } ?>
             </div>
+            </div>
     </section>
-</div>
