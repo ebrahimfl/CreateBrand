@@ -1,184 +1,165 @@
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	
+#user_profile{
+	margin-top: 30px;
 }
-
-.profile-header{
-	width: 100%;
-	height: 250px;
+#user_profile .profile_header{
 	position: relative;
+	margin-bottom: 60px;
 }
-.profile-header-img{
+#user_profile .profile_header .banner_img img{
+	max-height: 300px;
+	min-height: 130px;
+	height: auto;
 	width: 100%;
-	height: 250px;
+	border-radius: 6px 6px 0 0;
 }
-.profile-header-img img{
-	width: 100%;
-	height: 100%;	
-}
-.pro-edit-item{
-	width: 210px;
-	background: rgba(0,0,0,0.6);
+#user_profile .profile_header .banner_edit{
+	position: absolute;
+	right: 30px;
+	bottom: 20px;
+	background-color: #00000066;
+	width: 170px;
+	border-radius: 8px;
+	height: 36px;
+	color: #fff;
+	font-size: 15px;
 	display: flex;
 	align-items: center;
-	gap: 10px;
-	position: absolute;
-	right: 1rem;
-	bottom: 2rem;
-	padding: 0.1rem 1rem;
-	border-radius: 5px;
-}
-.pro-edit-item label{
-	font-weight: 700;
+	justify-content: center;
+	gap: 8px;
 	cursor: pointer;
-	color: aliceblue;
 }
-.pro-edit-item input{
+#user_profile .profile_header .banner_edit input{
 	display: none;
 }
-.pro-edit-item img{
-	width: 2rem;
-	border-radius: 10px;
-}
-/* ============ main profile ============== */
-.main-profile{
-	margin-top: 1rem;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	margin-top: -2rem;
-	border-bottom: 1px solid grey;
-	padding-bottom: 1rem;
-}
-.main-profile-item{
-	position: relative;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-.main-profile-item .profile-img{
-	border: 5px solid white;
-	width: 200px;
-	height: 200px;
+
+#user_profile .profile_header .profile_logo .icons{ 
+	position: absolute;
+	left: 143px;
+	bottom: -38px;
+	z-index: 2;
+	background-color: var(--primary);
+	width: 40px;
+	height: 40px;
 	border-radius: 50%;
-	overflow: hidden;
-	margin-top: -80px;
-}
-.main-profile img{
-	width: 100%;
-	height: 100%;
-	position: relative;
-}
-
-
-
-.profile-img-edit{
-	position: absolute;
-	bottom: 1rem;
-	right: 13rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	cursor: pointer;
 }
-.profile-img-edit img{
-	width: 2rem;
-	border-radius: 10px;
-}
-.profile-img-edit input{
+#user_profile .profile_header .profile_logo .icons input{
 	display: none;
 }
-.profile-name{
-	font-size: 30px;
-	margin-left: 1rem;
+#user_profile .profile_header .profile_logo{
+	z-index: 2;
+}
+#user_profile .profile_header .profile_logo img{
+	width: 150px;
+	height: 150px;
+	border-radius: 50%;
+	position: absolute;
+	bottom: -58px;
+	left: 30px;
+}
+#user_profile .user_name{
+	font-size: 33px;
+	text-align: left;
+	margin-left: 30px;
+}
+#user_profile p.user_intro{
+	color: #65676B;
+	font-size: 14px;
+	margin-left: 30px;
+	margin-top: 5px;
+	letter-spacing: 0.2px;
+	max-width: 400px;
+	line-height: 21px;
+}
+#user_tab{
+	margin: 50px 0;
 }
 
-
-/* ========== profile reedit ========= */
-.profile-reedit{
-	display: flex;
-	gap: 5px;
-	background: rgba(0,0,255,0.7);
-	color: wheat;
-	padding: 0.5rem;
-	border-radius: 10px;
-	justify-content: center;
-	align-items: center;
-	cursor: pointer;
-}
-.profile-reedit img{
-	width: 1.5rem;
-	border-radius: 5px;
-}
-/* ========= profile details ============= */
-.profile-details{
-	display: grid;
-	place-items: center;
-	padding: 1rem;
-}
-.profile-details-list{
-	max-width: 600px;
-	width: 100%;
-	text-align: center;
-	display: grid;
-	grid-template-columns: repeat(5,1fr);
-	gap: 1rem;
-}
-.profile-details-list li{
+#user_tab ul{
 	list-style: none;
-	padding: 0.6rem 1.4rem;
-	position: relative;
-	border: 1px solid rgb(202, 199, 199);
-	border-radius: 2px;
-	transition: all 0.4s linear;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #e6e6e6;
+	max-width: 360px;
+	height: auto;
+	margin: 0 auto;
 }
-.profile-details-list li::before{
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	border-top: 2px solid red;
-	border-left: 2px solid red;
-	border-radius: 3px;
-	transition: all 0.4s linear;
+#user_tab ul li{
+	display: inline-flex;
 }
-.profile-details-list li::after{
-	content: "";
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	bottom: 0;
-	right: 0;
-	border-bottom: 2px solid red;
-	border-right: 2px solid rgb(255, 71, 71);
-	border-radius: 3px;
-	transition: all 0.4s linear;
+#user_tab ul li a
+{
+	padding: 8px 16px;
+	font-size: 15px;
+	color: var(--black);
+	border-bottom: 3px solid transparent;
+	transition: 0.6s;
 }
-.profile-details-list li:hover::before{
-	width: 10%;
-	height: 20%;
+#user_tab ul li a.active{
+	color: var(--primary);
+	border-bottom: 3px solid var(--primary);
 }
-.profile-details-list li:hover::after{
-	width: 10%;
-	height: 20%;
+#user_profile .content{
+	padding: 20px 0;
 }
-.profile-details-list li a{
-	color: black;
-	font-weight: 600;
-}
-
-@media (max-width:580px){
-	.main-profile-item{
-		flex-direction: column;
-	}
-	.profile-img-edit{
-	bottom: 3rem;
-	right: 1rem;
-}
-.profile-details-list li{
-	padding: 0.2rem 0.3rem;
+#user_profile .content h3{
 	text-align: center;
-}
+	font-size: 29px;
+	margin-bottom: 20px;
 }
 
+#user_profile .content .row {
+	display: flex;
+	gap: 20px;
+	flex-direction: column;
+}
+.form-control{
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.form-control label{
+	font-size: 14px;
+	color: #2B2B2B;
+}
+.form-control input{
+	padding: 14px 15px;
+	color: #898989;
+	border: 1px solid #e6e6e6;
+	font-size: 14px;
+	border-radius: 8px;
+	outline: none;
+	transition: 0.4s;
+	max-width: 500px;
+}
+.form-control input[type=file]{
+	border: none;
+	outline: none;
+    background-color: transparent;
+    font-size: 14px;
+    color: #898989;
+    -webkit-box-shadow: none !important;
+    box-shadow: none;
+    border: 1px solid #e6e6e6;
+	padding:  0;
+}
+::-webkit-file-upload-button{
+	background-color: #dde0e3;
+	border: none;
+	line-height: 40px;
+	color: #2B2B2B;
+	padding: 0 20px;
+	margin-right: 20px;
+}
+
+.form-control input:focus{
+
+	box-shadow:  2px 2px 1px rgba(0,0,0,0),0 .375rem .625rem -0.3125rem rgba(254, 105, 106, 0.15);
+
+	/* box-shadow: 0 0px 3px rgba(0,0,0,0.12); */
+
+}

@@ -195,10 +195,10 @@ class addmin
                 $_SESSION[md5("admin_brandOfcreate_id")]=$id;
                 $_SESSION[md5("admin_brandOfcreate_ad_id")]= $id_c['ad_id'];
                 header("location:../../admin.php");
-            } else {
+            }else{
                 header("location:../../");
             }
-        } else {
+        }else{
             dir("Database not connected");
         }
     }
