@@ -14,11 +14,37 @@ class fun
     {
         $qur = "SELECT * FROM $table_name  ORDER BY id DESC";
         $conn_c = mysqli_query($this->conn, $qur);
-        if ($conn_c->num_rows > 0) {
+    if($conn_c->num_rows > 0) {
             $data = $this->conn->query($qur);
             return $data;
         } else {
             return ("No Data");
+        }
+    }
+    public function select_count($sql){
+        $conn_c = mysqli_query($this->conn, $sql);
+        if($conn_c->num_rows > 0) {
+                $data = $this->conn->query($sql);
+                return $data;
+            } else {
+                return ("No Data");
+            }
+    }
+
+    public function img_validaction($img_name, $img_tmp_name, $location)
+    {
+        if (isset($img_name) && !empty($img_name)) {
+            $ex_validation = ['png', 'PNG', 'jpeg', 'jpg', 'gif'];
+            $img_extanction = pathinfo($img_name, PATHINFO_EXTENSION);
+            if(in_array($img_extanction, $ex_validation)){
+                $new_img_name = rand() .time(). '.' . $img_extanction;
+                move_uploaded_file($img_tmp_name, $location . $new_img_name);
+                return $new_img_name;
+            }else{
+                return false;
+        }
+        }else{
+            return false;
         }
     }
     //   insert function
@@ -192,4 +218,5 @@ class databese
         }
         mysqli_close($this->connect);
     }
+   
 }

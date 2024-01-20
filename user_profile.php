@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="assets/css/profile.css">
 <?php include_once('include/headerM.php') ?>
 <?php include_once('include/profile-include.php') ?>
-		
+
 	</div>
 </section>
 

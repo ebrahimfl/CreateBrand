@@ -3,12 +3,11 @@
 </head>
 <body>
 
-<?php if (isset($_SESSION['alert'])) { ?>
+<?php if (isset($_SESSION['alert'])){ ?>
 
 
     <div class="overlay" id="overlay"></div>
 
-    
     <div class="modal" id="dangerModal">
         <div class="modal-content">
             <h4>Danger Alert</h4>

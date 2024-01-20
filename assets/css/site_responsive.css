@@ -138,9 +138,7 @@
          flex-direction: column;
          align-items: center;
      }
-     #contact .row .contact_details{
-        /* align-items: center; */
-     }
+ 
     
 
      #contact form {
@@ -163,6 +161,7 @@
 
  }
  @media(max-width:982px) {
+  
     #home .slider .card{
         display: none ;
     }
@@ -198,6 +197,15 @@
 }
 
  @media(max-width:750px){
+    #user_profile .content .row{
+        flex-direction: column ;
+    }
+    .top_save_bar .row .text{
+        display: none !important;
+    }
+.top_save_bar .row {
+    justify-content: center !important;
+}
     #user_profile .profile_header img.profile_logo{
         transform: translateX(-50%);
         left: 50% !important;

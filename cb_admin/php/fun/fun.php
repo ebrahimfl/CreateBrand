@@ -99,7 +99,7 @@ class addmin
         if (isset($img_name) && !empty($img_name)) {
             $ex_validation = ['png', 'PNG', 'jpeg', 'jpg', 'gif'];
             $img_extanction = pathinfo($img_name, PATHINFO_EXTENSION);
-            if (in_array($img_extanction, $ex_validation)) {
+            if(in_array($img_extanction, $ex_validation)){
                 $new_img_name = rand() . '.' . $img_extanction;
                 move_uploaded_file($img_tmp_name, $location . $new_img_name);
                 return $new_img_name;
