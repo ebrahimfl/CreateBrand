@@ -74,7 +74,6 @@
 	margin-left: 30px;
 	margin-top: 5px;
 	letter-spacing: 0.2px;
-	max-width: 400px;
 	line-height: 21px;
 }
 #user_tab{
@@ -87,7 +86,8 @@
 	align-items: center;
 	justify-content: space-between;
 	border-bottom: 1px solid #e6e6e6;
-	max-width: 360px;
+	max-width: 420px;
+	flex-wrap: wrap;
 	height: auto;
 	margin: 0 auto;
 }
@@ -121,7 +121,7 @@
 
 }
 
-#user_profile .content .row form {
+#user_profile .content form {
 	display: flex;
 	gap: 20px;
 	flex-direction: column;
@@ -134,18 +134,24 @@
 }
 .form-control label{
 	font-size: 14px;
+	font-weight: 500;
 	color: #2B2B2B;
 }
 
-.form-control input{
+.form-control input,
+.form-control textarea{
 	padding: 14px 15px;
 	color: #898989;
 	border: none;
-	border-bottom: 1px solid #e6e6e6;
+	border: 1px solid #e6e6e6;
 	font-size: 14px;
-	/* border-radius: 8px; */
+	border-radius: 8px;
 	outline: none;
 	transition: 0.4s;
+}
+.form-control input:focus,
+.form-control textarea:focus{
+	box-shadow:  2px 2px 1px rgba(0,0,0,0),0 .375rem .625rem -0.3125rem rgba(254, 105, 106, 0.15);
 }
 select{
 	border: none;
@@ -161,7 +167,7 @@ select{
     color: #898989;
     -webkit-box-shadow: none !important;
     box-shadow: none;
-    border-bottom: 1px solid #e6e6e6;
+    border: 1px solid #e6e6e6;
 	padding:  0;
 }
 ::-webkit-file-upload-button{
@@ -173,13 +179,7 @@ select{
 	margin-right: 20px;
 }
 
-.form-control input:focus{
 
-	box-shadow:  2px 2px 1px rgba(0,0,0,0),0 .375rem .625rem -0.3125rem rgba(254, 105, 106, 0.15);
-
-	/* box-shadow: 0 0px 3px rgba(0,0,0,0.12); */
-
-}
 .top_save_bar{
 	position: fixed;
 	z-index: 10000;
@@ -235,4 +235,8 @@ select{
 }
 .top_save_bar .row .button button[type=submit]:hover{
 	background-color: #d62b2b;
+}
+
+option{
+	padding: 10px 15px;
 }

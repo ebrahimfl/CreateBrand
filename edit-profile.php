@@ -8,7 +8,6 @@
 
 ?>
 
-
 <div class="content">
 	<h3>Update Your Profile</h3>
 
@@ -20,15 +19,19 @@
 			</div>
 			<div class='form-control'>
 				<label for="profile_name">Username</label>
-				<input class="form-control" type="text" placeholder="username" name="username" required value='<?php echo $data['username'] ?>'>
+				<input class="form-control" type="text" placeholder="enter you intro" name="username" required value='<?php echo $data['username'] ?>'>
+			</div>
+			<div class='form-control'>
+				<label for="profile_name">Intro</label>
+				<input class="form-control" type="text" placeholder="enter your intro" name="intro" required value='<?php echo $data['intro'] ?>'>
 			</div>
 		
 			<div class='form-control'>
 				<label for="profile_name">Nid Card or Birthday Certificate Number </label>
-				<input class="form-control" type="text" placeholder="nid or brith" name="nid_brith" required value='<?php echo $data['nid_brith'] ?>'>
+				<input class="form-control" type="text" placeholder="enter nid or brith" name="nid_brith" required value='<?php echo $data['nid_brith'] ?>'>
 			</div>	<div class='form-control'>
 				<label for="profile_name">birthday </label>
-				<input class="form-control" type="text" placeholder="birthday" name="birthday" required value='<?php echo $data['birthday'] ?>'>
+				<input class="form-control" type="text" placeholder="enter birthday" name="birthday" required value='<?php echo $data['birthday'] ?>'>
 			</div>
 			<div class='form-control'>
 				<label for="profile_name">Gander</label>
@@ -73,7 +76,7 @@
 			</div>
 			<div class='form-control'>
 				<label for="profile_name">Gander</label>
-				<select name="gander" id="">
+				<select name="gander" id="" required>
 					<option value="Male">Male</option>
 					<option value="Female">Female</option>
 					<option value="Other">Other</option>
@@ -83,6 +86,25 @@
 		</form>
 	</div>
 
+	<form action="useer_profile/php/core.php" method="post"  style='margin-top:70px'>
+	<label for="user_skill" style="font-size:20px">Select Your Skills</label>
+		<select name="user_skill[]" multiple id="user_skill" required>
+			<option value="Websaite Design">Websaite Design</option>
+			<option value="Websaite Developer">Websaite Developer</option>
+			<option value="SEO">SEO</option>
+			<option value="Digital Marketing">Digital Marketing</option>
+			<option value="Website any Bug fixing">Website any Bug fixing</option>
+			<option value="B2B Lead Colocation"> B2B Lead Colocation</option>
+			<option value="Wordpress Theme Customization">Wordpress Theme Customization</option>
+			<option value="Graphic Design">Graphic Design</option>
+		</select>
+		<!-- <div class='form-control'>
+				<label for="profile_name">Other Skills</label>
+				<input class="form-control" type="text" placeholder="enter your intro skills" name="other_skills" required >
+			</div> -->
+        <input type="submit" value='submit' name='user_skill_add' class="btn_normal" style='max-width:150px'>
+
+    </form>
 
 </div>
 
