@@ -66,6 +66,7 @@ if (isset($_POST['user_data']) && !empty($_POST['user_data'])) {
         }
     }
 }
+
 if (isset($_POST['user_project_add']) && !empty($_POST['user_project_add'])) {
     $title = $_POST['title'];
     $description = $_POST['description'];
@@ -75,7 +76,7 @@ if (isset($_POST['user_project_add']) && !empty($_POST['user_project_add'])) {
         $file_extanction = pathinfo($file_name, PATHINFO_EXTENSION);
         if (in_array($file_extanction, $ex_validation)) {
             $new_file_name = $user_id . '-' . rand() . time() . '.' . $file_extanction;
-            move_uploaded_file($_FILES['project_file']['tmp_name'], '../../assets/images/project/' . $new_file_name);
+            move_uploaded_file($_FILES['project_file']['tmp_name'], '../../assets/images/user-project/' . $new_file_name);
 
             $sql = "INSERT INTO user_project(user_id,title,description,zip_file)VALUES($user_id,'{$title}','{$description}','{$new_file_name}')";
             if ($fun->insert($sql)) {
@@ -91,16 +92,16 @@ if (isset($_POST['user_project_add']) && !empty($_POST['user_project_add'])) {
     }
 }
 
-
-
 if(isset($_POST['user_skill_add']) && !empty($_POST['user_skill_add'])){
     // $other_skills= $
     $sql = "SELECT * FROM user_skills WHERE user_id= $user_id";
     $result= $fun->select_count($sql);
     $data=[];
-     while($row = $result->fetch_assoc()){
-        $data[]=$row['skills'];
-     }
+    if($result->num_rows>0){
+        while($row = $result->fetch_assoc()){
+            $data[]=$row['skills'];
+         }
+    }
     
     foreach($_POST['user_skill'] as $element) {
         $element = trim($element); 
@@ -109,7 +110,7 @@ if(isset($_POST['user_skill_add']) && !empty($_POST['user_skill_add'])){
             $fun->insert($sql);
         }
     }
-    
+
     $fun->alert('success','Your Skills Add');
     header('Location:../../edit-profile.php');
 }
