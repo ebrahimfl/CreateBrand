@@ -9,7 +9,8 @@
     <input type="text" name="title" id="title" placeholder="Title" required>
 
     <label for="id">Content Here </label>
-    <textarea name="dsc" id="id" cols="20" rows="5" class="check" placeholder="Your Content" required></textarea>
+    <!-- <textarea name="dsc" id="id" cols="20" rows="5" class="check" placeholder="Your Content" required></textarea> -->
+    <?php include_once('include/text-editor.php') ?>
 
     <label for="mata">Meta Description Here </label>
     <input type="text" name="mata" id="mata" placeholder="Mata Dsciption" required>

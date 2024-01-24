@@ -136,7 +136,7 @@ class addmin
     {
 
         $title = $data['title'];
-        $dsc = $data['dsc'];
+        $dsc = $data['content'];
         $mata = $data['mata'];
         $catagory = $data['catagory'];
         $img_t = $_FILES["img"]['tmp_name'];
