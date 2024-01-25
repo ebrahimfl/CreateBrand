@@ -8,8 +8,7 @@ if (isset($_POST['login'])) {
 }
 
 if (isset($_POST['b_sub'])) {
-   //  $conn->add_blog($_POST);   
-   echo $_POST['content'];
+     $conn->add_blog($_POST); 
 }
 if (isset($_POST['S_sub'])) {
     $conn->serviec_add($_POST);   

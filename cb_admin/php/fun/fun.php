@@ -134,10 +134,8 @@ class addmin
     // blog add
     public function add_blog($data)
     {
-
-        $title = $data['title'];
         $dsc = $data['content'];
-        $mata = $data['mata'];
+        $tittle = $data['tittle'];
         $catagory = $data['catagory'];
         $img_t = $_FILES["img"]['tmp_name'];
         $img_namen = $_FILES["img"]['name'];
@@ -145,7 +143,7 @@ class addmin
         $size = $_FILES["img"]['size'];
         $img_name = rand(10, 100) . $img_namen;
 
-        $sql = "INSERT INTO blog (title,dsc,mata,img,catagory)VALUES('$title','$dsc','$mata','$img_name','$catagory')";
+        $sql = "INSERT INTO blog (title,dsc,img,catagory) VALUES ('$tittle','$dsc','$img_name','$catagory')";
         $result = $this->conn->query($sql);
         if ($result) {
             echo "succs";
