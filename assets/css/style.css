@@ -455,7 +455,7 @@
     position: relative;
     overflow: hidden;
     border-radius: 4px;
-    min-width: 400px;
+    min-width: 200px;
     max-height: 250px;
 }
 .our-work .work_rows .card img.card_img{
