@@ -1,44 +1,45 @@
 <link rel="stylesheet" href="assets/css/animation.css">
 
 </head>
+
 <body>
 
-<?php if (isset($_SESSION['alert'])){ ?>
+    <?php if (isset($_SESSION['alert'])) { ?>
 
 
-    <div class="overlay" id="overlay"></div>
+        <div class="overlay" id="overlay"></div>
 
-    <div class="modal" id="dangerModal">
-        <div class="modal-content">
-            <h4>Danger Alert</h4>
-            <p><?php            
-            if($_SESSION['alert']['type'] == 'danger' ) 
-            echo $_SESSION['alert']['message']; ?></p>
-           
-            <button class="btn btn-danger" onclick="closeModal('dangerModal', 'overlay')">Close</button>
+        <div class="modal" id="dangerModal">
+            <div class="modal-content">
+                <h4>Danger Alert</h4>
+                <p><?php
+                    if ($_SESSION['alert']['type'] == 'danger')
+                        echo $_SESSION['alert']['message']; ?></p>
+
+                <button class="btn btn-danger" onclick="closeModal('dangerModal', 'overlay')">Close</button>
+            </div>
         </div>
-    </div>
 
-    <div class="modal" id="successModal">
-        <div class="modal-content">
-            <h4>Success Alert</h4>
-            <p><?php  
-                if($_SESSION['alert']['type'] == 'success') echo $_SESSION['alert']['message'] ;
-                ?></p>
-            <button class="btn btn-success" onclick="closeModal('successModal', 'overlay')">Close</button>
+        <div class="modal" id="successModal">
+            <div class="modal-content">
+                <h4>Success Alert</h4>
+                <p><?php
+                    if ($_SESSION['alert']['type'] == 'success') echo $_SESSION['alert']['message'];
+                    ?></p>
+                <button class="btn btn-success" onclick="closeModal('successModal', 'overlay')">Close</button>
+            </div>
         </div>
-    </div>
 
 
-<?php
-            }
+    <?php
+    }
 
-?>
-
-
+    ?>
 
 
-    
+
+
+
     <header>
         <section class="top-bar">
             <div class="container" style='display:flex;justify-content: space-between;'>
@@ -104,12 +105,11 @@
                             </ul>
                         </div>
                     </li> -->
-        <?php 
-            $result = $function->show_col('user',$_COOKIE[md5('name')]);
-            $data = $result->fetch_assoc();
-        ?>
                     <li><a href="blog.php">Blog</a></li>
-                    <?php if (isset($_COOKIE[md5('name')])) {  ?>
+                    <?php if (isset($_COOKIE[md5('name')])) {
+                        $result = $function->show_col('user', $_COOKIE[md5('name')]);
+                        $data = $result->fetch_assoc();
+                    ?>
                         <li><a href="user_profile.php" style="padding: 0;"><img src="assets/images/user/<?php echo $data['img'] ?>" alt="" srcset="" width="50px" height="50px" style="border-radius: 25px;"></a></li>
                     <?php } ?>
                 </ul>

@@ -36,7 +36,6 @@ if (isset($_GET["id"])) {
         </div>
 
         <!-- ai pojonto -->
-        <!-- monuwar style end   -->
 <?php
     }
 }
@@ -44,29 +43,35 @@ if (isset($_GET["id"])) {
 
 <section id="blog">
     <div class="container">
-        <div class="row">
-            <div class="content">
+        <div class="row1">
+            <div class="content-main">
                 <?php
                 $datat = $fun->show("blog");
                 while ($data = $datat->fetch_assoc()) {
                 ?>
-                    <a href="?id=<?php echo $data['id']; ?>" class="blog_link">
-                        <div class="card">
-                            <div class="img">
-                                <img src="assets/images/blog/<?php echo $data['img']; ?>" alt="">
+                    <div class="card-boss">
+                        <a href="?id=<?php echo $data['id']; ?>" class="blog_link">
+                            <div class="card-main">
+                                <div class="img-main">
+                                    <img src="assets/images/blog/<?php echo $data['img']; ?>" alt="">
+                                </div>
+                                <div class="blog_text">
+                                    <h3><?php echo $data['title']; ?></h3>
+                                    <p><?php echo $fun->textShorten($data['dsc'], 200) ?> </p>
+                                </div>
                             </div>
-                            <div class="blog_text">
-                                <h3><?php echo $data['title']; ?></h3>
-                                <p><?php echo $fun->textShorten($data['dsc'],200) ?> </p>
-                            </div>
-                        </div>
-                    </a>
+                        </a>
+                    </div>
                 <?php } ?>
             </div>
-            <?php include 'include/blog_sidebar.php' ?>
+            <!-- <div class="blog-sidebar">
+                <?php // include 'include/blog_sidebar.php' 
+                ?>
+            </div> -->
+
         </div>
     </div>
- 
+
 </section>
 
 <?php require_once "include/footer.php"; ?>
