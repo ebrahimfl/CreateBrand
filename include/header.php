@@ -1,8 +1,9 @@
-<?php
+<?php session_start();
 include_once("assets/php/function.php");
 $conn_f = new databese();
 $conn_f->connect();
 $conn = $conn_f->connect;
+$function = new fun();
 
 include_once("assets/php/function.php");
 
@@ -13,7 +14,6 @@ if($result->num_rows == 0){
 $query = "INSERT INTO visitor(ip)VALUES('$ip')";
 $conn->query($query);
 }
-
 
 ?>
 <!DOCTYPE html>

@@ -138,9 +138,7 @@
          flex-direction: column;
          align-items: center;
      }
-     #contact .row .contact_details{
-        /* align-items: center; */
-     }
+ 
     
 
      #contact form {
@@ -163,6 +161,7 @@
 
  }
  @media(max-width:982px) {
+  
     #home .slider .card{
         display: none ;
     }
@@ -197,7 +196,35 @@
     } 
 }
 
- @media(max-width:750px) {
+ @media(max-width:750px){
+    #user_profile .content .row{
+        flex-direction: column ;
+    }
+    .top_save_bar .row .text{
+        display: none !important;
+    }
+.top_save_bar .row {
+    justify-content: center !important;
+}
+    #user_profile .profile_header img.profile_logo{
+        transform: translateX(-50%);
+        left: 50% !important;
+    }
+    #user_profile .user_name{
+        text-align: center !important;
+        margin-left: 0px !important;
+    }
+    #user_profile p.user_intro{
+        text-align: center;
+        margin-left: 0px !important;
+        margin-top: 10px !important;
+    }
+    #user_profile .profile_header .profile_logo .icons{
+        left: 50% !important;
+        bottom: -39px !important;
+        transform: translateX(42px);
+
+    }
     .top-bar #first{
         display: none !important;
     }
@@ -216,6 +243,17 @@
 
 
  @media(max-width:588px) {
+    #user_profile .profile_header .banner_edit{
+        width: auto !important;
+        padding: 0 12px;
+        right: 15px !important;
+        bottom: 10px !important;
+        z-index: 1;
+    }
+    #user_profile .profile_header .banner_edit span{
+        display: none;
+        
+    }   
     .slider{
         height: 290px !important;
       }
@@ -301,6 +339,12 @@
  /* ^Extra Small Device Media Query Start */
 
  @media(max-width:458px) {
+    #service .container{
+        padding: 0 !important;
+    }
+    #service .service{
+        padding: 12px !important;
+    }
     .slider{
         height: 290px !important;
       }

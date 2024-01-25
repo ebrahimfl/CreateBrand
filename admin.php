@@ -1,3 +1,15 @@
+
+<?php require_once "include/header.php"; ?>
+<link rel="stylesheet" href="cb_admin/css/adminM.css">
+<?php require_once "include/headerM.php"; ?>
+<?php
+if (!isset($_COOKIE[md5("ad_name")])) {
+    header("location: index.php");
+}elseif (!$_SESSION[md5("admin_brandOfcreate_ad_id")]) {
+    header("location: index.php");
+}
+?>
+
 <?php
 
 if (isset($_GET['id'])) {
@@ -7,14 +19,6 @@ if (isset($_GET['id'])) {
 
 ?>
 
-<?php require_once "include/header.php"; ?>
-<link rel="stylesheet" href="cb_admin/css/adminM.css">
-<?php require_once "include/headerM.php"; ?>
-<?php
-if (!isset($_COOKIE[md5("ad_name")])) {
-    header("location: index.php");
-}
-?>
 <!-- blog upload sestem add -->
 
 

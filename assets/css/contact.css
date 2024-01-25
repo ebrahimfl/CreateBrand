@@ -31,7 +31,7 @@
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
-#contact form input{
+#contact form input,#contact form select{
     width: 100%;
     background-color: var(--bg2);
     color: #000;
@@ -56,19 +56,18 @@
     margin-bottom: 10px;
 
 }
-#contact form .form-group small{
-    display: none;
-    margin: 5px 0 0 5px;
-}
+
 /* #contact form .form-group.error-message input{
     border: 1px solid red;
 } */
 
-#contact form .form-group.error-message small{
+#contact form .form-group small{
     display: block;
     color: red;
     font-size: 13px;
+    margin: 5px 0 0 5px;
     margin-left: 5px;
+
 }
 
 #contact form input::placeholder {

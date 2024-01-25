@@ -99,7 +99,7 @@ class addmin
         if (isset($img_name) && !empty($img_name)) {
             $ex_validation = ['png', 'PNG', 'jpeg', 'jpg', 'gif'];
             $img_extanction = pathinfo($img_name, PATHINFO_EXTENSION);
-            if (in_array($img_extanction, $ex_validation)) {
+            if(in_array($img_extanction, $ex_validation)){
                 $new_img_name = rand() . '.' . $img_extanction;
                 move_uploaded_file($img_tmp_name, $location . $new_img_name);
                 return $new_img_name;
@@ -136,7 +136,7 @@ class addmin
     {
 
         $title = $data['title'];
-        $dsc = $data['dsc'];
+        $dsc = $data['content'];
         $mata = $data['mata'];
         $catagory = $data['catagory'];
         $img_t = $_FILES["img"]['tmp_name'];
@@ -188,12 +188,17 @@ class addmin
         $check = mysqli_query($this->conn, $qur);
         if ($check) {
             if (mysqli_num_rows($check) === 1) {
+                $id_c = mysqli_fetch_assoc($check);
+                $id = $id_c['id'];
                 setcookie(md5("ad_name"), $use_name, time() + (86400 / 4), "/");
+                session_start();
+                $_SESSION[md5("admin_brandOfcreate_id")]=$id;
+                $_SESSION[md5("admin_brandOfcreate_ad_id")]= $id_c['ad_id'];
                 header("location:../../admin.php");
-            } else {
+            }else{
                 header("location:../../");
             }
-        } else {
+        }else{
             dir("Database not connected");
         }
     }

@@ -21,7 +21,7 @@ $conn = new addmin();
                     <h2>Admin Login</h2>
                         <label for="user-name" class="login-card">
                             <img src="assets/icons/user-icons.png" alt="">
-                        <input type="text" placeholder="Username" id="user-name" name="userName">
+                        <input type="email" placeholder="G" id="user-name" name="userName">
                         </label>
                     
                         <label for="password" class="login-card">

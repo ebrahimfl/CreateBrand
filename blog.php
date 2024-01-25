@@ -16,7 +16,7 @@ if (isset($_GET["id"])) {
 
         <!-- monuwar style start   -->
         <!-- html css code ta add korte hobe -->
-        <style>
+        <!-- <style>
             hr {
                 margin: 20px;
             }
@@ -121,14 +121,13 @@ if (isset($_GET["id"])) {
                     font-size: 18px;
                 }
             }
-        </style>
+        </style> -->
         <!-- html css code ta add korte hobe -->
         <div class="container">
             <div class="title">
                 <h1>
                     <?php echo $title; ?>
                 </h1>
-
             </div>
             <div class="image">
                 <img src="assets/images/blog/<?php echo $data['img']; ?>" alt="">
@@ -142,7 +141,6 @@ if (isset($_GET["id"])) {
                 <p>
                     <?php echo $catagory; ?>
                 </p>
-
             </div>
             <hr>
         </div>
@@ -157,7 +155,6 @@ if (isset($_GET["id"])) {
 <section id="blog">
     <div class="container">
         <div class="row">
-
             <div class="content">
                 <?php
                 $datat = $fun->show("blog");
@@ -179,8 +176,7 @@ if (isset($_GET["id"])) {
             <?php include 'include/blog_sidebar.php' ?>
         </div>
     </div>
-    </div>
-    </div>
+ 
 </section>
 
 <?php require_once "include/footer.php"; ?>

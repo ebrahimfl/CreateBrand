@@ -1,10 +1,44 @@
 <link rel="stylesheet" href="assets/css/animation.css">
+
 </head>
-
-
-
-
 <body>
+
+<?php if (isset($_SESSION['alert'])){ ?>
+
+
+    <div class="overlay" id="overlay"></div>
+
+    <div class="modal" id="dangerModal">
+        <div class="modal-content">
+            <h4>Danger Alert</h4>
+            <p><?php            
+            if($_SESSION['alert']['type'] == 'danger' ) 
+            echo $_SESSION['alert']['message']; ?></p>
+           
+            <button class="btn btn-danger" onclick="closeModal('dangerModal', 'overlay')">Close</button>
+        </div>
+    </div>
+
+    <div class="modal" id="successModal">
+        <div class="modal-content">
+            <h4>Success Alert</h4>
+            <p><?php  
+                if($_SESSION['alert']['type'] == 'success') echo $_SESSION['alert']['message'] ;
+                ?></p>
+            <button class="btn btn-success" onclick="closeModal('successModal', 'overlay')">Close</button>
+        </div>
+    </div>
+
+
+<?php
+            }
+
+?>
+
+
+
+
+    
     <header>
         <section class="top-bar">
             <div class="container" style='display:flex;justify-content: space-between;'>
@@ -51,7 +85,7 @@
 
         <nav>
             <div class="container">
-                <div class="logo"><a href="index.php"><img style="width:70px;height:70px;padding-bottom:20px" src="assets/images/logo-01.svg" ></a>
+                <div class="logo"><a href="index.php"><img style="width:70px;height:70px;padding-bottom:20px" src="assets/images/logo-01.svg"></a>
                 </div>
                 <ul class="main_menu">
                     <li><a href="index.php">Home</a></li>
