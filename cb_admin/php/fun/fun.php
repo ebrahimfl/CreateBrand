@@ -51,6 +51,38 @@ class addmin
         }
     }
 
+    //delet image 
+    public function delete_image($table_name, $path, $colomun_name, $id)
+    {
+        $sql_image = "SELECT * FROM $table_name WHERE id='$id'  ";
+        $result_for_image = $this->conn->query($sql_image);
+        $fetched_sql =  mysqli_fetch_assoc($result_for_image);
+        $image_name = $fetched_sql["$colomun_name"];
+
+        $sql = "DELETE FROM $table_name WHERE id='$id'";
+        $filename = $path . $image_name;
+        // Check if the file exists before attempting to delete
+        if (file_exists($filename)) {
+            // Attempt to delete the file
+            if (unlink($filename)) {
+          
+            } else {
+                echo 'Unable to delete the file.';
+            }
+        } else {
+            echo 'File does not exist.';
+        }
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return "sucssec";
+        } else {
+            dir("NO");
+        }
+    }
+
+
+
+
     // service start 
     public function serviec_add($data)
     {
@@ -99,7 +131,7 @@ class addmin
         if (isset($img_name) && !empty($img_name)) {
             $ex_validation = ['png', 'PNG', 'jpeg', 'jpg', 'gif'];
             $img_extanction = pathinfo($img_name, PATHINFO_EXTENSION);
-            if(in_array($img_extanction, $ex_validation)){
+            if (in_array($img_extanction, $ex_validation)) {
                 $new_img_name = rand() . '.' . $img_extanction;
                 move_uploaded_file($img_tmp_name, $location . $new_img_name);
                 return $new_img_name;
@@ -120,14 +152,13 @@ class addmin
         $category = $_POST['category'];
         $location = $_POST['location'];
         $password = $_POST['password'];
-       
-            $sql = "INSERT INTO admin (	acces, ad_id, ad_name, ad_pass, ad_parmison, ad_nid, ad_catagory, location) VALUES('$acces', '$team_id', '$name', '$password', '1', '$Nid', '$category', '$location')";
-            if ($this->conn->query($sql)) {
-                header("location:../../admin.php?val=team_add&&ok");
-            }else {                
-                header("location:../../admin.php?val=team_add&&no");
-            }
-        
+
+        $sql = "INSERT INTO admin (	acces, ad_id, ad_name, ad_pass, ad_parmison, ad_nid, ad_catagory, location) VALUES('$acces', '$team_id', '$name', '$password', '1', '$Nid', '$category', '$location')";
+        if ($this->conn->query($sql)) {
+            header("location:../../admin.php?val=team_add&&ok");
+        } else {
+            header("location:../../admin.php?val=team_add&&no");
+        }
     }
 
     // blog fun start
@@ -190,13 +221,13 @@ class addmin
                 $id = $id_c['id'];
                 setcookie(md5("ad_name"), $use_name, time() + (86400 / 4), "/");
                 session_start();
-                $_SESSION[md5("admin_brandOfcreate_id")]=$id;
-                $_SESSION[md5("admin_brandOfcreate_ad_id")]= $id_c['ad_id'];
+                $_SESSION[md5("admin_brandOfcreate_id")] = $id;
+                $_SESSION[md5("admin_brandOfcreate_ad_id")] = $id_c['ad_id'];
                 header("location:../../admin.php");
-            }else{
+            } else {
                 header("location:../../");
             }
-        }else{
+        } else {
             dir("Database not connected");
         }
     }
@@ -278,7 +309,6 @@ class addmin
         } else {
             echo "no data";
         }
-      
     }
     public function add_number_ge($id, $data)
     {
@@ -299,7 +329,6 @@ class addmin
         } else {
             echo "no data";
         }
-
     }
 
 
@@ -322,7 +351,6 @@ class addmin
         } else {
             echo "no data";
         }
-
     }
     public function save_add_country_get($id, $data)
     {
@@ -343,6 +371,5 @@ class addmin
         } else {
             echo "no data";
         }
-
     }
 }

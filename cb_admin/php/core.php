@@ -21,7 +21,7 @@ if (isset($_GET["action"])) {
     $check = $_GET['action'];
     $id = $_GET['id'];
     if ($check==="delete") {
-       if ($conn->delete("blog",$id)) {
+       if ($conn->delete_image("blog","../../assets/images/blog/", "img" ,$id,)) {
         //yes or no button add korte hobe
         header("location:../../admin.php?val=AllBlog");
        }

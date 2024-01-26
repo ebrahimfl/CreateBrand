@@ -22,11 +22,11 @@ table tr th:nth-child(1) {
 }
 
 table tr th:nth-child(2) {
-   width: 200px;
+   width: 300px;
 }
 
 table tr th:nth-child(3) {
-   width: 300px;
+   width: 105px;
 }
 
 table tr th:nth-child(4) {
@@ -68,4 +68,9 @@ table tr td a:nth-child(2) {
 	margin: 2px;
 	border-radius: 3px;
    font-weight: bolder;
+}
+.image-show img {
+   width: 100px;
+   height: 70px;
+   overflow: hidden;
 }

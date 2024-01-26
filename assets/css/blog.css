@@ -10,6 +10,7 @@
 #blog .container .row1 .content-main {
     overflow: hidden;
     width: 60%;
+    float: left;
 
 }
 
@@ -46,4 +47,11 @@
     border-radius: 5px;
     border-bottom: 1px solid #ddd;
     padding: 5px;
+}
+/* sidebar start from here  */
+
+#blog .row1 .sidebar {
+    overflow: hidden;
+    width: 40%;
+
 }

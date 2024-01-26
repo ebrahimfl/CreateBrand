@@ -18,8 +18,7 @@ $conn = new addmin;
     <tr>
         <th>Id</th>
         <th>Title</th>
-        <th>Dscription</th>
-        <th>Mata Dsc</th>
+       
         <th>IMG</th>
         <th>Catagory</th>
         <th>Action</th>
@@ -33,16 +32,13 @@ $conn = new addmin;
         $id = $con["id"];
         $title = $con["title"];
         $dsc = $con["dsc"];
-        $mata = $con["mata"];
         $img = $con["img"];
         $catagory = $con["catagory"];
     ?>
     <tr>
         <td> <?php echo $i; ?></td>
         <td><?php echo $title; ?></td>
-        <td><?php echo $dsc; ?></td>
-        <td><?php echo $mata; ?></td>
-        <td><?php echo $img; ?></td>
+        <td class="image-show" > <img src="assets/images/blog/<?php echo $img; ?>" alt=""> </td>
         <td><?php echo $catagory; ?></td>
         <td><a href="cb_admin/inc/allBlog.php?action=delete&&id=<?php echo $id; ?>" onclick="blogDelete(event)">Delete</a>  <a href="cb_admin/inc/allBlog.php?action=update&&id=<?php echo $id;?>">Update</a></td>
     </tr>

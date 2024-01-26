@@ -64,11 +64,9 @@ if (isset($_GET["id"])) {
                     </div>
                 <?php } ?>
             </div>
-            <!-- <div class="blog-sidebar">
-                <?php // include 'include/blog_sidebar.php' 
+            
+                <?php include 'include/blog_sidebar.php' 
                 ?>
-            </div> -->
-
         </div>
     </div>
 
