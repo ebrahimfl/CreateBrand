@@ -185,19 +185,34 @@ class addmin
         }
     }
     // SHUDHUMATORO BLOG UPDAT
-    public function blog_update($id, $data)
+    public function blog_update($id, $data,$images)
     {
         if ($data) {
             $title = $data['title'];
-            $dsc = $data['dsc'];
-            $mata = $data['mata'];
+            $dsc = $data['content'];
             $img = $_FILES['img']['name'];
             $img_t = $_FILES['img']['tmp_name'];
             $catagory = $data['catagory'];
+            if(!$img){
+                $img = $images ; 
 
-            $sql = "UPDATE blog SET title='$title',dsc='$dsc',mata='$mata',img='$img',catagory='$catagory' WHERE id=$id";
+            }else{
+                $filename = "../../assets/images/blog/".$images;
+                // Check if the file exists before attempting to delete
+                if (file_exists($filename)) {
+                    // Attempt to delete the file
+                    if (unlink($filename)) {
+                  
+                    } else {
+                        echo 'Unable to delete the file.';
+                    }
+                } else {
+                    echo 'File does not exist.';
+                }
+            }
+            $sql = "UPDATE blog SET title='$title',dsc='$dsc',img='$img',catagory='$catagory' WHERE id=$id";
             if (mysqli_query($this->conn, $sql)) {
-                move_uploaded_file($img_t, "../../assets/images/" . $img);
+                move_uploaded_file($img_t, "../../assets/images/blog/".$img);
                 header("location:../?val=AllBlog");
             } else {
                 echo "sumthing is rong";
