@@ -87,7 +87,7 @@ class addmin
     public function serviec_add($data)
     {
         $title = $data['title'];
-        $dsc = $data['dsc'];
+        $dsc = $data['content'];
         $img_t = $_FILES["img"]['tmp_name'];
         $img_name = $_FILES["img"]['name'];
         $type = $_FILES["img"]['type'];

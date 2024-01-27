@@ -79,6 +79,7 @@ if (isset($_GET["add"])) {
                 <a href="javascript:void(0);" onclick="myFunction('service')" >Service >>
                     <div id="service" style="display: none;">
                         <a href="?val=Service" style="font-size: 15px;">Service</a>
+                        <a href="?val=add_service" style="font-size: 15px;">Add Service</a>
                                                
                     </div>
                 </a>
@@ -117,6 +118,8 @@ if (isset($_GET["add"])) {
                             include_once("cb_admin/inc/Service.php");
                         }else if($val=='team_add'){
                             include_once("cb_admin/inc/our-team-add.php");
+                        }else if($val=='add_service'){
+                            include_once("cb_admin/inc/add_service.php");
                         }
                         
                         

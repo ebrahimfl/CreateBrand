@@ -19,25 +19,27 @@ if (isset($_POST['team_add']) && !empty($_POST['team_add'])) {
 
 if (isset($_GET["action"])) {
    $check = $_GET['action'];
+   $table = $_GET['table'];
    $id = $_GET['id'];
    if ($check === "delete") {
       if ($conn->delete_image("blog", "../../assets/images/blog/", "img", $id,)) {
          //yes or no button add korte hobe
          header("location:../../admin.php?val=AllBlog");
       }
+   } else if ($check == "delets" && $table == "service") {
+      if ($conn->delete_image("service", "../../assets/images/service/", "ser_img", $id,)) {
+         //yes or no button add korte hobe
+         header("location:../../admin.php?val=Service");
+      }
    }
 }
 if (isset($_POST["blogup"])) {
    if (isset($_GET['id'])) {
       $id = $_GET['id'];
-      $image = $_GET['img'] ; 
-
-      $conn->blog_update($id, $_POST,$image);
+      $image = $_GET['img'];
+      $conn->blog_update($id, $_POST, $image);
    }
-
    //print_r($_POST);
-
-
 }
 // monuwar write 
 if (isset($_POST["save_change_email_input"])) {
