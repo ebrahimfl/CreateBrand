@@ -18,7 +18,7 @@
                     $date = $conn['date'];
                 ?>
                 <div class="card">
-                    <a href="service-details/<?php echo $id ?>">
+                    <a href="services/<?php echo str_replace(' ','-',$ser_name) ?>">
                         <div class="card_img">
                             <img src="<?php base_url('assets/icons/website.png')?>" alt="<?php echo $ser_name ?>">
                         </div>

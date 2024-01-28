@@ -10,9 +10,8 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteCond %{REQUEST_FILENAME}\.php -f 
 RewriteRule ^(.*)$ $1.php [L]
 
-
-# RewriteRule ^`/service-details/`/([a-zA-Z0-9-]+)/?$ service-details.php?id=$1 [L,QSA]
-RewriteRule ^service-details/([a-zA-Z0-9-]+)/?$ service-details.php?id=$1 [L,QSA]
+# RewriteRule ^service/([a-zA-Z0-9-]+)/?$ service-details.php?id=$1 [L,QSA]
+RewriteRule ^services/([a-zA-Z0-9-]+)/?$ service-details.php?id=$1 [L,QSA]
 
  #ErrorDocument 404 http://localhost/CreateBrand/404
  ErrorDocument 404 /CreateBrand/404
