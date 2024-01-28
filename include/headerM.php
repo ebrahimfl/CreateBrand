@@ -61,17 +61,17 @@
                     <?php
                     if (!isset($_COOKIE[md5('name')])) {
                     ?>
-                        <a href="loginSign.php?log=login" style="align-items: center; display:flex" name="login" class="userInfLog">
+                        <a href="loginSign?log=login" style="align-items: center; display:flex" name="login" class="userInfLog">
                             <img src="assets/icons/login.png" alt="phone">
                             <h3 class="first-h3">Login</h3>
                         </a>
-                        <a href="loginSign.php?log=signup" name="signup" class="userInfLog" style="align-items: center; display:flex"> <img src="assets/icons/create-account.png" alt="phone">
+                        <a href="loginSign?log=signup" name="signup" class="userInfLog" style="align-items: center; display:flex"> <img src="assets/icons/create-account.png" alt="phone">
                             <h3 class="first-h3">Create Account</h3>
                         </a>
                     <?php
                     } else {
                     ?>
-                        <a href="loginSign.php?log=logout" name="logout" class="userInfLog">Logout</a>
+                        <a href="loginSign?log=logout" name="logout" class="userInfLog">Logout</a>
                     <?php
                     }
 
@@ -86,31 +86,31 @@
 
         <nav>
             <div class="container">
-                <div class="logo"><a href="index.php"><img style="width:70px;height:70px;padding-bottom:20px" src="assets/images/logo-01.svg"></a>
+                <div class="logo"><a href="home"><img style="width:70px;height:70px;padding-bottom:20px" src="assets/images/logo-01.svg"></a>
                 </div>
                 <ul class="main_menu">
-                    <li><a href="index.php">Home</a></li>
-                    <li><a href="service.php">Our Services</a></li>
-                    <li><a class="dorp_down_a" href='our-team.php'>Our Team</a>
+                    <li><a href="home">Home</a></li>
+                    <li><a href="service">Our Services</a></li>
+                    <li><a class="dorp_down_a" href='our-team'>Our Team</a>
                     </li>
-                    <li><a href="about-us.php">About</a></li>
-                    <li><a href="contact-us.php">Contact</a></li>
-                    <li><a href="our-work.php">Our Project</a></li>
-                    <!-- <li><a href="our-work.php" class="dorp_down_a">Our Project <img src="assets/icons/mingcute_down-line.png"></a>
+                    <li><a href="about-us">About</a></li>
+                    <li><a href="contact-us">Contact</a></li>
+                    <li><a href="our-work">Our Project</a></li>
+                    <!-- <li><a href="our-work" class="dorp_down_a">Our Project <img src="assets/icons/mingcute_down-line.png"></a>
                         <div class="drop_menu">
                             <ul class="drop-down">
-                                <li><a href="our-work.php">Our Work </a></li>
+                                <li><a href="our-work">Our Work </a></li>
                                 <li><a href="">Web Design</a></li>
                                 <li><a href="">SEO</a></li>
                             </ul>
                         </div>
                     </li> -->
-                    <li><a href="blog.php">Blog</a></li>
+                    <li><a href="blog">Blog</a></li>
                     <?php if (isset($_COOKIE[md5('name')])) {
                         $result = $function->show_col('user', $_COOKIE[md5('name')]);
                         $data = $result->fetch_assoc();
                     ?>
-                        <li><a href="user_profile.php" style="padding: 0;"><img src="assets/images/user/<?php echo $data['img'] ?>" alt="" srcset="" width="50px" height="50px" style="border-radius: 25px;"></a></li>
+                        <li><a href="user_profile" style="padding: 0;"><img src="assets/images/user/<?php echo $data['img'] ?>" alt="" srcset="" width="50px" height="50px" style="border-radius: 25px;"></a></li>
                     <?php } ?>
                 </ul>
                 <div class="menu-icon">
