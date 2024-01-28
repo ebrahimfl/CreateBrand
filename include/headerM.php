@@ -46,11 +46,11 @@
 
                 <div style='display:flex;gap:30px;align-items:center' id='first'>
                     <a href="" style="align-items: center; display:flex">
-                        <img src="assets/icons/phone_icons.png" alt="phone">
+                        <img src="<?php base_url('assets/icons/phone_icons.png')?>" alt="phone">
                         <h3 class="first-h3">01980533510</h3>
                     </a>
                     <a href="mailto:createofbrand@gmail.com" style="align-items: center; display:flex">
-                        <img src="assets/icons/top-mail.png" alt="Mail">
+                        <img src="<?php base_url('assets/icons/top-mail.png')?>" alt="Mail">
                         <h3>createofbrand@gmail.com</h3>
                     </a>
                 </div>
@@ -62,16 +62,16 @@
                     if (!isset($_COOKIE[md5('name')])) {
                     ?>
                         <a href="loginSign?log=login" style="align-items: center; display:flex" name="login" class="userInfLog">
-                            <img src="assets/icons/login.png" alt="phone">
+                            <img src="<?php base_url('assets/icons/login.png')?>" alt="phone">
                             <h3 class="first-h3">Login</h3>
                         </a>
-                        <a href="loginSign?log=signup" name="signup" class="userInfLog" style="align-items: center; display:flex"> <img src="assets/icons/create-account.png" alt="phone">
+                        <a href="<?php base_url('loginSign?log=signup')?>" name="signup" class="userInfLog" style="align-items: center; display:flex"> <img src="<?php base_url('assets/icons/create-account.png') ?>" alt="phone">
                             <h3 class="first-h3">Create Account</h3>
                         </a>
                     <?php
                     } else {
                     ?>
-                        <a href="loginSign?log=logout" name="logout" class="userInfLog">Logout</a>
+                        <a href="<?php base_url('loginSign?log=logout')?> " name="logout" class="userInfLog">Logout</a>
                     <?php
                     }
 
@@ -86,16 +86,16 @@
 
         <nav>
             <div class="container">
-                <div class="logo"><a href="home"><img style="width:70px;height:70px;padding-bottom:20px" src="assets/images/logo-01.svg"></a>
+                <div class="logo"><a href="home"><img style="width:70px;height:70px;padding-bottom:20px" src="<?php base_url('assets/images/logo-01.svg')?>"></a>
                 </div>
                 <ul class="main_menu">
-                    <li><a href="home">Home</a></li>
-                    <li><a href="service">Our Services</a></li>
-                    <li><a class="dorp_down_a" href='our-team'>Our Team</a>
+                    <li><a href="<?php base_url('home')?>">Home</a></li>
+                    <li><a href="<?php base_url('service')?>">Our Services</a></li>
+                    <li><a class="dorp_down_a" href='<?php base_url('our-team')?>'>Our Team</a>
                     </li>
-                    <li><a href="about-us">About</a></li>
-                    <li><a href="contact-us">Contact</a></li>
-                    <li><a href="our-work">Our Project</a></li>
+                    <li><a href="<?php base_url('about-us')?>">About</a></li>
+                    <li><a href="<?php base_url('contact-us')?>">Contact</a></li>
+                    <li><a href="<?php base_url('our-work')?>">Our Project</a></li>
                     <!-- <li><a href="our-work" class="dorp_down_a">Our Project <img src="assets/icons/mingcute_down-line.png"></a>
                         <div class="drop_menu">
                             <ul class="drop-down">
@@ -105,7 +105,7 @@
                             </ul>
                         </div>
                     </li> -->
-                    <li><a href="blog">Blog</a></li>
+                    <li><a href="<?php base_url('blog')?>">Blog</a></li>
                     <?php if (isset($_COOKIE[md5('name')])) {
                         $result = $function->show_col('user', $_COOKIE[md5('name')]);
                         $data = $result->fetch_assoc();

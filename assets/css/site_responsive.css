@@ -306,11 +306,7 @@
         gap: 10px !important;
     }
 
-    #our-team .header-menu ul {
-        flex-direction: column !important;
-        position: relative;
-        height: 41px;
-    }
+ 
     #our-team .header-menu ul li{
         
     }

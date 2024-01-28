@@ -11,7 +11,7 @@ $service_row = $conn->show_col("service",$service_id);
 ?>
 <?php
 $action = isset($_GET['vew']);
-if (!$action) {
+if (!$action){
     if($service_data = $service_row->fetch_assoc()){
         
     }
