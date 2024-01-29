@@ -1,11 +1,11 @@
 <?php require_once "include/header.php"; ?>
-<link rel="stylesheet" href="assets/css/blog.css">
+<link rel="stylesheet" href="<?php base_url('assets/css/blog.css') ?>">
 <?php require_once "include/headerM.php";
 $fun = new fun();
 if (isset($_GET["id"])) {
-    $id = $_GET["id"];
-    $func = $fun->show_col("blog", $id);
-    while ($data = $func->fetch_assoc()) {
+    $title =str_replace('-',' ', $_GET["id"]);
+    $func = $fun->select_count("SELECT * FROM blog WHERE title='$title'");
+    while ($data= $func->fetch_assoc()) {
         $title = $data['title'];
         $dsc = $data['dsc'];
         $img = $data['img'];
@@ -20,7 +20,7 @@ if (isset($_GET["id"])) {
                 </h1>
             </div>
             <div class="image">
-                <img src="assets/images/blog/<?php echo $data['img']; ?>" alt="">
+                <img src='<?php base_url("assets/images/blog/$img") ?>' alt="">
             </div>
 
             <div class="desc">
@@ -50,7 +50,7 @@ if (isset($_GET["id"])) {
                 while ($data = $datat->fetch_assoc()) {
                 ?>
                     <div class="card-boss">
-                        <a href="?id=<?php echo $data['id']; ?>" class="blog_link">
+                        <a href="<?php base_url('blogs/'.str_replace(' ','-',$data['title'])) ?>" class="blog_link">
                             <div class="card-main">
                                 <div class="img-main">
                                     <img src="assets/images/blog/<?php echo $data['img']; ?>" alt="">
