@@ -7,7 +7,6 @@ require_once "include/header.php"; ?>
 $conn = new fun();
 $service_row = $conn->select_count("SELECT * FROM service WHERE ser_name='$service_id'");
 
-
 ?>
 <?php
 $action = isset($_GET['vew']);

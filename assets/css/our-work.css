@@ -79,6 +79,7 @@
 #our-work .row .card .hover_effect h4{
     font-weight: 600;
     color: var(--black);
+    font-size: 15px;
 }
 #our-work .row .card .hover_effect .img{
     background-color:var(--primary) ;

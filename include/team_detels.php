@@ -1,13 +1,12 @@
-<link rel="stylesheet" href="assets/css/team_details.css">
-
+<link rel="stylesheet" href="<?php base_url('assets/css/team_details.css') ?>">
 
 <?php
-$id = $_GET["id"];
-if (!$id) {
+$username = $_GET["id"];
+if (!$username) {
     header("location: ../our-team.php");   
 }
  $function = new fun(); 
- $row =  $function->show_col("admin",$id);
+ $row =  $function->select_count("SELECT * FROM admin WHERE username='$username'");
  $check = mysqli_num_rows($row);
  
 
@@ -33,7 +32,7 @@ if (!$id) {
     <div class="container">
         <div class="row">
             <div class="image">
-                <img src="assets/images/team/<?php echo $img ?>" alt="">
+                <img src="<?php base_url("assets/images/team/$img") ?>" alt="">
             </div>
             <div class="text">
                 <h2><?php echo $ad_name ?></h2>
@@ -92,7 +91,7 @@ if (!$id) {
                                 <a href="" class="blog_link an" data-an='fade'>
                                     <div class="card1">
                                         <div class="img">
-                                            <img src="assets/images/project/<?php echo $pro_img  ?>" alt="">
+                                            <img src="<?php base_url("assets/images/project/$pro_project") ?>" alt="">
                                         </div>
                                         <div class="blog_text">
                                             <h3><?php echo substr($pro_title,0,15)."..." ?></h3>
@@ -122,7 +121,7 @@ if (!$id) {
                             $v_img ="verifiy_not.png";
                         }
                     ?>
-                    <img src="assets/icons/<?php echo $v_img ?>" class="verigiy" alt="" srcset="">
+                    <img src="<?php base_url("assets/icons/$v_img") ?>" class="verigiy" alt="" srcset="">
                 </div>
 
             </div>

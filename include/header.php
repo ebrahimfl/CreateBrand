@@ -2,6 +2,7 @@
 function base_url($url){
     echo "http://localhost/createBrand/".$url;
 }
+
 include_once("assets/php/function.php");
 $conn_f = new databese();
 $conn_f->connect();

@@ -46,8 +46,8 @@
         </div>
     </div>
 </footer>
-<script src="assets/js/animation.js"></script>
-<script src="assets/js/main.js"></script>
+<script src="<?php base_url('assets/js/animation.js')?>"></script>
+<script src="<?php base_url('assets/js/main.js')?>"></script>
 <script>
     <?php if (isset($_SESSION['alert']) && !empty($_SESSION['alert'])) {
 

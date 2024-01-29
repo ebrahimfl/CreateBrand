@@ -3,19 +3,19 @@
     <div class="container">
         <div class="slider an" style="margin-bottom: 40px;" data-an='fade'>
             <div class="img">
-                <img src="assets/images/slider/web-design-01.svg" alt="">
+                <img src="<?php base_url('assets/images/slider/web-design-01.svg') ?>" alt="">
             </div>
             <div class="img">
-                <img src="assets/images/slider/web-design-02.svg" alt="">
+                <img src="<?php base_url('assets/images/slider/web-design-02.svg')?>" alt="">
             </div>
             <div class="img">
-                <img src="assets/images/slider/bug-fix.svg" alt="">
+                <img src="<?php base_url('assets/images/slider/bug-fix.svg')?>" alt="">
             </div>
             <div class="img">
-                <img src="assets/images/slider/dashboard-1.svg" alt="">
+                <img src="<?php base_url('assets/images/slider/dashboard-1.svg')?>" alt="">
             </div>
             <div class="img">
-                <img src="assets/images/slider/dashboard-2.svg" alt="">
+                <img src="<?php base_url('assets/images/slider/dashboard-2.svg')?>" alt="">
             </div>
         </div>
         <div class="content">
@@ -39,12 +39,7 @@
     <?php include_once("include/work_slider.php"); ?>
 
         
-    
 
-    <div class="contact">
-        
-        <a href="contact-us.php" class='btn_normal'>Contact</a>
-    </div>
 
 
 

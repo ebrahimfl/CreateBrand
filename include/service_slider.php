@@ -18,11 +18,10 @@
                     $s_price = $data['s_price'];
                     $ser_dec = $data['ser_dec'];
                     $ser_img = $data['ser_img'];
-                    $date = $data['date'];           
-                
+                    $date = $data['date'];            
             ?>
                     <div class="card">        
-                    <a href="service-details.php?id=<?php echo $id ?>">        
+                    <a href="services/<?php echo str_replace(' ','-',$ser_name) ?>">        
                         <div class="card_img">
                             <img src="assets/icons/<?php echo $ser_img;?>" alt="">
                         </div>
