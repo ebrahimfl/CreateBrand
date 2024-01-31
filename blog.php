@@ -15,20 +15,20 @@ if (isset($_GET["id"])) {
         <!-- html css code ta add korte hobe -->
         <div class="container">
             <div class="title">
-                <h1>
+                <h1 class="blog_title" >
                     <?php echo $title; ?>
                 </h1>
             </div>
             <div class="image">
-                <img src='<?php base_url("assets/images/blog/$img") ?>' alt="">
+                <img style="width: 100%; max-height: 500px; "  src='<?php base_url("assets/images/blog/$img") ?>' alt="">
             </div>
 
             <div class="desc">
-                <h4><?php echo $dsc; ?></h4>
+                <h4 class="blog_desc" ><?php echo $dsc; ?></h4>
             </div>
 
             <div class="category">
-                <p>
+                <p class="blog_cat" >
                     <?php echo $catagory; ?>
                 </p>
             </div>
