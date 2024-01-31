@@ -20,13 +20,13 @@ for (let x = 0; x < menuA.length; x++) {
 }
 
 // nav Scroll Animaction
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset > nav.offsetTop + 80) {
-    header.classList.add("active_nav");
-  } else {
-    header.classList.remove("active_nav");
-  }
-});
+// window.addEventListener("scroll", () => {
+//   if (window.pageYOffset > nav.offsetTop + 80) {
+//     header.classList.add("active_nav");
+//   } else {
+//     header.classList.remove("active_nav");
+//   }
+// });
 
 // Contact us Page Validation Start
 let name = document.querySelector("#name");
@@ -122,13 +122,32 @@ function setSuccessMsg(input) {
   form_control.querySelector("small").innerHTML = "";
 }
 
+
+
+const optionMenu = document.querySelector("#our-team .select-menu");
+if(optionMenu){
+const selectBtn = optionMenu.querySelector("#our-team .select-btn"),
+       options = optionMenu.querySelectorAll("#our-team .option"),
+       sBtn_text = optionMenu.querySelector("#our-team .sBtn-text");
+selectBtn.addEventListener("click", () => optionMenu.classList.toggle("active"));       
+options.forEach(option =>{
+    option.addEventListener("click", ()=>{
+        let selectedOption = option.querySelector("#our-team .option-text").innerText;
+        sBtn_text.innerText = selectedOption;
+        optionMenu.classList.remove("active");
+    });
+    option.addEventListener("click", filtercardFun);
+});
+}
+
+
 let filterButton = document.querySelectorAll("#our-team .header-menu ul li");
 let filterCard = document.querySelectorAll("#our-team .row .card");
 function filtercardFun(e) {
-  document
-    .querySelector("#our-team .header-menu ul .active")
-    .classList.remove("active");
-  e.target.classList.add("active");
+if(document.querySelector("#our-team .header-menu ul .active")){
+  document.querySelector("#our-team .header-menu ul .active").classList.remove("active");
+e.target.classList.add("active");
+}
 
   filterCard.forEach((element) => {
     if (
@@ -145,20 +164,41 @@ function filtercardFun(e) {
 }
 
 // Add event listeners to filter buttons
+if(filterButton){
 filterButton.forEach((button) => {
   button.addEventListener("click", filtercardFun);
 });
+}
+
+
+
+let optionMenu_work = document.querySelector("#our-work .select-menu");
+if(optionMenu_work!=null){
+const selectBtn = optionMenu_work.querySelector("#our-work .select-btn"),
+       options = optionMenu_work.querySelectorAll("#our-work .option"),
+       sBtn_text = optionMenu_work.querySelector("#our-work .sBtn-text");
+selectBtn.addEventListener("click", () => optionMenu_work.classList.toggle("active"));       
+options.forEach(option =>{
+    option.addEventListener("click", ()=>{
+        let selectedOption = option.querySelector("#our-work .option-text").innerText;
+        sBtn_text.innerText = selectedOption;
+        optionMenu_work.classList.remove("active");
+    });
+    option.addEventListener("click", filter_work_fun);
+});
+}
 
 let filterButton_work = document.querySelectorAll(
   "#our-work .header-menu ul li"
 );
 let filterCard_work = document.querySelectorAll("#our-work .row .card");
 
-function filter_work_fun(e) {
-  document
-    .querySelector("#our-work .header-menu ul .active")
-    .classList.remove("active");
+function filter_work_fun(e){
+  if(document.querySelector("#our-work .header-menu ul .active")){
+  document.querySelector("#our-work .header-menu ul .active").classList.remove("active");
   e.target.classList.add("active");
+  }
+
   filterCard_work.forEach((element) => {
     if (
       e.target.dataset.work === "All" ||
@@ -172,10 +212,13 @@ function filter_work_fun(e) {
     }
   });
 }
+if(filterButton_work){
 
 filterButton_work.forEach((button) => {
   button.addEventListener("click", filter_work_fun);
 });
+
+}
 
 // Our  Filterable Image Galler End
 

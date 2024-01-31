@@ -1,4 +1,5 @@
- /* ^Medium Device Media Query Start */
+
+/* ^Medium Device Media Query Start */
  @media(max-width:1150px){
      /* === Nab Bar Responsive Start === */
      .menu-icon {
@@ -161,6 +162,10 @@
 
  }
  @media(max-width:982px) {
+    #our-work .row{
+        grid-template-columns: 33% 33% 33% !important;
+        gap: 10px !important;
+    }
   
     #home .slider .card{
         display: none ;
@@ -215,6 +220,9 @@
         width: 70px !important;
         height: 40px !important;
     }
+    #about .row{
+        gap: 0 !important;
+    }
     #about .row .img img{
         display: none !important;
     }
@@ -261,6 +269,18 @@
 }
 
  @media(max-width:750px){
+    #our-team .select-menu{
+        display: block !important;
+    }
+    #our-team .header-menu{
+        display: none !important;
+    }
+    #our-work .select-menu{
+    display: block !important;
+    }
+    #our-work .header-menu{
+        display: none !important;
+    }
     #user_profile .content .row{
         flex-direction: column ;
     }
@@ -307,18 +327,74 @@
     }
 
  
-    #our-team .header-menu ul li{
-        
-    }
+  
     #our-team .header-menu ul li.active{
         position: static;
         
+    }
+
+
+    #service .service{
+        grid-template-columns: 50% 50% !important;
+        gap: 10px !important;
+        padding: 0 !important;
+    }
+    #service .service .card {
+        height: 255px !important;
+        padding: 20px !important;
+    }
+    #service .service .card h3{
+        font-size: 19px !important;
+       margin: 10px !important;
+    }
+    #service .service .card .card_img {
+        width: 75px !important;
+        height: 75px !important; 
+        margin-bottom: 0px !important;
+    }
+    #service .service .card .card_img img{
+        width: 60%;
+    }
+    #service .service .card p {
+        /* display: none; */
+        font-size: 15px !important;
+        line-height: 22px !important;
     }
  }
 
  /* ^Medium Device Media Query End */
 
 
+ @media(max-width:694px) {
+    #our-work .row{
+        grid-template-columns: 33% 33% 33% !important;
+        gap: 10px !important;
+    }
+    #our-team .row .card img.card-img{
+        width: 70px !important;
+        height: 70px !important;
+    }
+    #our-team .row .card .text h3 {
+        font-size: 15px !important;
+        margin: 4px 0 !important;
+    }
+    #our-team .row .card .text p{
+        font-size: 12px !important;
+        margin-bottom: 5px !important;
+    }
+    #our-team .row .card {
+        padding:20px 25px !important;
+    }
+    #our-team .row .card .text a {
+        padding: 8px 5px !important;
+        font-size: 13px;
+    }
+    #our-team .row .card .text a img{
+        width: 16px;
+    }
+  
+
+ }
  @media(max-width:588px) {
     #about .slider .card{
         width: 123px !important;
@@ -429,7 +505,6 @@
  /* ^Extra Small Device Media Query Start */
 
  @media(max-width:458px) {
-
     #service .container{
         padding: 0 !important;
     }
@@ -437,10 +512,10 @@
         padding: 12px !important;
     }
     .slider{
-        height: 290px !important;
+        height: 200px !important;
       }
       #home .slider{
-        height: 400px !important;
+        height: 200px !important;
       }
     h2{
         font-size: 30px !important;
@@ -475,6 +550,74 @@
      #faqs .accordion_card h3{
        font-size: 17px;
     }
+    #about .services{
+        margin-top: 20px !important;
+    }
+    .our-team h2,
+    .our-work h2,
+    #blog h2{
+        margin-top: 50px !important;
+    }
+    #about .row{
+        padding: 15px 0px !important;
+    }
+    .counter_wrapper{
+        margin-top: 0px !important;
+    }
+    #our-team .row{
+        grid-template-columns: 50% 50% !important;
+        column-gap: 10px !important;
+    }
+    #our-team .row .card img.card-img{
+        width: 60px !important;
+        height: 60px !important;
+    }
+    #our-team .row .card .text h3 {
+        font-size: 12px !important;
+        margin: 3px 0 !important;
+    }
+    #our-team .row .card .text p{
+        font-size: 9px !important;
+        margin-bottom: 3px !important;
+    }
+    #our-team .row .card {
+        padding:10px 15px !important;
+    }
+    #our-team .row .card .text a {
+        padding: 3px 5px !important;
+        font-size: 12px;
+    }
+    #our-team .row .card .text a img{
+        width: 16px;
+    }
+    #our-work .row{
+        grid-template-columns: 50% 50% !important;
+        gap: 10px !important;
+    }
+    #service .service{
+        grid-template-columns: 50% 50% !important;
+        gap: 10px !important;
+    }
+    #service .service .card {
+        height: 185px !important;
+        
+    }
+    #service .service .card h3{
+        font-size: 19px !important;
+       margin: 10px !important;
+    }
+    #service .service .card .card_img {
+        width: 65px !important;
+        height: 65px !important; 
+        margin-bottom: 0px !important;
+    }
+    #service .service .card .card_img img{
+        width: 60%;
+    }
+    #service .service .card p {
+        display: none;
+    }
+ 
  }
 
  /* ^Extra Small Device Media Query End */

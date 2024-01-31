@@ -31,7 +31,7 @@ h1{
     width: 100%;
     margin: 0 auto;
 }
-#about .container .row h2{
+#about .row h2{
     font-size: 35px;
     margin-bottom: 20px;
     font-weight: 600;
@@ -41,7 +41,7 @@ h1{
     margin-bottom: 30px;
 }
 
-#about .container .row h2::before{
+#about  .row h2::before{
     position: absolute;
     content:'';
     height: 4px;
@@ -49,7 +49,7 @@ h1{
     background-color: var(--primary);
     bottom: -12px;
 }
-#about .container .row p{
+#about .row p{
     color: #6e6e6e;
     line-height: 27px;
     font-size: 15px;

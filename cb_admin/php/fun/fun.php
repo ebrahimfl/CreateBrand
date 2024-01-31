@@ -174,7 +174,7 @@ class addmin
         $size = $_FILES["img"]['size'];
         $img_name = rand(10, 100) . $img_namen;
 
-        $sql = "INSERT INTO blog (title,dsc,img,catagory) VALUES ('$tittle','$dsc','$img_name','$catagory')";
+        $sql = "INSERT INTO blog (title,dsc,img,catagory) VALUES ('$tittle','{$dsc}','$img_name','$catagory')";
         $result = $this->conn->query($sql);
         if ($result) {
             echo "succs";

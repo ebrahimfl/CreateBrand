@@ -4,6 +4,30 @@
 
 <section id="our-work">
     <div class="container">
+    <div class="select-menu">
+        <div class="select-btn">
+            <span class="sBtn-text" data-team="All">All</span>
+            <img src="assets/icons/mingcute_down-line.png" alt="">
+        </div>
+        <ul class="options">
+            <li class="option">
+                <i class="bx bxl-github" style="color: #171515;"></i>
+                <span class="option-text" data-work="Websaite Design">Websaite Design</span>
+            </li>
+            <li class="option">
+                <i class="bx bxl-instagram-alt" style="color: #E1306C;"></i>
+                <span class="option-text" data-work="Web Development">Websaite Development</span>
+            </li>
+            <li class="option">
+                <i class="bx bxl-linkedin-square" style="color: #0E76A8;"></i>
+                <span class="option-text"data-work="Full Stack Development">Full Stack Development</span>
+            </li>
+            <li class="option">
+                <i class="bx bxl-facebook-circle" style="color: #4267B2;"></i>
+                <span class="option-text" data-work="SEO">SEO</span>
+            </li>
+        </ul>
+    </div>
         <div class="header-menu an" data-an='fade-left'>
             <ul>
                 <li class='active' data-work="All">All</li>
