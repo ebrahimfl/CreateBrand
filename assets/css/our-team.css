@@ -46,7 +46,7 @@
 }
 #our-team .row{
     display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,320px));
+    grid-template-columns: repeat(auto-fit,minmax(150px,300px));
     gap:40px;
     row-gap: 40px;
     justify-content: center;
@@ -128,4 +128,64 @@
 }
 #our-team .row .card:hover a{
     background-color: var(--primary);
+}
+
+
+#our-team .select-menu{
+    max-width: 350px;
+    width: 100%;
+    margin: 40px auto;
+    display: none;
+}
+#our-team .select-menu .select-btn{
+    display: flex;
+    height: 55px;
+    background: #fff;
+    padding: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+#our-team .select-btn i{
+    font-size: 25px;
+    transition: 0.3s;
+}
+#our-team .select-menu.active .select-btn i{
+    transform: rotate(-180deg);
+}
+#our-team .select-menu .options{
+    position: relative;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    display: none;
+}
+#our-team .select-menu.active .options{
+    display: block;
+}
+#our-team .options .option{
+    display: flex;
+    height: 35px;
+    cursor: pointer;
+    padding: 0 12px;
+    border-radius: 8px;
+    align-items: center;
+    background: #fff;
+}
+#our-team .options .option:hover{
+    background: var(--bg2);
+}
+#our-team .option i{
+    font-size: 25px;
+    margin-right: 12px;
+}
+#our-team .option .option-text{
+    font-size: 14px;
+    color: #000;
 }

@@ -84,10 +84,16 @@ a {
 	background: #f3f3f3;
 }
 #content {
-	padding: 16px;
-	outline: none;
-	max-height: 50vh;
-	overflow: auto;
+    padding: 16px;
+    outline: none;
+    max-height: 50vh;
+    overflow: auto;
+    margin: 5px;
+    border-bottom: 1px solid #ddd;
+	font-size: 16px;
+}
+#content:hover {
+    border-bottom: 1px solid var(--primary);
 }
 #show-code[data-active="true"] {
 	background: #eee;
@@ -157,7 +163,7 @@ a {
 
 
 	
-			<div name="div" id="content" contenteditable="true" spellcheck="false">
+			<div name="div" id="content"  contenteditable="true" spellcheck="false">
 
 			</div>
 			<input type="hidden" name="content" id="contentInput">

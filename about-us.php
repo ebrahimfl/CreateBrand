@@ -2,9 +2,6 @@
 <link rel="stylesheet" href="assets/css/about.css">
 <?php require_once "include/headerM.php"; ?>
 
-
-    <!-- <h1>About us</h1> -->
-    <div class="container">
         
 
     <?php require_once "include/slider.php"; ?>

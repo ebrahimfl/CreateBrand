@@ -9,6 +9,14 @@ class fun
         $conne->connect();
         $this->conn = $conne->connect;
     }
+
+    // url 
+
+   public function base_url ($url){
+    echo "http://localhost/CreateBrand/".$url;
+
+   }
+
     //   show function
     public function show($table_name)
     {

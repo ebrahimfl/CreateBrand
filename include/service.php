@@ -1,5 +1,6 @@
-<link rel="stylesheet" href="assets/css/service.css">
-
+<link rel="stylesheet" href="<?php base_url('assets/css/service.css')?>">
+<?php 
+?>
     <section id='service'>
      <div class="container">
         <h2 class="sec-titel">Our Services</h2>
@@ -17,9 +18,9 @@
                     $date = $conn['date'];
                 ?>
                 <div class="card">
-                    <a href="service-details.php?id=<?php echo $id ?>">
+                    <a href="services/<?php echo str_replace(' ','-',$ser_name) ?>">
                         <div class="card_img">
-                            <img src="assets/icons/website.png" alt="<?php echo $ser_name ?>">
+                            <img src="<?php base_url('assets/icons/website.png')?>" alt="<?php echo $ser_name ?>">
                         </div>
                         <div class="card-text">
                             <h3> <?php echo $ser_name ?></h4>

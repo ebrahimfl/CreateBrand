@@ -35,7 +35,7 @@
                     </a>
                 </div>
             </div>
-            <div class="card">
+            <div class="card" data-work="Full Stack Development">
                 <img src="assets/images/4.png" alt="" class="card_img">
                 <div class="hover_effect">
                     <h4>Website Design</h4>

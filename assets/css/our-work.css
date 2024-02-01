@@ -79,6 +79,7 @@
 #our-work .row .card .hover_effect h4{
     font-weight: 600;
     color: var(--black);
+    font-size: 15px;
 }
 #our-work .row .card .hover_effect .img{
     background-color:var(--primary) ;
@@ -88,4 +89,63 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+}
+
+#our-work .select-menu{
+    max-width: 350px;
+    width: 100%;
+    margin: 40px auto;
+    display: none;
+}
+#our-work .select-menu .select-btn{
+    display: flex;
+    height: 55px;
+    background: #fff;
+    padding: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    border-radius: 8px;
+    align-items: center;
+    cursor: pointer;
+    justify-content: space-between;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+#our-work .select-btn i{
+    font-size: 25px;
+    transition: 0.3s;
+}
+#our-work .select-menu.active .select-btn i{
+    transform: rotate(-180deg);
+}
+#our-work .select-menu .options{
+    position: relative;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 3px rgba(0,0,0,0.1);
+    display: none;
+}
+#our-work .select-menu.active .options{
+    display: block;
+}
+#our-work .options .option{
+    display: flex;
+    height: 35px;
+    cursor: pointer;
+    padding: 0 12px;
+    border-radius: 8px;
+    align-items: center;
+    background: #fff;
+}
+#our-work .options .option:hover{
+    background: var(--bg2);
+}
+#our-work .option i{
+    font-size: 25px;
+    margin-right: 12px;
+}
+#our-work .option .option-text{
+    font-size: 14px;
+    color: #000;
 }

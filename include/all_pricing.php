@@ -53,7 +53,7 @@
         </li>
     </ol>
 </section> -->
-<section id="package">
+<!-- <section id="package">
     <div class="package-left">
         <h4>
             আমাদের সমস্ত প্যাকেজের উপর আপনি ৫০% ডিসকাউন্ট পাবেন।
@@ -164,4 +164,4 @@
 
         </table>
     </div>
-</section>
+</section> -->

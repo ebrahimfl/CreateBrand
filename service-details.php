@@ -1,17 +1,16 @@
 <?php
 if(isset($_GET['id']) && !empty($_GET['id'])){
-$service_id = $_GET['id']; 
+$service_id = str_replace('-',' ',$_GET['id']); 
 require_once "include/header.php"; ?>
 <link rel="stylesheet" href="assets/css/service-details.css">
 <?php require_once "include/headerM.php";
 $conn = new fun();
-$service_row = $conn->show_col("service",$service_id);
-
+$service_row = $conn->select_count("SELECT * FROM service WHERE ser_name='$service_id'");
 
 ?>
 <?php
 $action = isset($_GET['vew']);
-if (!$action) {
+if (!$action){
     if($service_data = $service_row->fetch_assoc()){
         
     }

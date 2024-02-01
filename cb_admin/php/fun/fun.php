@@ -51,11 +51,43 @@ class addmin
         }
     }
 
+    //delet image 
+    public function delete_image($table_name, $path, $colomun_name, $id)
+    {
+        $sql_image = "SELECT * FROM $table_name WHERE id='$id'  ";
+        $result_for_image = $this->conn->query($sql_image);
+        $fetched_sql =  mysqli_fetch_assoc($result_for_image);
+        $image_name = $fetched_sql["$colomun_name"];
+
+        $sql = "DELETE FROM $table_name WHERE id='$id'";
+        $filename = $path . $image_name;
+        // Check if the file exists before attempting to delete
+        if (file_exists($filename)) {
+            // Attempt to delete the file
+            if (unlink($filename)) {
+          
+            } else {
+                echo 'Unable to delete the file.';
+            }
+        } else {
+            echo 'File does not exist.';
+        }
+        $result = $this->conn->query($sql);
+        if ($result) {
+            return "sucssec";
+        } else {
+            dir("NO");
+        }
+    }
+
+
+
+
     // service start 
     public function serviec_add($data)
     {
         $title = $data['title'];
-        $dsc = $data['dsc'];
+        $dsc = $data['content'];
         $img_t = $_FILES["img"]['tmp_name'];
         $img_name = $_FILES["img"]['name'];
         $type = $_FILES["img"]['type'];
@@ -99,7 +131,7 @@ class addmin
         if (isset($img_name) && !empty($img_name)) {
             $ex_validation = ['png', 'PNG', 'jpeg', 'jpg', 'gif'];
             $img_extanction = pathinfo($img_name, PATHINFO_EXTENSION);
-            if(in_array($img_extanction, $ex_validation)){
+            if (in_array($img_extanction, $ex_validation)) {
                 $new_img_name = rand() . '.' . $img_extanction;
                 move_uploaded_file($img_tmp_name, $location . $new_img_name);
                 return $new_img_name;
@@ -120,24 +152,21 @@ class addmin
         $category = $_POST['category'];
         $location = $_POST['location'];
         $password = $_POST['password'];
-       
-            $sql = "INSERT INTO admin (	acces, ad_id, ad_name, ad_pass, ad_parmison, ad_nid, ad_catagory, location) VALUES('$acces', '$team_id', '$name', '$password', '1', '$Nid', '$category', '$location')";
-            if ($this->conn->query($sql)) {
-                header("location:../../admin.php?val=team_add&&ok");
-            }else {                
-                header("location:../../admin.php?val=team_add&&no");
-            }
-        
+
+        $sql = "INSERT INTO admin (	acces, ad_id, ad_name, ad_pass, ad_parmison, ad_nid, ad_catagory, location) VALUES('$acces', '$team_id', '$name', '$password', '1', '$Nid', '$category', '$location')";
+        if ($this->conn->query($sql)) {
+            header("location:../../admin.php?val=team_add&&ok");
+        } else {
+            header("location:../../admin.php?val=team_add&&no");
+        }
     }
 
     // blog fun start
     // blog add
     public function add_blog($data)
     {
-
-        $title = $data['title'];
         $dsc = $data['content'];
-        $mata = $data['mata'];
+        $tittle = $data['tittle'];
         $catagory = $data['catagory'];
         $img_t = $_FILES["img"]['tmp_name'];
         $img_namen = $_FILES["img"]['name'];
@@ -145,7 +174,7 @@ class addmin
         $size = $_FILES["img"]['size'];
         $img_name = rand(10, 100) . $img_namen;
 
-        $sql = "INSERT INTO blog (title,dsc,mata,img,catagory)VALUES('$title','$dsc','$mata','$img_name','$catagory')";
+        $sql = "INSERT INTO blog (title,dsc,img,catagory) VALUES ('$tittle','{$dsc}','$img_name','$catagory')";
         $result = $this->conn->query($sql);
         if ($result) {
             echo "succs";
@@ -156,19 +185,34 @@ class addmin
         }
     }
     // SHUDHUMATORO BLOG UPDAT
-    public function blog_update($id, $data)
+    public function blog_update($id, $data,$images)
     {
         if ($data) {
             $title = $data['title'];
-            $dsc = $data['dsc'];
-            $mata = $data['mata'];
+            $dsc = $data['content'];
             $img = $_FILES['img']['name'];
             $img_t = $_FILES['img']['tmp_name'];
             $catagory = $data['catagory'];
+            if(!$img){
+                $img = $images ; 
 
-            $sql = "UPDATE blog SET title='$title',dsc='$dsc',mata='$mata',img='$img',catagory='$catagory' WHERE id=$id";
+            }else{
+                $filename = "../../assets/images/blog/".$images;
+                // Check if the file exists before attempting to delete
+                if (file_exists($filename)) {
+                    // Attempt to delete the file
+                    if (unlink($filename)) {
+                  
+                    } else {
+                        echo 'Unable to delete the file.';
+                    }
+                } else {
+                    echo 'File does not exist.';
+                }
+            }
+            $sql = "UPDATE blog SET title='$title',dsc='$dsc',img='$img',catagory='$catagory' WHERE id=$id";
             if (mysqli_query($this->conn, $sql)) {
-                move_uploaded_file($img_t, "../../assets/images/" . $img);
+                move_uploaded_file($img_t, "../../assets/images/blog/".$img);
                 header("location:../?val=AllBlog");
             } else {
                 echo "sumthing is rong";
@@ -192,13 +236,13 @@ class addmin
                 $id = $id_c['id'];
                 setcookie(md5("ad_name"), $use_name, time() + (86400 / 4), "/");
                 session_start();
-                $_SESSION[md5("admin_brandOfcreate_id")]=$id;
-                $_SESSION[md5("admin_brandOfcreate_ad_id")]= $id_c['ad_id'];
+                $_SESSION[md5("admin_brandOfcreate_id")] = $id;
+                $_SESSION[md5("admin_brandOfcreate_ad_id")] = $id_c['ad_id'];
                 header("location:../../admin.php");
-            }else{
+            } else {
                 header("location:../../");
             }
-        }else{
+        } else {
             dir("Database not connected");
         }
     }
@@ -280,7 +324,6 @@ class addmin
         } else {
             echo "no data";
         }
-      
     }
     public function add_number_ge($id, $data)
     {
@@ -301,7 +344,6 @@ class addmin
         } else {
             echo "no data";
         }
-
     }
 
 
@@ -324,7 +366,6 @@ class addmin
         } else {
             echo "no data";
         }
-
     }
     public function save_add_country_get($id, $data)
     {
@@ -345,6 +386,5 @@ class addmin
         } else {
             echo "no data";
         }
-
     }
 }

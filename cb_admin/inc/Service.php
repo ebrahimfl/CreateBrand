@@ -1,66 +1,77 @@
 <!-- add service -->
 <?php
+
+if (isset($_GET['action'])) {
+    $check = $_GET['action'];
+    $id = $_GET['id'];
+    if ($check==="delete") {
+        header("location:../php/core.php?action=delets&&table=service&&id=$id");
+    }elseif ($check==="update") {
+        header("location: ../../admin.php?action=blogup&&id=$id");
+    }
+}else{
+
+include_once("cb_admin/php/fun/fun.php");
+$conn = new addmin;
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
-    include_once("../php/fun/fun.php");
-    $conn = new addmin;
+    
 ?>
     <?php
-    $blog_show = $conn->show_col("blog", $id);
+    $blog_show = $conn->show_col("service", $id);
     while ($data = mysqli_fetch_assoc($blog_show)) {
-        $title = $data['title'];
-        $dsc = $data['dsc'];
-        $mata = $data['mata'];
-        $img = $data['img'];
-        $catagory = $data['catagory'];
+        $ser_name = $data['ser_name'];
+        $ser_dec = $data['ser_dec'];
+        $s_price = $data['s_price'];
+        $ser_img = $data['ser_img'];
+        $date = $data['date'];
+
     ?>
-        <link rel="stylesheet" href="../css/update_blog.css">
-        <div class="update-blog-conatiner">
-            <div class="update-blog-wrapper">
-                <form action="../php/core.php?id=<?php echo $id; ?>" method="post" enctype="multipart/form-data">
-                    <h1>You Can Update The From Here </h1>
-                    <label for="title">Title</label>
-                    <input type="text" name="title" id="title" value="<?php echo $title; ?>" required>
-
-                    <label for="id">Description</label>
-                    <textarea name="dsc" id="id" cols="30" rows="10" required><?php echo $dsc; ?></textarea>
-
-                    <label for="mata">Meta Discription</label>
-                    <input type="text" name="mata" id="mata" value="<?php echo $mata; ?>" required>
-
-                    <label for="catagory">Catagory</label>
-                    <input type="text" name="catagory" id="catagory" value="<?php echo $catagory; ?>" required>
-
-                    <label for="img">Upload Image</label>
-                    <input type="file" name="img" id="img" value="Upload You Thamble">
-
-
-                    <input type="submit" class="btnn"  value="Submit" name="blogup">
-
-
-                </form>
-            </div>
-        </div>
-
-
-
 <?php
+
     }
 } ?>
+<link rel="stylesheet" href="cb_admin/css/allblog.css">
 
+<table>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Price</th>
+        <th>Image</th>
+        <th>Action</th>
+    </tr>
 
-<link rel="stylesheet" href="cb_admin/css/add_blog.css">
+    <?php
+    $blog = $conn->show("service");
+    $i = 0;
+    while ($data = mysqli_fetch_assoc($blog)) {
+        $i++;
+        $id = $data["id"];
+        $ser_name = $data['ser_name'];
+        $ser_dec = $data['ser_dec'];
+        $s_price = $data['s_price'];
+        $ser_img = $data['ser_img'];
+        $date = $data['date'];
+    ?>
+        <tr>
+            <td> <?php echo $i; ?></td>
+            <td><?php echo $ser_name; ?></td>
+            <td class="image-show"> <?php echo $s_price; ?> </td>
+            <td > <img style="width: 100px; height: 70px; " src="assets/images/service/<?php echo $ser_img; ?>" alt=""></td>
+            <td><a href="cb_admin/inc/service.php?action=delete&&id=<?php echo $id; ?>" onclick="blogDelete(event)">Delete</a> <a href="cb_admin/inc/service.php?action=update&&id=<?php echo $id; ?>">Update</a></td>
+        </tr>
+        <script>
+            function blogDelete(e) {
+                let confirmMsg = confirm('Are You Sure');
+                if (!confirmMsg) {
+                    e.preventDefault()
+                }
+            }
+        </script>
+    <?php
+    }
 
-<form action="cb_admin/php/core.php" method="post" enctype= "multipart/form-data" >
-    <label for="title">Service Name </label>
-    <input type="text" name="title" id="title" placeholder="Title" required>
-
-    <label for="id">Service Description</label>
-    <textarea name="dsc" id="id" cols="20" rows="12" placeholder="Your Content" required></textarea>     
-    <input type="file" name="img" id="img">    
-    <input type="submit" class="btnn" value="Submite" name="S_sub">
-</form>
-
-
-
-
+    ?>
+</table>
+<?php }  ?> 

@@ -6,6 +6,36 @@ $function = new fun();
 ?>
 <section id="our-team">
    <div class="container">
+   <div class="select-menu">
+        <div class="select-btn">
+            <span class="sBtn-text" data-team="All">All</span>
+            <img src="assets/icons/mingcute_down-line.png" alt="">
+        </div>
+        <ul class="options">
+            <li class="option">
+                <i class="bx bxl-github" style="color: #171515;"></i>
+                <span class="option-text" data-team="Web Designer">Websaite Design & Developer</span>
+            </li>
+            <li class="option">
+                <i class="bx bxl-instagram-alt" style="color: #E1306C;"></i>
+                <span class="option-text"data-team="SEO">SEO</span>
+            </li>
+            <li class="option">
+                <i class="bx bxl-linkedin-square" style="color: #0E76A8;"></i>
+                <span class="option-text"data-team="Digital Marketing">Digital Marketing</span>
+            </li>
+            <li class="option">
+                <i class="bx bxl-facebook-circle" style="color: #4267B2;"></i>
+                <span class="option-text">Facebook</span>
+            </li>
+            <li class="option">
+                <i class="bx bxl-twitter" style="color: #1DA1F2;"></i>
+                <span class="option-text">Twitter</span>
+            </li>
+        </ul>
+    </div>
+
+    
     <div class="header-menu an" data-an='fade-right'>
         <ul>
             <li class='active' data-team="All">All</li>
