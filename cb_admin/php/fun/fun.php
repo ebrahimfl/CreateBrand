@@ -165,8 +165,12 @@ class addmin
     // blog add
     public function add_blog($data)
     {
-        $dsc = $data['content'];
-        $tittle = $data['tittle'];
+      
+      $url_input = preg_replace('/[^a-zA-Z0-9০-৯অ-ঁ\-]/', '-', $data['url']);
+      echo $url = preg_replace('/-+/', '-', $url_input);
+        
+        $dsc = mysqli_real_escape_string($this->conn,$data['content']);
+        $tittle = mysqli_real_escape_string($this->conn,$data['tittle']);
         $catagory = $data['catagory'];
         $img_t = $_FILES["img"]['tmp_name'];
         $img_namen = $_FILES["img"]['name'];
@@ -174,7 +178,7 @@ class addmin
         $size = $_FILES["img"]['size'];
         $img_name = rand(10, 100) . $img_namen;
 
-        $sql = "INSERT INTO blog (title,dsc,img,catagory) VALUES ('$tittle','{$dsc}','$img_name','$catagory')";
+        $sql = "INSERT INTO blog (title,dsc,img,catagory, url ) VALUES ('$tittle','{$dsc}','$img_name','$catagory','$url')";
         $result = $this->conn->query($sql);
         if ($result) {
             echo "succs";

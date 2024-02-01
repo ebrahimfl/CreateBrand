@@ -2,6 +2,7 @@
 
 <form action="cb_admin/php/core.php" method="post" enctype="multipart/form-data">
     <input type="text" name="tittle" id="tittle" placeholder="Tittle" required>
+    <input type="text" name="url" id="tittle" placeholder="enter blog url" required>
     <input type="text" name="catagory" id="catagory" placeholder="Catagory" required>
     <!-- <textarea name="dsc" id="id" cols="20" rows="5" class="check" placeholder="Your Content" required></textarea> -->
     <?php include_once('include/text-editor.php') ?>

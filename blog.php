@@ -3,8 +3,8 @@
 <?php require_once "include/headerM.php";
 $fun = new fun();
 if (isset($_GET["id"])) {
-    $title =str_replace('-',' ', $_GET["id"]);
-    $func = $fun->select_count("SELECT * FROM blog WHERE title='$title'");
+   echo  $title = $_GET["id"];
+    $func = $fun->select_count("SELECT * FROM blog WHERE url='$title'");
     while ($data= $func->fetch_assoc()) {
         $title = $data['title'];
         $dsc = $data['dsc'];
@@ -50,7 +50,7 @@ if (isset($_GET["id"])) {
                 while ($data = $datat->fetch_assoc()) {
                 ?>
                     <div class="card-boss">
-                        <a href="<?php base_url('blogs/'.str_replace(' ','-',$data['title'])) ?>" class="blog_link">
+                        <a href="<?php base_url('blogs/'.$data['url']) ?>" class="blog_link">
                             <div class="card-main">
                                 <div class="img-main">
                                     <img src="assets/images/blog/<?php echo $data['img']; ?>" alt="">
