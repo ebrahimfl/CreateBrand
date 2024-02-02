@@ -1,4 +1,4 @@
-DirectoryIndex home
+DirectoryIndex home.php
 RewriteEngine On
 
 # Remove trailing slashes
