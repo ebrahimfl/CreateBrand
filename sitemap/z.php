@@ -1,8 +1,4 @@
-<?php
-echo '<pre>';
-print_r($_SERVER);
-
-
+<?php 
 include_once("../cb_admin/php/fun/fun.php");
 $conn = new addmin;
 
@@ -22,41 +18,22 @@ $blog_url = [];
     echo '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">'.PHP_EOL;
     echo '<!--  createofbrnd.com  -->'.PHP_EOL;
     // Your URLs and additional information
-    $urls = array(
-        // ... (unchanged)
-    );
+
     
     // Loop through each URL and add it to the sitemap
     foreach ($blog_url as $data) {
         echo '<url>';
-?>
-
-    <?php echo '<loc>'.$rootPath.$data .'</loc>'; ?>
-    <?php   echo '<lastmod>'.date("c").'</lastmod>';?>
-    <?php   echo '<changefreq>'."daily".'</changefreq>';?>
-    <?php   echo '<priority>'."0.9000".'</priority>';?>
-
-
-
-
-     <?php   
-     echo '</url>';
+        echo '<loc>'.htmlspecialchars($rootPath.$data) .'</loc>';
+        echo '<lastmod>'.date("c").'</lastmod>';
+        echo '<changefreq>'."daily".'</changefreq>';
+        echo '<priority>'."0.9000".'</priority>';
+        echo '</url>';
     }
-   
+    
     // Close the XML file
     echo '</urlset>';
     ?>
     
-
-
-
-
-
-
-
-
-
-
 
 
 
