@@ -1,2 +1,69 @@
-<h1>dasbord</h1>
-Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti eum iste amet suscipit? Impedit expedita animi in veritatis aspernatur aut sapiente vitae quia rerum. Iusto mollitia in, corrupti aliquam rem dignissimos laudantium ipsum ad, reiciendis nobis quam fugit similique doloremque eveniet. Fugit incidunt mollitia aliquam. Iure, necessitatibus. Inventore vero qui minima repellat sit accusantium pariatur nam, et dolores quae obcaecati totam vel, ducimus in aspernatur dicta! Magnam, porro voluptatibus. Enim incidunt eos omnis obcaecati, vel explicabo sapiente ut qui nam esse ipsam voluptates a, beatae, error sint corrupti quas repellendus labore consectetur asperiores ex nemo. Eum, laudantium aliquid. Molestiae alias deleniti, exercitationem, impedit perspiciatis ducimus, atque itaque necessitatibus perferendis id consequatur unde. Placeat quaerat exercitationem sit vel odit totam perferendis nam veniam, fuga eveniet at. Cupiditate placeat perspiciatis architecto incidunt? Consequuntur, aliquid in nemo corporis ad fugiat quaerat odit rem at debitis quae doloribus. Suscipit nesciunt sunt sit minima voluptate earum commodi molestias temporibus facere, expedita magnam natus optio ex eos iusto sapiente iure id! Hic asperiores iusto quia cumque molestias cum, ex quasi. Quas optio voluptas suscipit dignissimos enim hic nam facere accusamus! Atque, fugit accusantium ipsum beatae qui optio, dicta esse sed provident natus a voluptates eveniet, eligendi fugiat consectetur non placeat nisi nobis molestiae suscipit? Dolor, reiciendis. Cumque nulla perspiciatis aspernatur obcaecati quos alias eos soluta ratione, modi placeat a explicabo error officiis quibusdam, quisquam accusantium laborum perferendis ipsum dolorem? Dicta delectus corporis, ex reiciendis maxime odit, sit repellendus tempora magnam beatae neque minus enim voluptatum. Nam eaque modi maxime et. Laboriosam voluptas quaerat cupiditate explicabo quos fugit consequuntur numquam? Asperiores accusantium pariatur beatae incidunt dolorem quae voluptas mollitia, unde facere quos deleniti accusamus consequuntur, praesentium voluptatibus, suscipit commodi expedita deserunt sint nobis temporibus minima ea? Laborum, ipsam aut dolor vero impedit obcaecati. Mollitia, non nesciunt distinctio reiciendis officiis debitis ex accusantium cum iure nam dignissimos, sunt veniam alias odio libero officia. Illo, nulla ipsum. Porro, fugiat? Illum ipsam minus asperiores recusandae quo, quidem nobis officia temporibus facilis reiciendis modi suscipit consectetur inventore pariatur omnis, quia cumque aspernatur eum voluptatibus soluta mollitia vel voluptatem. Itaque, placeat? Porro inventore neque, consectetur aliquam repellendus veritatis ea beatae tempore obcaecati quibusdam est quos animi pariatur accusantium quo error odit ratione eos molestiae fugiat ad dolor doloremque culpa. Amet itaque omnis accusamus eos voluptatem? Libero quia doloremque provident est deserunt. Recusandae suscipit excepturi deleniti reiciendis esse ipsa velit iure soluta quisquam, vel ipsam dolorem sequi ab nam corporis laboriosam quo? Maxime asperiores ad sint delectus repudiandae rem consequuntur debitis temporibus natus magnam, blanditiis assumenda iste voluptates officiis libero, totam praesentium accusamus illo similique at consequatur laborum? Voluptatibus dolorum harum dicta quis similique, earum aliquid at temporibus aspernatur. Aspernatur adipisci architecto ullam, velit deserunt amet iure ad. Quibusdam, perspiciatis fuga quisquam praesentium totam nobis autem qui distinctio iste nostrum ab fugit, deserunt ipsa consectetur deleniti repellat voluptatibus! Dicta voluptates eum placeat dolores molestiae laborum unde recusandae eligendi, amet expedita doloribus accusamus veniam itaque minus tempore omnis aperiam. Nemo necessitatibus rerum deserunt nulla dolorem. Rem alias cum dolorem tempora itaque inventore, dolores quibusdam voluptate nesciunt hic quisquam quis repellat, reprehenderit voluptatem vel veniam perspiciatis molestias quae autem magnam? Quia maxime tempora blanditiis modi eos nam, pariatur aliquam distinctio vitae, deserunt voluptatem nihil nisi eum nobis cumque, dolores inventore neque. Fugit, est rem. Vel doloremque ducimus dolore! Dolores eum molestias ut optio ipsum ex, officia nostrum cumque neque inventore dolorem, voluptatibus minima corporis quas. Ullam perferendis laudantium deleniti quod in aut quibusdam? Culpa, aliquam hic non deleniti fugiat voluptatem enim iste ipsam tenetur dolores voluptates consectetur harum repellat molestias consequuntur sunt, alias placeat quae nulla! Sequi nisi ea repudiandae, blanditiis enim dolor! Eos distinctio, minus laboriosam cum ipsa, laudantium magni deleniti repellendus eius esse temporibus labore dignissimos nihil! Labore nisi sed soluta. Illum ab assumenda doloribus quod nobis nesciunt, culpa saepe, recusandae atque sed voluptates? Hic unde praesentium dolorum libero, repellat sit nostrum atque quaerat rerum corporis quidem ipsum quam sunt esse recusandae! Commodi alias quaerat laborum non accusamus delectus ea accusantium at, officiis voluptate distinctio tempore debitis cupiditate. Inventore excepturi nemo, alias eveniet voluptatum voluptatibus perferendis in reprehenderit. Soluta distinctio mollitia, nulla odio veritatis dolore dolores sapiente expedita reprehenderit cupiditate recusandae. Aliquid nostrum, distinctio fugiat recusandae placeat, dolores nobis dolorem rerum nesciunt at facilis pariatur amet est. Ad inventore rem eaque qui numquam distinctio quidem totam, vero fugit officiis quam praesentium, consequuntur molestias deserunt fuga vel dolore quaerat ducimus pariatur mollitia ullam sunt. Dolorum tempora eos sapiente vero praesentium molestias aperiam? Non, modi laudantium. Ea minima quia id quisquam soluta cumque. Accusantium numquam dignissimos non, quas, est ipsam voluptate sunt quis assumenda pariatur exercitationem beatae dolores similique debitis ut totam cum laudantium iure architecto saepe nemo? Itaque aperiam, repellat aliquid autem commodi nesciunt mollitia saepe quod aliquam aspernatur consectetur dolorem! Eum provident, facilis ab sit facere fugiat, pariatur dolores aliquid maxime incidunt asperiores quam nostrum itaque inventore architecto nam doloribus cumque, numquam obcaecati? Hic saepe, dignissimos quibusdam nostrum id ipsa quia aliquid, esse a quos error facilis, atque temporibus tenetur! Porro omnis nemo sit iste excepturi blanditiis quia nobis enim modi consequuntur, officiis, animi adipisci! Porro illum quaerat sint suscipit eligendi. Ex minus porro id, quae quis cum tempora nobis eveniet, ipsum adipisci voluptate asperiores, consequuntur consequatur odit. Doloremque quos obcaecati cumque expedita vel repudiandae pariatur fuga neque esse, ipsa corporis sit assumenda illo, laboriosam iure, debitis natus exercitationem nobis temporibus harum quidem in. Illo, tenetur! Perspiciatis consectetur tempore nemo illo dignissimos quae quis magnam eaque sit repellat tempora, adipisci quam ab ipsa saepe exercitationem. Ex inventore, pariatur corrupti reiciendis ipsum facilis aperiam consequuntur, aut vel reprehenderit vitae doloremque quasi eos. Quod harum illum eum, earum neque minima sed excepturi accusamus nihil consequatur animi quidem provident recusandae, enim autem impedit quas ex ea et, tempora distinctio. Eius eaque fugit voluptas nihil repellat obcaecati beatae animi sunt accusamus fugiat doloribus, fuga possimus illo rem voluptates soluta aspernatur suscipit eveniet ducimus nobis dolorem. Provident nam eum molestias iste eaque fugit ipsa dicta unde quas inventore.
+<?php
+
+ $ad_name = $_COOKIE[md5('ad_name')];
+$id = $_SESSION[md5("admin_brandOfcreate_id")];
+$team_id = $_SESSION[md5("admin_brandOfcreate_ad_id")];
+
+if ( $team_id && $id && $team_id) {
+
+    
+    $main_data = $function->select_count("SELECT * FROM admin WHERE ad_id=$team_id");
+    
+    
+        while ($data1 = $main_data->fetch_assoc()) {
+           $name =  $data1["ad_name"];
+            $acces =  $data1["acces"];
+            $username =  $data1["username"];
+            $ad_catagory =  $data1["ad_catagory"];
+            $exp_about =  $data1["exp_about"];
+            $dsc =  $data1["dsc"];
+            $location =  $data1["location"];
+            $data =  $data1["data"];
+            $img =  $data1["img"];            
+        }
+        ?>
+
+
+        <?php
+        // project code 
+        $main_data1 = $function->select_count("SELECT * FROM  admin_project WHERE ad_id=$team_id");
+        while ($data1 = $main_data1->fetch_assoc()) {
+            $project =  $data1["project"];
+            $title =  $data1["title"];
+            $des =  $data1["des"];
+            $img =  $data1["img"];
+            $url =  $data1["url"];
+            $date =  $data1["date"];
+        }
+        ?>
+        <!-- project code -->
+
+
+
+
+
+        <?php
+        // skill code
+        $main_data2 = $function->select_count("SELECT * FROM  admin_skill WHERE ad_id=$team_id");
+        while ($data1 = $main_data2->fetch_assoc()) {
+            $skill =  $data1["skill"];
+            $url =  $data1["url"];
+        ?>
+        <!-- skill code -->
+        <table>
+            <td><?php echo  $skill; ?></td>
+        </table>
+            
+
+        <?php            
+            }
+
+        ?>
+
+
+
+
+<?php   
+    }
+
+?>
