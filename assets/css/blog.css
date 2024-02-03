@@ -12,6 +12,7 @@
 #blog {
     margin-top: 40px;
     padding: 0px 0px 100px;
+    display: flex;
 }
 
 #blog .container .row1 .content-main .card-card {
