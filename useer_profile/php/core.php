@@ -10,37 +10,94 @@ if (isset($_POST['profile_img_submit'])) {
     $old_img = $result->fetch_assoc();
     $result->num_rows;
     $sql = "UPDATE user SET ";
+    
 
+        // path select
+        $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], 'useer_profile/php/core.php') );
+        $remove =rtrim($_SERVER['SCRIPT_NAME'], $page);
+        
+        if ($remove !== ""){
+            $remove1 =$remove."/";
+            echo $servarname = $_SERVER['DOCUMENT_ROOT'].$remove1;
+        }else{
+
+        echo $servarname = $_SERVER['DOCUMENT_ROOT'];
+        }
+
+
+  
 
     if (isset($_FILES['banner_img']) && !empty($_FILES['banner_img']['name'])) {
-        if ($name_img = $fun->img_validaction($_FILES['banner_img']['name'], $_FILES['banner_img']['tmp_name'], '../../assets/images/user/')) {
+        echo '<br>';
+        print_r($_FILES['profile_logo']);
+        // cover img        
+        if ($name_img = $fun->img_validaction($_FILES['banner_img']['name'], $_FILES['banner_img']['tmp_name'], 'assets/images/user/')) {
             if (!empty($_FILES['profile_logo']['name'])) {
-                echo $sql .= "img_c='$name_img', ";
+              $sql .= "img_c='$name_img', ";
             } else {
                 $sql .= "img_c='$name_img'";
             }
             if ($result->num_rows == 1) {
-                unlink('../../assets/images/user/' . $old_img['img_c']);
+                
+                
+                 $old_img['img_c'];
+                if ($old_img['img_c'] != null) {
+                    // Construct the server path to the old image
+                    $oldImagePath = $_SERVER['DOCUMENT_ROOT'] . $remove . '/assets/images/user/' . $old_img['img_c'];
+                
+                    // Check if the file exists before attempting to unlink it
+                    if (file_exists($oldImagePath)) {
+                         unlink($oldImagePath);
+                        echo "File deleted successfully";
+                    } else {
+                        echo "File does not exist or there was an issue deleting it" ;
+                    }
+                }
+                $sql = $sql." WHERE id=".$user_id;
+                $fun->insert($sql);
+
+                 
             }
         } else {
             $fun->alert('danger', 'Something is Rong');
         }
     }
+
+
+    // profile 
     if (isset($_FILES['profile_logo']) && !empty($_FILES['profile_logo']['name'])) {
-        if ($name_img = $fun->img_validaction($_FILES['profile_logo']['name'], $_FILES['profile_logo']['tmp_name'], '../../assets/images/user/')) {
-            $sql .= "img='$name_img' ";
-            if ($result->num_rows == 1) {
-                unlink('../../assets/images/user/' . $old_img['img']);
-            }
-        } else {
-            $fun->alert('danger', 'Something is Rong');
-        }
+
+        echo '<br>';
+        print_r($_FILES['profile_logo']);
+
+        // if ($name_img1 = $fun->img_validaction($_FILES['profile_logo']['name'], $_FILES['profile_logo']['tmp_name'], "assets/images/user/")) {
+            
+        //     if ($result->num_rows == 1) {
+        //         $old_img['img_c'];
+        //         if ($old_img['img_c'] != null) {
+        //             // Construct the server path to the old image
+        //             $oldImagePath = $_SERVER['DOCUMENT_ROOT'] . $remove . '/assets/images/user/' . $old_img['img_c'];
+                
+        //             // Check if the file exists before attempting to unlink it
+        //             if (file_exists($oldImagePath)) {
+        //                  unlink($oldImagePath);
+        //                 echo "File deleted successfully";
+        //             } else {
+        //                 echo "File does not exist or there was an issue deleting it" ;
+        //             }
+        //         }
+        //     }
+        // } else {
+        //     $fun->alert('danger', 'Something is Rong');
+        // }
+        // $sql1 = "UPDATE user SET img_c=$name_img1 WHERE id=$user_id";
+        // $fun->insert($sql1);
     }
-    $sql .= " WHERE id=$user_id";
-    if ($fun->insert($sql)) {
+     
+   
         $fun->alert('success', 'Your Image Upload');
-        header('Location:../../user_profile.php');
-    }
+        // header('Location:../../user_profile');
+    
 }
 // User Profile Logo and Banner End
 

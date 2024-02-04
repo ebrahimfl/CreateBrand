@@ -42,11 +42,26 @@ class fun
     public function img_validaction($img_name, $img_tmp_name, $location)
     {
         if (isset($img_name) && !empty($img_name)) {
+
             $ex_validation = ['png', 'PNG', 'jpeg', 'jpg', 'gif'];
+
             $img_extanction = pathinfo($img_name, PATHINFO_EXTENSION);
+            
             if(in_array($img_extanction, $ex_validation)){
-                $new_img_name = rand() .time(). '.' . $img_extanction;
-                move_uploaded_file($img_tmp_name, $location . $new_img_name);
+                $new_img_name = rand() .time(). '.' . $img_extanction; 
+                
+                 $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], 'useer_profile/php/core.php') );
+                 $remove =rtrim($_SERVER['SCRIPT_NAME'], $page);
+                
+                if ($remove !== ""){
+                    $remove1 =$remove."/";
+                     $servarname = $_SERVER['DOCUMENT_ROOT'].$remove1;
+                }else{
+
+                  $servarname = $_SERVER['DOCUMENT_ROOT'];
+                }
+                
+                move_uploaded_file($img_tmp_name, $servarname.$location . $new_img_name);
                 return $new_img_name;
             }else{
                 return false;
@@ -54,6 +69,7 @@ class fun
         }else{
             return false;
         }
+        
     }
     //   insert function
     public function insert($sql)

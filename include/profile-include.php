@@ -1,6 +1,9 @@
-<?php $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], '/') + 1);
+<?php
+$page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], '/') + 1);
+
+
 if(!isset($_COOKIE[md5('name')])){
-	header('Location:index.php');
+	header('Location:home');
 }
 $row = $function->show_col('user',$_COOKIE[md5('name')]);
 $data = $row->fetch_assoc();
