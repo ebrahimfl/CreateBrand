@@ -61,8 +61,11 @@ class fun
                   $servarname = $_SERVER['DOCUMENT_ROOT'];
                 }
                 
-                move_uploaded_file($img_tmp_name, $servarname.$location . $new_img_name);
-                return $new_img_name;
+                
+                    move_uploaded_file($img_tmp_name, $servarname.$location.$new_img_name);
+                    return $new_img_name;
+                
+                
             }else{
                 return false;
         }

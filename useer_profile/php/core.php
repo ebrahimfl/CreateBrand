@@ -3,12 +3,15 @@ include_once('function/fun.php');
 $fun = new fun();
 $user_id = $_COOKIE[md5('name')];
 
+
 // User Profile Logo and Banner Start
 if (isset($_POST['profile_img_submit'])) {
     $querys = "SELECT img,img_c FROM user WHERE id=$user_id ";
     $result = $fun->select_count($querys);
     $old_img = $result->fetch_assoc();
     $result->num_rows;
+    
+    
     $sql = "UPDATE user SET ";
     
 
@@ -25,78 +28,70 @@ if (isset($_POST['profile_img_submit'])) {
         }
 
 
-  
+  echo "<pre>";
+  print_r($_POST);
+  print_r($_FILES);
+  echo "</pre>";
 
-    if (isset($_FILES['banner_img']) && !empty($_FILES['banner_img']['name'])) {
-        echo '<br>';
-        print_r($_FILES['profile_logo']);
-        // cover img        
-        if ($name_img = $fun->img_validaction($_FILES['banner_img']['name'], $_FILES['banner_img']['tmp_name'], 'assets/images/user/')) {
-            if (!empty($_FILES['profile_logo']['name'])) {
-              $sql .= "img_c='$name_img', ";
-            } else {
-                $sql .= "img_c='$name_img'";
-            }
-            if ($result->num_rows == 1) {
-                
-                
-                 $old_img['img_c'];
-                if ($old_img['img_c'] != null) {
-                    // Construct the server path to the old image
-                    $oldImagePath = $_SERVER['DOCUMENT_ROOT'] . $remove . '/assets/images/user/' . $old_img['img_c'];
-                
-                    // Check if the file exists before attempting to unlink it
-                    if (file_exists($oldImagePath)) {
-                         unlink($oldImagePath);
-                        echo "File deleted successfully";
-                    } else {
-                        echo "File does not exist or there was an issue deleting it" ;
-                    }
-                }
-                $sql = $sql." WHERE id=".$user_id;
-                $fun->insert($sql);
+        // cover img
+        if (isset($_FILES['banner_img'])&& $_FILES['banner_img']['name']!='') {
+            $name_c = $_FILES['banner_img']['name'];
+            $type_c = $_FILES['banner_img']['type'];
+            $tmp_name_c = $_FILES['banner_img']['tmp_name'];
 
-                 
-            }
-        } else {
-            $fun->alert('danger', 'Something is Rong');
-        }
-    }
-
-
-    // profile 
-    if (isset($_FILES['profile_logo']) && !empty($_FILES['profile_logo']['name'])) {
-
-        echo '<br>';
-        print_r($_FILES['profile_logo']);
-
-        // if ($name_img1 = $fun->img_validaction($_FILES['profile_logo']['name'], $_FILES['profile_logo']['tmp_name'], "assets/images/user/")) {
+            $old_cover = $old_img['img_c'];
             
-        //     if ($result->num_rows == 1) {
-        //         $old_img['img_c'];
-        //         if ($old_img['img_c'] != null) {
-        //             // Construct the server path to the old image
-        //             $oldImagePath = $_SERVER['DOCUMENT_ROOT'] . $remove . '/assets/images/user/' . $old_img['img_c'];
-                
-        //             // Check if the file exists before attempting to unlink it
-        //             if (file_exists($oldImagePath)) {
-        //                  unlink($oldImagePath);
-        //                 echo "File deleted successfully";
-        //             } else {
-        //                 echo "File does not exist or there was an issue deleting it" ;
-        //             }
-        //         }
-        //     }
-        // } else {
-        //     $fun->alert('danger', 'Something is Rong');
-        // }
-        // $sql1 = "UPDATE user SET img_c=$name_img1 WHERE id=$user_id";
-        // $fun->insert($sql1);
-    }
-     
+            // Check if the 'img_c' property in the $old_img array is not empty
+                if ($old_img['img_c'] != '') {                    
+                    $file_path = $servarname . 'assets/images/user/' . $old_cover;                   
+                    if (unlink($file_path)) {
+                        // The file was successfully deleted                        
+                    } else {                        
+                        echo "Error: Unable to delete the file";
+                    }
+                } else {                    
+                    echo "no";
+                }
+
+            
+            echo $new_file_name = $fun->img_validaction($name_c,$tmp_name_c,'assets/images/user/');
+            $crove_sql = "UPDATE user SET img_c='$new_file_name' WHERE id='$user_id'";
+            $fun->insert($crove_sql);
+
+            
+        }else {
+            echo " no baner img";
+        }
+        
+        // profile
+        if (isset($_FILES['profile_logo'])&& $_FILES['profile_logo']['name']!='') {
+            $name_pro = $_FILES['profile_logo']['name'];
+            $type_pro = $_FILES['profile_logo']['type'];
+            $tmp_name_pro = $_FILES['profile_logo']['tmp_name'];
+
+            $old_profile = $old_img['img'];
+            if ($old_img['img'] != '') {                    
+                $file_path = $servarname . '/assets/images/user/' . $old_profile;                   
+                if (unlink($file_path)) {
+                    // The file was successfully deleted                        
+                } else {                        
+                    echo "Error: Unable to delete the file";
+                }
+            } else {                    
+                echo "no";
+            }
+
+            echo $new_file_name = $fun->img_validaction($name_pro,$tmp_name_pro,'assets/images/user/');
+            $pro_sql = "UPDATE user SET img='$new_file_name' WHERE id='$user_id'";
+            $fun->insert($pro_sql);
+
+
+        }else {
+            echo " no baner img";
+        }     
    
         $fun->alert('success', 'Your Image Upload');
-        // header('Location:../../user_profile');
+        header('Location:../../user_profile');
     
 }
 // User Profile Logo and Banner End

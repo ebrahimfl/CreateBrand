@@ -7,6 +7,7 @@ if(!isset($_COOKIE[md5('name')])){
 }
 $row = $function->show_col('user',$_COOKIE[md5('name')]);
 $data = $row->fetch_assoc();
+$data['img_c'];
 ?>
 <section id="user_profile">
 	<div class="container">
@@ -15,7 +16,7 @@ $data = $row->fetch_assoc();
 			<div class="profile_header">
 				<div class="banner_img">
 					<input type="file" id="profile_banner" accept="image/png, image/jpeg, image/jpg" name="banner_img">
-					<img src="assets/images/user/<?php echo $data['img_c'] ?>" name='img_cover' alt="">
+					<img src="<?php base_url("assets/images/user/".$data['img_c']); ?> ?>" name='img_cover' alt="">
 				</div>
 				<div class="profile_logo">
 					<input type="file" id='profile-logo' accept=".png,.jpeg,.jpg" name='profile_logo'>
