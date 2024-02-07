@@ -22,8 +22,15 @@ include_once('include/header.php') ?>
 
         <div class='form-control'>
             <label for="profile_name">Project Zip File</label>
-            <input type="file" name="project_file" placeholder="enter project title" id="project_file"  accept=".zip" required autocomplete="off">
+            <input type="file" name="project_file" placeholder="enter project file" id="project_file"  accept=".zip" required autocomplete="off">
+
         </div>
+        <div class='form-control'>
+            <label for="profile_name">Project URL</label>
+            <input type="text" name="url" placeholder="enter project url name" id="project_file"   required autocomplete="off">
+
+        </div>
+
       
         <input type="submit" value='submit' name='user_project_add' class="btn_normal" style='max-width:150px'>
 
