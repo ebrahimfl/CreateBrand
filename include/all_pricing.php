@@ -1,16 +1,10 @@
 <?php
-$show = new fun();
-$ser = $show->show("service");
-while ($conn = mysqli_fetch_assoc($ser)) {
-    $id = $conn['id'];
-    $ser_name = $conn['ser_name'];
-    $s_price = $conn['s_price'];
-    $ser_dec = $conn['ser_dec'];
-    $ser_img = $conn['ser_img'];
-    $date = $conn['date'];
+  function pricing ($price, $discount){
+     $num = ($price * $discount) / 100;
+     echo (int) $num.".00"; 
+   }
+  
 ?>
-
-    <?php } ?>
 
 
 
@@ -37,43 +31,38 @@ while ($conn = mysqli_fetch_assoc($ser)) {
                 </tr>
             </thead>
             <tbody>
+            <?php
+                $show =$function;
+                $ser = $show->show("service");
+                $serial = 1;
+                while ($conn = mysqli_fetch_assoc($ser)) {
+                    $id = $conn['id'];
+                    $ser_name = $conn['ser_name'];
+                    $s_price = $conn['s_price'];
+                    $ser_dec = $conn['ser_dec'];
+                    $ser_img = $conn['ser_img'];
+                    $date = $conn['date'];
+                    $url = $conn['url'];
+                    $discount = $conn['discount'];
+                    $help = $conn['help'];
+                ?>
+
+   
                 <tr>
-                    <td> 1</td>
-                    <td>স্ট্যাটিকওয়েব</td>
-                    <td>১৫,০০০ </td>
-                    <td>৫০%</td>
-                    <td>৫০%</td>
-                    <td>৭৫০০ </td>
+                    <td><?php echo $serial ++?></td>
+                    <td><?php echo $ser_name ?></td>
+                    <td><?php echo $help ?></td>
+                    <td><?php echo $s_price ?></td>
+                    <td><?php echo $discount."%" ?></td>
+                    <td><?php pricing($s_price, $discount) ?></td>
                     <td> <a href="#">Order </a>|
-                        <a href="#">Details </a>
+                        <a href="<?php $url ?>">Details </a>
                     </td>
                 </tr>
-                <tr>
-                    <td> 1</td>
-                    <td>লপমেন্ট:</td>
-                    <td>১৫,০০০ </td>
-                    <td>৫০%</td>
-                    <td>৫০%</td>
-                    <td>৭৫০০ </td>
-                    <td> <a href="#">Order </a>|
-                        <a href="#">Details </a>
-                    </td>
-                </tr>
-                <tr>
-                    <td> 1</td>
-                    <td>বসাইটডিজাইনএবন্ট:</td>
-                    <td>১৫,০০০ </td>
-                    <td>৫০%</td>
-                    <td>৫০%</td>
-                    <td>৭৫০০ </td>
-                    <td>
-                        <a href="#">Order </a> |
-                        <a href="#">Details </a>
-                    </td>
-                </tr>
+            <?php }  ?> 
 
             </tbody>
 
-
+        
         </table>
     </div>
