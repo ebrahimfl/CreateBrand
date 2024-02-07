@@ -77,6 +77,11 @@
     </div>
 </section>
 
+<!-- all pricing means table section  -->
+
+<?php require_once "include/all_pricing.php"; ?>
+
+
 <section id="support" class="support">
     <div class="main-text">
         <span>LIFE TIME SUPPORT</span>
