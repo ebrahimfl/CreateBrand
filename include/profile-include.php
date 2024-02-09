@@ -59,3 +59,6 @@ $data['img_c'];
 					<li><a href="add-project.php" class="<?php echo $page == 'add-project.php' ? 'active' : ''; ?>">Add Project </a></li>
 				</ul>
 			</section>
+			<section id="our-work">
+				<?php include_once('include/ourproject.php'); ?>
+			</section>

@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="assets/css/our-work.css">
 <div class="row an" data-an='fade'>
     <?php 
     $ser = $function->show("user_project");
