@@ -53,12 +53,10 @@ $data['img_c'];
 			<p class='user_intro'><?php echo $data['intro'] ?></p>
 			<section id="user_tab">
 				<ul>
-					<li><a href="user_profile.php" class="<?php echo $page == 'user_profile.php' ? 'active' : ''; ?>">Home</a></li>
-					<li><a href="edit-profile.php" class="<?php echo $page == 'edit-profile.php' ? 'active' : ''; ?>">Profile</a></li>
-					<li><a href="profile-about.php" class="<?php echo $page == 'profile-about.php' ? 'active' : ''; ?>">About</a></li>
-					<li><a href="add-project.php" class="<?php echo $page == 'add-project.php' ? 'active' : ''; ?>">Add Project </a></li>
+					<li><a href="user_profile" class="<?php echo $page == 'user_profile.php' ? 'active' : ''; ?>">Home</a></li>
+					<li><a href="edit-profile" class="<?php echo $page == 'edit-profile.php' ? 'active' : ''; ?>">Profile</a></li>
+					<li><a href="profile-about" class="<?php echo $page == 'profile-about.php' ? 'active' : ''; ?>">About</a></li>
+					<li><a href="add-project" class="<?php echo $page == 'add-project.php' ? 'active' : ''; ?>">Add Project </a></li>
 				</ul>
 			</section>
-			<section id="our-work">
-				<?php include_once('include/ourproject.php'); ?>
-			</section>
+			
