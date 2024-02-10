@@ -1,4 +1,4 @@
-DirectoryIndex home
+DirectoryIndex home.php
 RewriteEngine On
 
 # Remove trailing slashes
@@ -16,6 +16,10 @@ RewriteRule ^blogs/([^/]+)/?$ blog.php?id=$1 [L,QSA]
 #RewriteRule ^blogs/([a-zA-Z0-9-]+)/?$ blog.php?id=$1 [L,QSA]
 RewriteRule ^team/([a-zA-Z0-9-]+)/?$ service-details.php?vew=team&&id=$1 [L,QSA]
 
+
+#change
+RewriteRule ^sitemap/blog_sitemap\.xml$ /CreateBrand/sitemap/blog_sitemap.php [L]
+RewriteRule ^all-service/pricing /CreateBrand/loginSign.php?log=pricing [L]
  #ErrorDocument 404 http://localhost/CreateBrand/404
  ErrorDocument 404 /CreateBrand/404
 

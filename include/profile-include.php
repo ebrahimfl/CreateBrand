@@ -1,9 +1,13 @@
-<?php $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], '/') + 1);
+<?php
+$page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], '/') + 1);
+
+
 if(!isset($_COOKIE[md5('name')])){
-	header('Location:index.php');
+	header('Location:home');
 }
 $row = $function->show_col('user',$_COOKIE[md5('name')]);
 $data = $row->fetch_assoc();
+$data['img_c'];
 ?>
 <section id="user_profile">
 	<div class="container">
@@ -12,7 +16,7 @@ $data = $row->fetch_assoc();
 			<div class="profile_header">
 				<div class="banner_img">
 					<input type="file" id="profile_banner" accept="image/png, image/jpeg, image/jpg" name="banner_img">
-					<img src="assets/images/user/<?php echo $data['img_c'] ?>" name='img_cover' alt="">
+					<img src="<?php base_url("assets/images/user/".$data['img_c']); ?> ?>" name='img_cover' alt="">
 				</div>
 				<div class="profile_logo">
 					<input type="file" id='profile-logo' accept=".png,.jpeg,.jpg" name='profile_logo'>
@@ -49,9 +53,10 @@ $data = $row->fetch_assoc();
 			<p class='user_intro'><?php echo $data['intro'] ?></p>
 			<section id="user_tab">
 				<ul>
-					<li><a href="user_profile.php" class="<?php echo $page == 'user_profile.php' ? 'active' : ''; ?>">Home</a></li>
-					<li><a href="edit-profile.php" class="<?php echo $page == 'edit-profile.php' ? 'active' : ''; ?>">Profile</a></li>
-					<li><a href="profile-about.php" class="<?php echo $page == 'profile-about.php' ? 'active' : ''; ?>">About</a></li>
-					<li><a href="add-project.php" class="<?php echo $page == 'add-project.php' ? 'active' : ''; ?>">Add Project </a></li>
+					<li><a href="user_profile" class="<?php echo $page == 'user_profile.php' ? 'active' : ''; ?>">Home</a></li>
+					<li><a href="edit-profile" class="<?php echo $page == 'edit-profile.php' ? 'active' : ''; ?>">Profile</a></li>
+					<li><a href="profile-about" class="<?php echo $page == 'profile-about.php' ? 'active' : ''; ?>">About</a></li>
+					<li><a href="add-project" class="<?php echo $page == 'add-project.php' ? 'active' : ''; ?>">Add Project </a></li>
 				</ul>
 			</section>
+			

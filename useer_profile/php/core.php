@@ -3,44 +3,91 @@ include_once('function/fun.php');
 $fun = new fun();
 $user_id = $_COOKIE[md5('name')];
 
+
 // User Profile Logo and Banner Start
 if (isset($_POST['profile_img_submit'])) {
     $querys = "SELECT img,img_c FROM user WHERE id=$user_id ";
     $result = $fun->select_count($querys);
     $old_img = $result->fetch_assoc();
     $result->num_rows;
+
+
     $sql = "UPDATE user SET ";
 
 
-    if (isset($_FILES['banner_img']) && !empty($_FILES['banner_img']['name'])) {
-        if ($name_img = $fun->img_validaction($_FILES['banner_img']['name'], $_FILES['banner_img']['tmp_name'], '../../assets/images/user/')) {
-            if (!empty($_FILES['profile_logo']['name'])) {
-                echo $sql .= "img_c='$name_img', ";
+    // path select
+    $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], 'useer_profile/php/core.php'));
+    $remove = rtrim($_SERVER['SCRIPT_NAME'], $page);
+
+    if ($remove !== "") {
+        $remove1 = $remove . "/";
+        echo $servarname = $_SERVER['DOCUMENT_ROOT'] . $remove1;
+    } else {
+
+        echo $servarname = $_SERVER['DOCUMENT_ROOT'];
+    }
+
+
+    echo "<pre>";
+    print_r($_POST);
+    print_r($_FILES);
+    echo "</pre>";
+
+    // cover img
+    if (isset($_FILES['banner_img']) && $_FILES['banner_img']['name'] != '') {
+        $name_c = $_FILES['banner_img']['name'];
+        $type_c = $_FILES['banner_img']['type'];
+        $tmp_name_c = $_FILES['banner_img']['tmp_name'];
+
+        $old_cover = $old_img['img_c'];
+
+        // Check if the 'img_c' property in the $old_img array is not empty
+        if ($old_img['img_c'] != '') {
+            $file_path = $servarname . 'assets/images/user/' . $old_cover;
+            if (unlink($file_path)) {
+                // The file was successfully deleted                        
             } else {
-                $sql .= "img_c='$name_img'";
-            }
-            if ($result->num_rows == 1) {
-                unlink('../../assets/images/user/' . $old_img['img_c']);
+                echo "Error: Unable to delete the file";
             }
         } else {
-            $fun->alert('danger', 'Something is Rong');
+            echo "no";
         }
+
+
+        echo $new_file_name = $fun->img_validaction($name_c, $tmp_name_c, 'assets/images/user/');
+        $crove_sql = "UPDATE user SET img_c='$new_file_name' WHERE id='$user_id'";
+        $fun->insert($crove_sql);
+    } else {
+        echo " no baner img";
     }
-    if (isset($_FILES['profile_logo']) && !empty($_FILES['profile_logo']['name'])) {
-        if ($name_img = $fun->img_validaction($_FILES['profile_logo']['name'], $_FILES['profile_logo']['tmp_name'], '../../assets/images/user/')) {
-            $sql .= "img='$name_img' ";
-            if ($result->num_rows == 1) {
-                unlink('../../assets/images/user/' . $old_img['img']);
+
+    // profile
+    if (isset($_FILES['profile_logo']) && $_FILES['profile_logo']['name'] != '') {
+        $name_pro = $_FILES['profile_logo']['name'];
+        $type_pro = $_FILES['profile_logo']['type'];
+        $tmp_name_pro = $_FILES['profile_logo']['tmp_name'];
+
+        $old_profile = $old_img['img'];
+        if ($old_img['img'] != '') {
+            $file_path = $servarname . '/assets/images/user/' . $old_profile;
+            if (unlink($file_path)) {
+                // The file was successfully deleted                        
+            } else {
+                echo "Error: Unable to delete the file";
             }
         } else {
-            $fun->alert('danger', 'Something is Rong');
+            echo "no";
         }
+
+        echo $new_file_name = $fun->img_validaction($name_pro, $tmp_name_pro, 'assets/images/user/');
+        $pro_sql = "UPDATE user SET img='$new_file_name' WHERE id='$user_id'";
+        $fun->insert($pro_sql);
+    } else {
+        echo " no baner img";
     }
-    $sql .= " WHERE id=$user_id";
-    if ($fun->insert($sql)) {
-        $fun->alert('success', 'Your Image Upload');
-        header('Location:../../user_profile.php');
-    }
+
+    $fun->alert('success', 'Your Image Upload');
+    header('Location:../../user_profile');
 }
 // User Profile Logo and Banner End
 
@@ -70,20 +117,49 @@ if (isset($_POST['user_data']) && !empty($_POST['user_data'])) {
 if (isset($_POST['user_project_add']) && !empty($_POST['user_project_add'])) {
     $title = $_POST['title'];
     $description = $_POST['description'];
+    $url = $_POST['url'];
     $file_name = $_FILES['project_file']['name'];
     if (isset($file_name) && !empty($file_name)) {
         $ex_validation = ['zip',];
         $file_extanction = pathinfo($file_name, PATHINFO_EXTENSION);
         if (in_array($file_extanction, $ex_validation)) {
             $new_file_name = $user_id . '-' . rand() . time() . '.' . $file_extanction;
-            move_uploaded_file($_FILES['project_file']['tmp_name'], '../../assets/images/user-project/' . $new_file_name);
+            move_uploaded_file($_FILES['project_file']['tmp_name'], '../../assets/user-project/' . $new_file_name);
 
-            $sql = "INSERT INTO user_project(user_id,title,description,zip_file)VALUES($user_id,'{$title}','{$description}','{$new_file_name}')";
+            // Extract the uploaded ZIP file
+            $zip = new ZipArchive;
+            $zipFilePath = "../../assets/user-project/" . $new_file_name;
+            $mkdirector =  "../../assets/user-project/" . $url . "/";
+            mkdir($mkdirector);
+
+            $extractPath = $mkdirector;
+            if ($zip->open($zipFilePath) === TRUE) {
+                $zip->extractTo($extractPath);
+                $zip->close();
+                echo '<script>alert("succesfull")</script>';
+                if (file_exists("../../assets/user-project/$new_file_name")) {
+                    unlink("../../assets/user-project/$new_file_name");
+                } else {
+                    echo "File does not exist.";
+                }
+                $file_open = fopen($mkdirector . $user_id . ".txt", "w");
+                if ($file_open) {
+                    $content = "this is " . $user_id . " project";
+                    fwrite($file_open, $content);
+                    fclose($file_open);
+                }
+            } else {
+                echo 'Failed to extract zip file.';
+            }
+
+            // extract end
+            $url = "assets/user-project/".$url."/" ;
+            $sql = "INSERT INTO user_project(user_id,title,description,zip_file,url)VALUES($user_id,'{$title}','{$description}','{$new_file_name}','$url')";
             if ($fun->insert($sql)) {
                 $fun->alert('success', 'your project upload');
                 header('Location:../../user_profile.php');
             }
-        }else{
+        } else {
             $fun->alert('danger', 'only zip file allow');
             header('Location:../../add-project.php');
         }
@@ -92,25 +168,25 @@ if (isset($_POST['user_project_add']) && !empty($_POST['user_project_add'])) {
     }
 }
 
-if(isset($_POST['user_skill_add']) && !empty($_POST['user_skill_add'])){
+if (isset($_POST['user_skill_add']) && !empty($_POST['user_skill_add'])) {
     // $other_skills= $
     $sql = "SELECT * FROM user_skills WHERE user_id= $user_id";
-    $result= $fun->select_count($sql);
-    $data=[];
-    if($result->num_rows>0){
-        while($row = $result->fetch_assoc()){
-            $data[]=$row['skills'];
-         }
+    $result = $fun->select_count($sql);
+    $data = [];
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            $data[] = $row['skills'];
+        }
     }
-    
-    foreach($_POST['user_skill'] as $element) {
-        $element = trim($element); 
-        if(!in_array(strtolower($element), array_map('strtolower', $data)) && !in_array($element, $data)){
+
+    foreach ($_POST['user_skill'] as $element) {
+        $element = trim($element);
+        if (!in_array(strtolower($element), array_map('strtolower', $data)) && !in_array($element, $data)) {
             $sql = "INSERT INTO user_skills (user_id, skills) VALUES($user_id, '{$element}')";
             $fun->insert($sql);
         }
     }
 
-    $fun->alert('success','Your Skills Add');
+    $fun->alert('success', 'Your Skills Add');
     header('Location:../../edit-profile.php');
 }
