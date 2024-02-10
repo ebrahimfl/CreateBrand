@@ -1,8 +1,4 @@
 <?php
-// gurutto purnno code
-// $page = substr($_SERVER['SCRIPT_NAME'], strrpos($_SERVER['SCRIPT_NAME'], 'useer_profile/php/core.php') );
-// $remove =rtrim($_SERVER['SCRIPT_NAME'], $page);
-// $servarname = $_SERVER['SERVER_NAME'].$remove."/";
 
 session_start();
 
@@ -19,7 +15,7 @@ if (isset($_POST['order'])) {
         $my_order = array_column($_SESSION['order'],'order_id');
         if (in_array($id, $my_order)) {
             echo "<script>
-            window.location=('loginSign.php?log=pricing');
+            window.location=('../loginSign.php?log=pricing');
             alert('Service Already Added');
           </script>";
 
@@ -37,7 +33,7 @@ if (isset($_POST['order'])) {
             'help' => $_POST['help']
         );
         echo "<script>
-            window.location=('loginSign.php?log=pricing');
+            window.location=('../loginSign.php?log=pricing');
             alert('Service Added');
           </script>";
         
@@ -51,7 +47,7 @@ if (isset($_POST['order'])) {
             'help' => $_POST['help']
         );
         echo "<script>
-            window.location=('loginSign.php?log=pricing');
+            window.location=('../loginSign.php?log=pricing');
             alert('Service Added');
           </script>";
 
@@ -60,9 +56,3 @@ if (isset($_POST['order'])) {
 }
 
 ?>
-
-
-
-
-
-
