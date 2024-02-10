@@ -22,7 +22,8 @@ if (isset($_POST['order'])) {
         }
 
         // count koto gulo seesion ache
-        $count = count($_SESSION['order']);
+        else {
+            $count = count($_SESSION['order']);
 
         // add kora
         $_SESSION['order'][$count]= array(
@@ -36,6 +37,7 @@ if (isset($_POST['order'])) {
             window.location=('../loginSign.php?log=pricing');
             alert('Service Added');
           </script>";
+        }
         
         
     }else {
