@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voucher Printing</title>
+  <style>
+    /* styles.css */
+    .voucher {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 20px;
+    }
+
+    #printButton {
+      margin-top: 20px;
+      padding: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Your web page content -->
+
+  <!-- Voucher section -->
+  <div class="voucher" id="voucher">
+    <h2>Voucher</h2>
+    <p><strong>Recipient:</strong> John Doe</p>
+    <p><strong>Amount:</strong> $50.00</p>
+    <p><strong>Expiration Date:</strong> 2024-12-31</p>
+  </div>
+
+  <!-- Print button -->
+  <button id="printButton">Print Voucher</button>
+
+  <!-- Your web page content -->
+
+  <script>
+    // script.js
+
+    document.getElementById('printButton').addEventListener('click', function() {
+      printVoucher();
+    });
+
+    function printVoucher() {
+      var voucherContent = document.getElementById('voucher').outerHTML;
+      var printWindow = window.open('', '_blank');
+      printWindow.document.write('<html><head><title>Voucher</title>');
+      printWindow.document.write('<link rel="stylesheet" href="styles.css"></head><body>');
+      printWindow.document.write(voucherContent);
+      printWindow.document.write('</body></html>');
+      printWindow.document.close();
+      printWindow.print();
+    }
+  </script>
+
+</body>
+</html>

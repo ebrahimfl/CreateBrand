@@ -10,7 +10,7 @@
 
 
 
-    <link rel="stylesheet" href="assets/css/all_pricing.css">
+    <link rel="stylesheet" href="<?php base_url('assets/css/all_pricing.css') ?>">
     <!-- header text part -->
 
 
@@ -53,7 +53,12 @@
                     <td><?php echo $ser_name ?></td>
                     <td><?php echo $help ?></td>
                     <td><?php echo $s_price ?></td>
-                    <td><?php echo $discount."%" ?></td>
+                    <td><?php if ($discount!='') {
+                        echo $discount."%";
+                    }else{
+                        $discount= 0;
+                        echo $discount;
+                    } ?></td>
                     <td><?php pricing($s_price, $discount) ?></td>
                     <td> <a href="#">Order </a>|
                         <a href="<?php $url ?>">Details </a>

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="assets/css/footer_pricing.css">
+<link rel="stylesheet" href="<?php base_url('assets/css/footer_pricing.css') ?>">
 <!-- pricing area  -->
 
 

@@ -18,6 +18,7 @@
                 <img src="<?php base_url('assets/images/slider/dashboard-2.svg')?>" alt="">
             </div>
         </div>
+       
         <div class="content">
             <div class="heading">
                 <h2 style=''><?php echo $service_data['ser_name'] ?></h2>
@@ -27,7 +28,11 @@
                     <?php echo $service_data['ser_dec'] ?>
                 </p>
             </div>
-        </div>        
+        </div> 
+        <div class="container">
+            <style>h3.btn {width: fit-content; padding: 5px 13px; margin: auto; background: #0e64db;border-radius: 5px; margin-top: 10px; color: white;}</style>
+            <a href="<?php base_url('all-service/pricing')?>"><h3 class="btn">Order Now</h3></a>
+        </div>       
     </div>
 </div>
 
