@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+// session_destroy();
 
 
 if (isset($_POST['order'])) {
@@ -22,7 +23,8 @@ if (isset($_POST['order'])) {
         }
 
         // count koto gulo seesion ache
-        $count = count($_SESSION['order']);
+        else {
+            $count = count($_SESSION['order']);
 
         // add kora
         $_SESSION['order'][$count]= array(
@@ -36,6 +38,7 @@ if (isset($_POST['order'])) {
             window.location=('../loginSign.php?log=pricing');
             alert('Service Added');
           </script>";
+        }
         
         
     }else {
@@ -54,5 +57,39 @@ if (isset($_POST['order'])) {
     }
     
 }
+
+// if (isset($_POST['remove'])) {    
+//     $remove = $_POST['order_id'];
+//     foreach ($_SESSION['order'] as $key => $value) {
+        
+//         if (isset($value['order_id'])) {
+//             $se_remove = $value['order_id'];
+//             if ($remove == $se_remove) {
+        
+//                 unset($_SESSION['order'][$key]);
+//                 $_SESSION['order']= array_values($_SESSION['order']);
+//                 header("location:../loginSign.php?log=pricing");
+                
+//             }
+//         } else {            
+//             echo "Value key is not set for order with key: $key";
+//         }
+
+//     }    
+    
+// }
+// if (isset($_POST['order_conf'])) {
+//     foreach ($_SESSION['order'] as $key => $value) {
+        
+//         $order_id = $value['order_id']  ;
+//         $price = $value['price']  ;
+//         $discount = $value['discount']  ;
+//         $ser_name = $value['ser_name']  ;
+//         $help = $value['help']  ;
+//         echo '<pre>';
+//         print_r($value);
+//         echo '</pre>';
+//     }
+// }
 
 ?>
