@@ -105,24 +105,39 @@
         <?php   
             $i = 0; 
             foreach ($_SESSION['order'] as $key => $value) {
-                echo "
-                <tr>
-                    <td>" . ($i + 1) . "</td>
-                    <td>" . $value['ser_name'] . "</td>
-                    <td>" . $value['help'] . "</td>
-                    <td>" . $value['price'] . "</td>
-                    <td>" . $value['discount'] . "</td>
-                    <td>" . (int)($value['price'] * $value['discount']) / 100 . '.00' . "</td>
-                    <td>" . "Remove" . "</td>
-                    <!-- Add other columns here if needed -->
-                </tr>";
-                $i++;
+                ?>
+                
+                
+                    
+                    
+                    <tr>
+                        <td> <?php echo ($i + 1) ?> </td>
+                        <td> <?php echo $value['ser_name'] ?></td>
+                        <td> <?php echo $value['help'] ?></td>
+                        <td> <?php echo $value['price'] ?></td>
+                        <td> <?php echo $value['discount'] ?></td>
+                        <td> <?php $de = (int)($value['price'] * $value['discount']) / 100 . '.00' ;
+                        echo $aam =$value['price']-$de; ?></td>
+                        <td>
+                            <form action="<?php base_url('assets/php/userCore.php') ?>" method="post">
+
+                                <button type='submit' name='remove'> Remove</button>
+                                <input type='hidden' name='order_id' value='<?php echo $value['order_id'];  ?>'>
+                            
+                        </td>
+                        <!-- Add other columns here if needed -->
+                    </tr>
+                    <?php
+                    $i++;                    
+                
             }
         ?>
 
         </tbody>
     </table>
 <?php } ?>
+<input type="submit" value="Order" name="order_conf" style="width: fit-content; padding: 5px 15px;     background: tomato;  color: white;  font-size: 16px; border: navajowhite; border-radius: 5px;    margin-top: 5px;  float: right; margin-right: 5px ">
+</form>
 
     </div>
 
