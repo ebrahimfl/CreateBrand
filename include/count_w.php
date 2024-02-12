@@ -1,6 +1,6 @@
 
 
-<link rel="stylesheet" href="assets/css/about.css">
+<link rel="stylesheet" href="<?php base_url('assets/css/about.css') ?>">
 <section id="about" class="container">
     <div class="counter_wrapper">
         <div class="card an" data-an='fade-right'>

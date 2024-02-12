@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="assets/css/about.css">
+<link rel="stylesheet" href="<?php base_url('assets/css/about.css') ?>">
 <section id="about">
 
     <div class="container">
@@ -23,7 +23,7 @@
                     <div class="card">        
                     <a href="services/<?php echo str_replace(' ','-',$ser_name) ?>">        
                         <div class="card_img">
-                            <img src="assets/icons/<?php echo $ser_img;?>" alt="">
+                            <img src="<?php base_url('assets/icons/'.$ser_img) ?>" alt="">
                         </div>
                         <h3><?php echo $ser_name;?></h3>
                         <p><?php echo $fun->textShorten($ser_dec,90); ?></p>

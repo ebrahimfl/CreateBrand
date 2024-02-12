@@ -3,14 +3,8 @@
      $num = ($price * $discount) / 100;
      echo (int) $num.".00"; 
    }
- 
-
   
 ?>
-
-
-
-
 
     <link rel="stylesheet" href="<?php base_url('assets/css/all_pricing.css') ?>">
     <!-- header text part -->
