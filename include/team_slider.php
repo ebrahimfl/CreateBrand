@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="assets/css/service-details.css">
+<link rel="stylesheet" href="<?php base_url('assets/css/service-details.css') ?>">
 
 <div class="container">
     <div class="our-team" margin-top='30px'>

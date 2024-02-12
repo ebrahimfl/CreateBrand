@@ -4,11 +4,10 @@ if (isset($_COOKIE[md5("name")])) {
 }
 
 ?>
-<link rel="stylesheet" href="assets/css/signup.css">
+<link rel="stylesheet" href="<?php base_url('assets/css/signup.css') ?>">
 <main class="container sing-up">
-		<form action="assets/php/userCore.php" method="post" class="form-sing-up">
+		<form action="<?php base_url('assets/php/userCore.php')?>" method="post" class="form-sing-up">
 			<h3 class="sing">Sing Up Here</h3>
-            
 			<div>
 				<label for="name">Name</label>
 				<input type="text" id="name" placeholder="Enter Your Name" name="name" required>

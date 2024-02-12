@@ -1,5 +1,5 @@
 
-<link rel="stylesheet" href="assets/css/about.css">
+<link rel="stylesheet" href="<?php base_url('assets/css/about.css') ?>">
 
 
 <section id="about">
@@ -11,11 +11,11 @@
 
                 
                 <div style='margin-top: 25px;'>
-                    <a href="contact-us.php" class='btn_normal'>Contact Us</a>
+                    <a href="<?php base_url('contact-us.php') ?>" class='btn_normal'>Contact Us</a>
                 </div>
             </div>
             <div class='img'>
-                <img src="assets/images/about-img.png" alt="">
+                <img src="<?php base_url('assets/images/about-img.png')?>" alt="">
             </div>
         </div>
     </div>
