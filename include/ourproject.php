@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="assets/css/our-work.css">
+<link rel="stylesheet" href="<?php base_url('assets/css/our-work.css') ?>">
 <div class="row an" data-an='fade'>
     <?php 
     $ser = $function->show("user_project");
@@ -11,7 +11,7 @@
                 <div class="hover_effect">
                     <h4><?php echo $data['title'] ?></h4>
                     <a class="img" href='<?php echo $data["url"]; ?>' target="_blank">
-                        <img src="assets/icons/right-arrow.png" alt="">
+                        <img src="<?php base_url('assets/icons/right-arrow.png') ?>" alt="">
                     </a>
                 </div>
             </div> 

@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="assets/css/animation.css">
+<link rel="stylesheet" href="<?php base_url('assets/css/animation.css')?>">
 
 </head>
 
@@ -35,9 +35,6 @@
     }
 
     ?>
-
-
-
 
 
     <header class="active_nav">

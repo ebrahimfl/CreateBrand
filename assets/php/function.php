@@ -13,7 +13,19 @@ class fun
     // url 
 
    public function base_url ($url){
-    echo "http://localhost/CreateBrand/".$url;
+    $page = $_SERVER['SCRIPT_NAME'];
+    $page = str_replace("/CreateBrand/", "", $_SERVER['SCRIPT_NAME']);
+    $remove =rtrim($_SERVER['SCRIPT_NAME'], $page);
+        
+    if ($remove !== ""){
+        $remove1 =$remove."";
+        $servarname = "http://localhost/createBrand/";
+    }else{
+
+        $servarname = $_SERVER['DOCUMENT_ROOT']."/";
+    }
+    
+    echo $servarname.$url;
 
    }
 

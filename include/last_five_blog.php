@@ -7,10 +7,10 @@
                 $datat = $fun->showLimit("blog", 5);
                 while ($data = $datat->fetch_assoc()) {
                 ?>
-                    <a href="blog.php?id=<?php echo $data['id']; ?>" class="blog_link an" data-an='fade'>
+                    <a href="<?php base_url("blog.php?id=". $data['id']) ?>" class="blog_link an" data-an='fade'>
                         <div class="card">
                             <div class="img">
-                                <img src="assets/images/blog/<?php echo $data['img']; ?>" alt="">
+                                <img src="<?php base_url("assets/images/blog/".$data['img']) ?>" alt="">
                             </div>
                             <div class="blog_text">
                                 <h3><?php echo $data['title']; ?></h3>

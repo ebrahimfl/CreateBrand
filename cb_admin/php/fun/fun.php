@@ -1,18 +1,29 @@
 <?php
+$page = $_SERVER['SCRIPT_NAME'];
+$page = str_replace("/CreateBrand/", "", $_SERVER['SCRIPT_NAME']);
+$remove =rtrim($_SERVER['SCRIPT_NAME'], $page);
+    
+if ($remove !== ""){
+    $remove1 =$remove."";
+    $servarname = $_SERVER['DOCUMENT_ROOT'] . "/CreateBrand/";
+}else{
+
+    $servarname = $_SERVER['DOCUMENT_ROOT']."/";
+}
+include_once($servarname."assets/php/function.php");
+// include_once($_SERVER['DOCUMENT_ROOT'] . "/CreateBrand/assets/php/function.php");
+
 class addmin
 {
+    
     private $conn;
     public function __construct()
     {
-        $db_host = "localhost";
-        $db_user = "root";
-        $db_pass = "";
-        $db_name = "createbrand";
-        $this->conn = mysqli_connect($db_host, $db_user, $db_pass, $db_name);
-        if (!$this->conn) {
-            die("<h1>Database do not worked!! Please Database create your server?? Help Ebrahim: 01980533510</h1>");
-        }
+        $conne = new databese;
+        $conne->connect();
+        $this->conn = $conne->connect;
     }
+
 
 
     // show all
