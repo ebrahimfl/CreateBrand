@@ -3,7 +3,7 @@
 <?php require_once "include/headerM.php";
 $fun = new fun();
 if (isset($_GET["id"])) {
-   echo  $title = $_GET["id"];
+     $title = $_GET["id"];
     $func = $fun->select_count("SELECT * FROM blog WHERE url='$title'");
     while ($data= $func->fetch_assoc()) {
         $title = $data['title'];
