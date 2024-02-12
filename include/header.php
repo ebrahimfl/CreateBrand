@@ -18,7 +18,8 @@ if($result->num_rows == 0){
 $query = "INSERT INTO visitor(ip)VALUES('$ip')";
 $conn->query($query);
 }
-
+ $pagePath= substr($_SERVER['SCRIPT_NAME'],strrpos($_SERVER['SCRIPT_NAME'],'/')+1);
+  $pagePath = ucwords(substr($pagePath,0,strpos($pagePath,'.')))
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +28,7 @@ $conn->query($query);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crete of Brand</title>
+    <title><?php echo $pagePath=='Home'?'Crete of Brand':$pagePath ?></title>
     <link rel="stylesheet" href="<?php base_url('assets/css/style.css') ?>">
     <link rel="stylesheet" href="<?php base_url('assets/css/site_responsive.css')?>">
     <link rel="icon" href="<?php base_url('assets/images/logo-01.svg')?>">
